@@ -10,7 +10,7 @@ La app de Power Apps escribía directo al Excel vía conectores (`Patch`/`Remove
 
 - `data/vocabulario.json` y `data/frases.json` (generados desde el Excel) son el **seed** de solo lectura — nunca se tocan en tiempo de ejecución.
 - Al abrir la app por primera vez en un navegador, el seed se copia a **localStorage**. Todo lo que agregues/edites/borres/marques como aprendida vive ahí — es privado de ese navegador/dispositivo.
-- En **Palabras** y **Frases**, cada pantalla tiene su propio botón **Exportar CSV** (con confirmación previa) que descarga `vocabulario_YYYY-MM-DD.csv` o `frases_YYYY-MM-DD.csv` respectivamente, con el estado actual (seed + tus cambios), por si quieres reincorporarlo a mano al Excel original o respaldarlo.
+- En **Palabras** y **Frases**, cada pantalla tiene su propio botón **Exportar CSV** (con confirmación previa) que descarga `vocabulario_YYYY-MM-DD.csv` o `frases_YYYY-MM-DD.csv` respectivamente, con el estado actual (seed + tus cambios), por si quieres reincorporarlo a mano al Excel original o respaldarlo. La pantalla **Ayuda** tiene el flujo inverso, **Restaurar desde CSV**: sube uno de esos archivos para recuperar tus datos en otro navegador/dispositivo (reemplaza por completo el dataset correspondiente, no se combina).
 - La pantalla **Traducir** usa la API pública de [MyMemory](https://mymemory.translated.net/) en vez del conector Microsoft Translator del original (que requiere autenticación de Power Apps). No hay detección automática de idioma gratuita, así que eliges el sentido de la traducción (Inglés→Español / Español→Inglés).
 
 ## Ejecutar localmente

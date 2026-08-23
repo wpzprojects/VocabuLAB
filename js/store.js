@@ -8,7 +8,7 @@
 //   3. exportCsv() permite sacar el estado actual a CSV para reincorporarlo
 //      a mano al Excel original si se quiere.
 
-import { uid, downloadCsv } from "./util/format.js";
+import { uid, downloadCsv, parseCsv } from "./util/format.js";
 
 const KEY_VOCAB = "vocabulab:v1:vocabulario";
 const KEY_FRASES = "vocabulab:v1:frases";
@@ -143,6 +143,48 @@ export async function exportFrasesCsv() {
     ],
     frases.map((r) => ({ ...r, aprendida_txt: r.aprendida ? "Si" : "No" }))
   );
+}
+
+// ---------------- Restaurar desde CSV (reemplaza todo el dataset) ----------------
+
+export async function importVocabularioCsv(text) {
+  const records = parseCsv(text);
+  if (records.length && !("Palabra_Ing" in records[0] && "Palabra_Esp" in records[0])) {
+    throw new Error("El archivo no tiene las columnas de Vocabulario (Palabra_Ing, Palabra_Esp...). Es el CSV correcto?");
+  }
+  const rows = records
+    .map((rec) => ({
+      id: uid(),
+      lista: (rec.Lista || "").trim(),
+      palabra_ing: (rec.Palabra_Ing || "").trim(),
+      palabra_esp: (rec.Palabra_Esp || "").trim(),
+      contexto: (rec.Palabra_en_contexto || "").trim(),
+      aprendida: (rec.Aprendida || "").trim().toLowerCase() === "si",
+    }))
+    .filter((r) => r.palabra_ing && r.palabra_esp);
+  vocabCache = rows;
+  persist(KEY_VOCAB, rows);
+  return rows.length;
+}
+
+export async function importFrasesCsv(text) {
+  const records = parseCsv(text);
+  if (records.length && !("Frase_Ing" in records[0] && "Frase_Esp" in records[0])) {
+    throw new Error("El archivo no tiene las columnas de Frases (Frase_Ing, Frase_Esp...). Es el CSV correcto?");
+  }
+  const rows = records
+    .map((rec) => ({
+      id: uid(),
+      categoria: (rec.Categoria || "").trim(),
+      frase_ing: (rec.Frase_Ing || "").trim(),
+      frase_esp: (rec.Frase_Esp || "").trim(),
+      notas_uso: (rec.Notas_de_uso || "").trim(),
+      aprendida: (rec.Aprendida || "").trim().toLowerCase() === "si",
+    }))
+    .filter((r) => r.frase_ing && r.frase_esp);
+  frasesCache = rows;
+  persist(KEY_FRASES, rows);
+  return rows.length;
 }
 
 // Punto de extension para Fase 2 (backup a Google Drive vía Google Identity

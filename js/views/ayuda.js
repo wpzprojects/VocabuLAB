@@ -3,6 +3,7 @@
 // migracion para orientar al usuario.
 
 import { el } from "../util/format.js";
+import { importVocabularioCsv, importFrasesCsv } from "../store.js";
 
 const SECCIONES = [
   {
@@ -76,4 +77,47 @@ export async function render(container) {
       " de vez en cuando como respaldo.",
     ])
   );
+
+  container.append(buildRestoreCard());
+}
+
+function buildRestoreCard() {
+  return el("div", { class: "card" }, [
+    el("h2", { class: "section-title", style: "margin-top:0" }, "Restaurar desde CSV"),
+    el(
+      "p",
+      { class: "text-sm text-muted" },
+      "Para recuperar tus datos en un navegador o dispositivo nuevo a partir de un CSV exportado antes. " +
+        "Ojo: reemplaza POR COMPLETO el vocabulario o las frases actuales de este navegador con el contenido del archivo — no se combina con lo que ya tengas, y no se puede deshacer."
+    ),
+    buildImportField("Restaurar vocabulario desde CSV", importVocabularioCsv),
+    buildImportField("Restaurar frases desde CSV", importFrasesCsv),
+  ]);
+}
+
+function buildImportField(label, importFn) {
+  const fileInput = el("input", { type: "file", accept: ".csv,text/csv", hidden: true });
+  const statusMsg = el("p", { class: "text-sm", hidden: true }, "");
+  const pickBtn = el("label", { class: "btn" }, [label, fileInput]);
+
+  fileInput.addEventListener("change", async () => {
+    const file = fileInput.files[0];
+    fileInput.value = "";
+    if (!file) return;
+    if (!confirm(`Esto reemplaza TODOS los datos actuales con el contenido de "${file.name}". No se puede deshacer. Continuar?`)) {
+      return;
+    }
+    try {
+      const text = await file.text();
+      const count = await importFn(text);
+      statusMsg.style.color = "var(--success)";
+      statusMsg.textContent = `Listo: se restauraron ${count} filas. Entra a la pantalla correspondiente para verlas.`;
+    } catch (err) {
+      statusMsg.style.color = "var(--danger)";
+      statusMsg.textContent = `No se pudo restaurar: ${err.message || err}`;
+    }
+    statusMsg.hidden = false;
+  });
+
+  return el("div", { class: "field" }, [pickBtn, statusMsg]);
 }

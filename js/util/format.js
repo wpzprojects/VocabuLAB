@@ -73,6 +73,50 @@ export function downloadCsv(filename, columns, rows) {
   downloadBlob(filename, blob);
 }
 
+// Parser de CSV (inverso de downloadCsv): entiende comillas, comas y saltos
+// de linea dentro de un campo, y quita el BOM UTF-8 que downloadCsv agrega.
+// Devuelve un array de objetos usando la primera fila como encabezados.
+export function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let inQuotes = false;
+  const s = text.replace(/^﻿/, "").replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i];
+    if (inQuotes) {
+      if (c === '"') {
+        if (s[i + 1] === '"') { field += '"'; i++; }
+        else inQuotes = false;
+      } else field += c;
+    } else if (c === '"') {
+      inQuotes = true;
+    } else if (c === ",") {
+      row.push(field);
+      field = "";
+    } else if (c === "\n") {
+      row.push(field);
+      rows.push(row);
+      row = [];
+      field = "";
+    } else {
+      field += c;
+    }
+  }
+  if (field !== "" || row.length) {
+    row.push(field);
+    rows.push(row);
+  }
+
+  if (rows.length === 0) return [];
+  const headers = rows[0];
+  return rows
+    .slice(1)
+    .filter((r) => r.some((v) => v !== ""))
+    .map((r) => Object.fromEntries(headers.map((h, i) => [h, r[i] ?? ""])));
+}
+
 export function downloadBlob(filename, blob) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
