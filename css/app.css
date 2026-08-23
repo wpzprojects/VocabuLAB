@@ -129,6 +129,7 @@ input[type="text"], input[type="number"], input[type="search"], select, textarea
   background: var(--bg-input);
   color: var(--text);
   width: 100%;
+  min-height: 42px;
 }
 textarea { resize: vertical; }
 input:disabled, select:disabled { opacity: 0.55; }
@@ -145,6 +146,7 @@ input:disabled, select:disabled { opacity: 0.55; }
   font-size: 0.86rem;
   cursor: pointer;
   text-decoration: none;
+  min-height: 42px;
 }
 .btn:hover { background: var(--bg-sunken); }
 .btn-primary { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
@@ -153,7 +155,7 @@ input:disabled, select:disabled { opacity: 0.55; }
 .btn-danger:hover { background: var(--danger); color: #fff; }
 .btn-ghost { background: transparent; border-color: transparent; }
 .btn-ghost:hover { background: var(--bg-sunken); }
-.btn-sm { padding: 6px 10px; font-size: 0.78rem; }
+.btn-sm { padding: 6px 10px; font-size: 0.78rem; min-height: 32px; }
 .btn-row { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-4); }
 .btn[disabled] { opacity: 0.5; cursor: not-allowed; }
 
@@ -203,6 +205,7 @@ tbody tr.clickable:focus-visible { outline: 2px solid var(--focus-ring); outline
 
 /* ---------- flashcards (Practicar) ---------- */
 .flash-toolbar { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: flex-end; margin-bottom: var(--space-4); }
+.flash-toolbar .field { margin-bottom: 0; min-width: 150px; flex: 1 1 150px; }
 .flash-list { display: flex; flex-direction: column; gap: var(--space-3); }
 .flash-card {
   background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-md);

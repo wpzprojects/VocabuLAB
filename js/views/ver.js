@@ -1,7 +1,7 @@
 // Pantalla "Ver" (1. Pantalla_Ver): lista de vocabulario con selector de
 // Lista, buscador, orden A-Z y CRUD (Nuevo/Editar/Borrar).
 
-import { el, escapeHtml, debounce, distinct } from "../util/format.js";
+import { el, debounce, distinct } from "../util/format.js";
 import { getVocabulario, addPalabra, updatePalabra, deletePalabra, exportCsv } from "../store.js";
 
 export async function render(container) {
@@ -65,7 +65,6 @@ export async function render(container) {
       el("tr", {}, [
         el("th", {}, "Ingles"),
         el("th", {}, "Espanol"),
-        el("th", {}, "Lista"),
         el("th", {}, "Aprendida"),
       ]),
     ]);
@@ -88,7 +87,6 @@ export async function render(container) {
           [
             el("td", {}, row.palabra_ing),
             el("td", {}, row.palabra_esp),
-            el("td", {}, escapeHtml(row.lista || "—")),
             el("td", {}, row.aprendida ? el("span", { class: "badge badge-success" }, "Si") : el("span", { class: "badge" }, "No")),
           ]
         )

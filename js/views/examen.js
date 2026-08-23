@@ -41,10 +41,16 @@ export async function render(container) {
   );
   container.append(
     el("div", { class: "flash-toolbar" }, [
-      el("label", { class: "checkbox-row" }, [aleatorioCheck, "Aleatorio"]),
-      el("label", { class: "toggle-row" }, [
-        el("span", {}, "Intercambiar idioma"),
-        el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
+      el("div", { class: "field" }, [
+        el("span", { class: "field-title" }, "Orden"),
+        el("label", { class: "checkbox-row" }, [aleatorioCheck, "Aleatorio"]),
+      ]),
+      el("div", { class: "field" }, [
+        el("span", { class: "field-title" }, "Direccion"),
+        el("label", { class: "toggle-row" }, [
+          el("span", {}, "Intercambiar idioma"),
+          el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
+        ]),
       ]),
       resultText,
       resetBtn,
