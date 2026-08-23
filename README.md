@@ -36,7 +36,7 @@ js/translate.js                            # wrapper de la API de traduccion (My
 js/util/format.js                          # helpers de DOM/datos (el, uid, downloadCsv, etc.)
 js/views/*.js                              # 1 modulo por pantalla: export async function render(container, params)
 data/*.json                                # seed de vocabulario/frases (generado desde el Excel)
-icons/                                     # iconos PWA (placeholder generado, ver mas abajo)
+icons/                                     # iconos PWA (logo definitivo, ver mas abajo)
 tools/                                     # scripts de extraccion/generacion (no forman parte de la app en runtime)
 APP_PowerApps/                             # app original de Power Apps + Excel (fuente de verdad de los datos)
 ```
@@ -56,7 +56,14 @@ Ojo: esto **no** afecta lo que un usuario ya tenga guardado en su localStorage �
 
 ## Iconos / logo
 
-`icons/icon-192.png`, `icon-512.png`, `icon-maskable-512.png` e `icons/icon.svg` son un placeholder generado con `tools/generate_icons.py` (sin dependencias externas). Reemplázalos cuando haya un logo definitivo.
+`icons/icon.svg` es el logo definitivo (dos flashcards con "Ab"). Los PNG (`icon-192.png`, `icon-512.png`, `icon-maskable-512.png`) se generan a partir de ese SVG con `tools/generate_icons.py`. A diferencia del resto de la app, este script sí necesita dependencias de Python para rasterizar SVG:
+
+```
+pip install svglib reportlab pycairo rlPyCairo pillow
+python tools/generate_icons.py
+```
+
+Si editas `icons/icon.svg`, vuelve a correr el script para regenerar los PNG (y sube `CACHE_VERSION` en `sw.js`).
 
 ## Publicar en GitHub Pages
 

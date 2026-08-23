@@ -1,90 +1,63 @@
 """
-Genera iconos PWA placeholder (PNG, sin dependencias externas: solo zlib de
-la libreria estandar) hasta que el usuario aporte un logo definitivo.
-Dibuja un libro abierto blanco simple sobre fondo solido color de marca,
-representativo de una app de vocabulario (mismo tema que el icono "book"
-usado como marca en la barra superior, ver js/icons.js).
+Genera los iconos PWA (PNG) a partir de icons/icon.svg (el logo definitivo:
+dos flashcards con "Ab"). Necesita svglib + reportlab + pycairo/rlPyCairo
+para rasterizar SVG -- a diferencia del resto de la app, esto SI requiere
+dependencias externas de Python:
+
+    pip install svglib reportlab pycairo rlPyCairo pillow
 
 Uso: python tools/generate_icons.py
-Salida: icons/icon-192.png, icons/icon-512.png, icons/icon-maskable-512.png
+Salida:
+  icons/icon-192.png, icons/icon-512.png   (purpose "any", fondo
+    transparente fuera de la forma squircle -- el mismo dibujo que
+    icon.svg, solo rasterizado a distintos tamanos)
+  icons/icon-maskable-512.png              (purpose "maskable", fondo
+    solido de borde a borde -- el sistema operativo aplica su propia
+    mascara -- con el dibujo escalado al 72% y centrado para que quepa
+    en la "safe zone" sin importar la forma que use cada launcher)
 """
-import struct
-import zlib
 from pathlib import Path
 
+from reportlab.graphics import renderPM
+from reportlab.lib.colors import Color
+from svglib.svglib import svg2rlg
+
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "icons"
-OUT.mkdir(exist_ok=True)
+ICONS = ROOT / "icons"
+SRC = ICONS / "icon.svg"
+TRANSPARENT = Color(0, 0, 0, 0)
 
-BG = (217, 119, 87, 255)   # var(--accent)
-FG = (255, 255, 255, 255)
-
-# Dos paginas de un libro abierto, en un viewBox de 24x24 (lineas rectas para
-# poder rasterizarlas con point_in_polygon; deja un pequeno hueco central que
-# sugiere el lomo/canal del libro).
-PAGES = [
-    [(2, 5), (11.4, 3.8), (11.4, 20.2), (2, 19)],
-    [(22, 5), (12.6, 3.8), (12.6, 20.2), (22, 19)],
-]
-
-
-def point_in_polygon(x, y, poly):
-    inside = False
-    n = len(poly)
-    j = n - 1
-    for i in range(n):
-        xi, yi = poly[i]
-        xj, yj = poly[j]
-        if ((yi > y) != (yj > y)) and (x < (xj - xi) * (y - yi) / (yj - yi) + xi):
-            inside = not inside
-        j = i
-    return inside
+MASKABLE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#262624"/>
+  <g transform="translate(512,512) scale(0.72) translate(-512,-512)">
+    <g transform="translate(-14,52)">
+      <rect x="239" y="194" width="630" height="450" rx="44" fill="none" stroke="#FAF9F5" stroke-width="18" opacity="0.55" transform="rotate(8 554 419)"/>
+      <rect x="179" y="284" width="630" height="450" rx="44" fill="#D97757" transform="rotate(-6 494 509)"/>
+      <text x="494" y="584" text-anchor="middle" font-family="'DejaVu Sans', Arial, sans-serif" font-weight="700" font-size="300" fill="#262624" transform="rotate(-6 494 509)">Ab</text>
+    </g>
+  </g>
+</svg>
+"""
 
 
-def render(size, padding_frac, rounded=True):
-    pad = size * padding_frac
-    scale = (size - 2 * pad) / 24
-    polys = [[(pad + px * scale, pad + py * scale) for px, py in page] for page in PAGES]
-    corner_r = size * 0.18 if rounded else 0
-
-    rows = []
-    for y in range(size):
-        row = bytearray()
-        for x in range(size):
-            in_bg = True
-            if rounded:
-                cx = min(max(x, corner_r), size - corner_r)
-                cy = min(max(y, corner_r), size - corner_r)
-                if (x < corner_r or x > size - corner_r) and (y < corner_r or y > size - corner_r):
-                    if (x - cx) ** 2 + (y - cy) ** 2 > corner_r ** 2:
-                        in_bg = False
-            if not in_bg:
-                row.extend((0, 0, 0, 0))
-            elif any(point_in_polygon(x + 0.5, y + 0.5, poly) for poly in polys):
-                row.extend(FG)
-            else:
-                row.extend(BG)
-        rows.append(bytes(row))
-    return rows
-
-
-def write_png(path, size, rows):
-    def chunk(tag, data):
-        return struct.pack(">I", len(data)) + tag + data + struct.pack(">I", zlib.crc32(tag + data))
-
-    sig = b"\x89PNG\r\n\x1a\n"
-    ihdr = struct.pack(">IIBBBBB", size, size, 8, 6, 0, 0, 0)
-    raw = b"".join(b"\x00" + row for row in rows)
-    idat = zlib.compress(raw, 9)
-    png = sig + chunk(b"IHDR", ihdr) + chunk(b"IDAT", idat) + chunk(b"IEND", b"")
-    path.write_bytes(png)
-    print(f"  -> {path.relative_to(ROOT)} ({size}x{size})")
+def render_svg_file(svg_path, out_path, size, transparent=False):
+    drawing = svg2rlg(str(svg_path))
+    dpi = 72 * (size / drawing.width)
+    kwargs = {"fmt": "PNG", "dpi": dpi}
+    if transparent:
+        kwargs.update(bg=TRANSPARENT, backendFmt="RGBA")
+    renderPM.drawToFile(drawing, str(out_path), **kwargs)
+    print(f"  -> {out_path.relative_to(ROOT)} ({size}x{size})")
 
 
 def main():
-    write_png(OUT / "icon-192.png", 192, render(192, padding_frac=0.22))
-    write_png(OUT / "icon-512.png", 512, render(512, padding_frac=0.22))
-    write_png(OUT / "icon-maskable-512.png", 512, render(512, padding_frac=0.32, rounded=False))
+    render_svg_file(SRC, ICONS / "icon-192.png", 192, transparent=True)
+    render_svg_file(SRC, ICONS / "icon-512.png", 512, transparent=True)
+
+    maskable_src = ICONS / "_maskable_source.svg"
+    maskable_src.write_text(MASKABLE_SVG, encoding="utf-8")
+    render_svg_file(maskable_src, ICONS / "icon-maskable-512.png", 512, transparent=False)
+    maskable_src.unlink()
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ import { initRouter } from "./router.js";
 const topnav = document.getElementById("topnav");
 const mount = document.getElementById("app");
 
-document.getElementById("brand-mark").innerHTML = icon("book");
+document.getElementById("brand-mark").innerHTML = '<img src="icons/icon.svg" alt="" width="28" height="28">';
 
 topnav.innerHTML = navLinks
   .map(
