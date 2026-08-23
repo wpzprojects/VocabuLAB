@@ -33,7 +33,7 @@ export async function render(container) {
     errorMsg
   );
 
-  const resultWrap = el("div", { hidden: true });
+  const resultWrap = el("div", { hidden: true, style: "margin-top:var(--space-4)" });
   container.append(resultWrap);
 
   translateBtn.addEventListener("click", async () => {
