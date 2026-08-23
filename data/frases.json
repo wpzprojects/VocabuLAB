@@ -1,0 +1,986 @@
+[
+  {
+    "id": "ctpbos3Hhqw",
+    "categoria": "Saludar y presentarse",
+    "frase_ing": "How are you?",
+    "frase_esp": "¿Quién eres tú?",
+    "notas_uso": "______",
+    "aprendida": false
+  },
+  {
+    "id": "r2nD7QETTRw",
+    "categoria": "Saludar y presentarse",
+    "frase_ing": "What’s your name?",
+    "frase_esp": "¿Cual es tu nombre?",
+    "notas_uso": "______",
+    "aprendida": false
+  },
+  {
+    "id": "t0I0MljppLs",
+    "categoria": "Saludar y presentarse",
+    "frase_ing": "Where do you live?",
+    "frase_esp": "¿Dónde vives?",
+    "notas_uso": "______",
+    "aprendida": false
+  },
+  {
+    "id": "svqRihgBIuQ",
+    "categoria": "Saludar y presentarse",
+    "frase_ing": "Hi, I’m Wilsson. Nice to meet you",
+    "frase_esp": "Hola, mi nombre es Wilsson, encantado de conocerte",
+    "notas_uso": "______",
+    "aprendida": false
+  },
+  {
+    "id": "t1ep1k3zZFU",
+    "categoria": "Saludar y presentarse",
+    "frase_ing": "What do you do for a living?",
+    "frase_esp": "¿Qué haces para vivir?",
+    "notas_uso": "______",
+    "aprendida": false
+  },
+  {
+    "id": "tw6URmHrQas",
+    "categoria": "Saludar y presentarse",
+    "frase_ing": "What´s going on?",
+    "frase_esp": "¿Que está pasando?",
+    "notas_uso": "______",
+    "aprendida": false
+  },
+  {
+    "id": "rDkxMixLN0Q",
+    "categoria": "Saludar y presentarse",
+    "frase_ing": "What are you doing?",
+    "frase_esp": "¿Que estas haciendo?",
+    "notas_uso": "______",
+    "aprendida": false
+  },
+  {
+    "id": "ujffExKXzm4",
+    "categoria": "Saludar y presentarse",
+    "frase_ing": "I’m from Colombia",
+    "frase_esp": "______",
+    "notas_uso": "______",
+    "aprendida": false
+  },
+  {
+    "id": "N1R5GF_6s-E",
+    "categoria": "Saludar y presentarse",
+    "frase_ing": "It's me Jhon",
+    "frase_esp": "Hola, soy yo, Jhon",
+    "notas_uso": "Se usa en llamadas telefonicas cuando preguntan ¿quien es?",
+    "aprendida": false
+  },
+  {
+    "id": "izpTdBSSHgo",
+    "categoria": "Saludar y presentarse",
+    "frase_ing": "Nice to see you again",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "zkEMWk7mSa0",
+    "categoria": "Despedidas",
+    "frase_ing": "Take care / See you later",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "Alg-wrANOIA",
+    "categoria": "Despedidas",
+    "frase_ing": "It was nice meeting you",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "6peuqmZXhL0",
+    "categoria": "Hacer preguntas",
+    "frase_ing": "How long have you been living here?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "mhM2v1hAuBA",
+    "categoria": "Hacer preguntas",
+    "frase_ing": "What do you like to do in your free time?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "I81VvLGcpeo",
+    "categoria": "Hacer preguntas",
+    "frase_ing": "Could you tell me more about that?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "w-YozGcPWK4",
+    "categoria": "Cambiar de tema",
+    "frase_ing": "By the way, did you hear about…?",
+    "frase_esp": "Por cierto, ¿has oído hablar de…?",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "BajUihRUmmg",
+    "categoria": "Cambiar de tema",
+    "frase_ing": "Speaking of that…",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "a5Q_tDG3Cpg",
+    "categoria": "Hablar de uno mismo",
+    "frase_ing": "I’ve been learning English for a year",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "cUPY5vhXyCM",
+    "categoria": "Hablar de uno mismo",
+    "frase_ing": "I enjoy traveling and learning new things",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "7yEMkiUeyO8",
+    "categoria": "Hablar de uno mismo",
+    "frase_ing": "I'm passionate about technology",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "iaua6OhLXyY",
+    "categoria": "Hablar de uno mismo",
+    "frase_ing": "In my free time, I like reading",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "ApVQYxTo6yI",
+    "categoria": "Agradecimientos y cortesia",
+    "frase_ing": "I really appreciate it",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "gK2SJ6tH-rQ",
+    "categoria": "Agradecimientos y cortesia",
+    "frase_ing": "Excuse me / Sorry",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "kDZbQqUAB9Q",
+    "categoria": "Frases de relleno",
+    "frase_ing": "I see what you mean",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "rxrzgVmZMtY",
+    "categoria": "Frases de relleno",
+    "frase_ing": "Anyway, as I was saying",
+    "frase_esp": "De todos modos, como decía",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "YVi7dzhDdw4",
+    "categoria": "Respuestas basicas",
+    "frase_ing": "I see / That makes sense",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "vouozIJ6yrM",
+    "categoria": "Respuestas basicas",
+    "frase_ing": "Let me think… / That's a good question",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "JH0nPqvXbAc",
+    "categoria": "Respuestas basicas",
+    "frase_ing": "I’m not so sure about that",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "AFTBhJA7s38",
+    "categoria": "Respuestas basicas",
+    "frase_ing": "In my opinion, it depends",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "yVGw1oDXICk",
+    "categoria": "Respuestas basicas",
+    "frase_ing": "I think that's a great idea",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "YrkXwBN3Z1Q",
+    "categoria": "Respuestas basicas",
+    "frase_ing": "From my point of view…",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "14GYqlBI940",
+    "categoria": "Respuestas basicas",
+    "frase_ing": "Honestly, I don't agree",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "GjJYDr2Gm4E",
+    "categoria": "Respuestas basicas",
+    "frase_ing": "That’s unbelievable!",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "tWiC0F5-auI",
+    "categoria": "Opiniones y sentimientos",
+    "frase_ing": "I think that’s a great idea",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "M8I-ZNnKQ3E",
+    "categoria": "Opiniones y sentimientos",
+    "frase_ing": "Honestly, I’m not sure",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "DnZMh_TB2iE",
+    "categoria": "Opiniones y sentimientos",
+    "frase_ing": "I'm feeling a bit tired today",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "zbn1t_qaSGM",
+    "categoria": "Opiniones y sentimientos",
+    "frase_ing": "I'm proud of that achievement",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "EgK2ABo4xz0",
+    "categoria": "Opiniones y sentimientos",
+    "frase_ing": "That sounds frustrating",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "ZvLjw846zrM",
+    "categoria": "En el trabajo",
+    "frase_ing": "Could you clarify that, please?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "sw7Q1B-bWc8",
+    "categoria": "En el trabajo",
+    "frase_ing": "Let’s touch base tomorrow",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "v3Rk9nrSAM0",
+    "categoria": "Reuniones",
+    "frase_ing": "Can you hear me well?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "uX_DYkY2x90",
+    "categoria": "Reuniones",
+    "frase_ing": "Let me share my screen",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "vsEyek05Ft4",
+    "categoria": "Reuniones",
+    "frase_ing": "Let’s get started",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "jUDD2TcjWrY",
+    "categoria": "Reuniones",
+    "frase_ing": "Could you repeat that?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "WBgewwlhfxE",
+    "categoria": "Reuniones",
+    "frase_ing": "Let’s take a short break",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "BXwiN8eeOEQ",
+    "categoria": "Presentaciones",
+    "frase_ing": "Any questions so far?",
+    "frase_esp": "¿Algúna pregunta hasta acá?",
+    "notas_uso": "",
+    "aprendida": true
+  },
+  {
+    "id": "gw6LWDBX4og",
+    "categoria": "Presentaciones",
+    "frase_ing": "In conclusion…",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "g1E0GeWcBpg",
+    "categoria": "Dar discursos",
+    "frase_ing": "Today I’m going to talk about…",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "XpijjIzQ5b0",
+    "categoria": "Correos electronicos",
+    "frase_ing": "Please let me know if you have any questions",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "u4-091qxGeQ",
+    "categoria": "Correos electronicos",
+    "frase_ing": "I look forward to your reply",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "ZWJZDUREdvM",
+    "categoria": "Correos electronicos",
+    "frase_ing": "Attached you will find",
+    "frase_esp": "Adjunto encontrarás",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "lXwfQEOMsW0",
+    "categoria": "Correos electronicos",
+    "frase_ing": "Thank you for your time",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "V3bb2MY2l78",
+    "categoria": "Resolucion de problemas",
+    "frase_ing": "We need to find a solution",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "X2vfPn3gxgc",
+    "categoria": "Resolucion de problemas",
+    "frase_ing": "This issue needs urgent attention",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "0jyDvREcK0w",
+    "categoria": "Resolucion de problemas",
+    "frase_ing": "Can we schedule a follow-up?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "hGqqRS35PAw",
+    "categoria": "Coordinacion de tareas",
+    "frase_ing": "What’s the deadline?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "dvthKLg5e6o",
+    "categoria": "Coordinacion de tareas",
+    "frase_ing": "Can you send me an update?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "XwR2X81BYS0",
+    "categoria": "Coordinacion de tareas",
+    "frase_ing": "Let’s split the tasks",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "FEcFTAYldIY",
+    "categoria": "Coordinacion de tareas",
+    "frase_ing": "When should we meet again?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "fss4L2XJ1L4",
+    "categoria": "Paso a paso de una actividad",
+    "frase_ing": "I’ll take care of it",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "Yh-aoKRukF0",
+    "categoria": "Llamadas",
+    "frase_ing": "Can you hear me clearly?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "uYiJHZm0zJg",
+    "categoria": "Llamadas",
+    "frase_ing": "You’re on mute",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "GrozEOn7boQ",
+    "categoria": "Llamadas",
+    "frase_ing": "I’ll call you back later",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "5jbl5_ifajA",
+    "categoria": "Llamadas",
+    "frase_ing": "Thanks for joining the call",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "B0b32p9VmVA",
+    "categoria": "Entrevistas",
+    "frase_ing": "Tell me about yourself",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "lm3i4Pb0dNo",
+    "categoria": "Entrevistas",
+    "frase_ing": "What are your strengths?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "MQYpNBhnhOY",
+    "categoria": "Entrevistas",
+    "frase_ing": "Do you have any questions for us?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "zmg8qcpVoKE",
+    "categoria": "Aeropuerto",
+    "frase_ing": "Where is the boarding gate?",
+    "frase_esp": "¿Dónde está la puerta de abordaje?",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "3mQ9wnagEWo",
+    "categoria": "Aeropuerto",
+    "frase_ing": "I have a connecting flight to Miami",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "y5sn-h__qQQ",
+    "categoria": "Aeropuerto",
+    "frase_ing": "Where is the check-in counter?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "do1224C3IUI",
+    "categoria": "Aeropuerto",
+    "frase_ing": "I’d like to check my luggage",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "5uH32Tmqx3g",
+    "categoria": "Aeropuerto",
+    "frase_ing": "What time is boarding?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "pAmtVhc5fgU",
+    "categoria": "Transporte terrestre",
+    "frase_ing": "I’ll be staying for two weeks",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "E2dIN-U5reI",
+    "categoria": "Transporte terrestre",
+    "frase_ing": "How much does the ride cost?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "KJb39D3xGnU",
+    "categoria": "Transporte terrestre",
+    "frase_ing": "Can you take me to this address?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "Ihd4v7KdKbk",
+    "categoria": "Vehiculos",
+    "frase_ing": "I’d like to rent a car",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "f48p1FvLzZE",
+    "categoria": "Vehiculos",
+    "frase_ing": "How much is it per day?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "u5vwvUW4_-A",
+    "categoria": "Vehiculos",
+    "frase_ing": "Can I return it at another location?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "Bj1ACOYYm3Q",
+    "categoria": "Hotel",
+    "frase_ing": "I have a reservation under Wilsson",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "aEKNQYzs20U",
+    "categoria": "Hotel",
+    "frase_ing": "What time is check-out?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "3AyN9iLkBRk",
+    "categoria": "Hotel",
+    "frase_ing": "Is breakfast included?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "LiJ0qHDdihw",
+    "categoria": "Restaurante",
+    "frase_ing": "I’ll have the chicken salad, please",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "SIVKn-585P4",
+    "categoria": "Restaurante",
+    "frase_ing": "Could I get this to go?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "DcOHs9P8qi0",
+    "categoria": "Compras",
+    "frase_ing": "How much does this cost?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "onBBLQ5Klno",
+    "categoria": "Compras",
+    "frase_ing": "Do you have this in another size?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "BB4yh69wPu8",
+    "categoria": "Farmacia y hospital",
+    "frase_ing": "I have a headache",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "HbSzaFeIEyw",
+    "categoria": "Farmacia y hospital",
+    "frase_ing": "Do you have something for a cold?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "RRm_4YGhBO0",
+    "categoria": "Farmacia y hospital",
+    "frase_ing": "Is there a pharmacy nearby?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "DCaScq002fE",
+    "categoria": "Pedir ayuda",
+    "frase_ing": "Excuse me, how do I get to the subway?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "u51wwMi-5v4",
+    "categoria": "Pedir ayuda",
+    "frase_ing": "Can you help me with this?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "wM6Om3onW5s",
+    "categoria": "Emergencias",
+    "frase_ing": "I lost my passport",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "_u78FplxnC0",
+    "categoria": "Emergencias",
+    "frase_ing": "I don’t feel well",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "DjczzNTmQbo",
+    "categoria": "Conectores comunes",
+    "frase_ing": "By the way…",
+    "frase_esp": "Por cierto...",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "Uyr1dMYGB6Y",
+    "categoria": "Conectores comunes",
+    "frase_ing": "In other words…",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "g652xi14v-8",
+    "categoria": "Debates o foros",
+    "frase_ing": "I’d like to add something",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "c-stGvy6t4Q",
+    "categoria": "Debates o foros",
+    "frase_ing": "I see your point, but...",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "XBcb5__WCI4",
+    "categoria": "Participar en clase",
+    "frase_ing": "Want to review after class?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "Rpr229gAZlE",
+    "categoria": "Atencion al cliente",
+    "frase_ing": "I need help with my order",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "c9xXIyIalIY",
+    "categoria": "Atencion al cliente",
+    "frase_ing": "Can I get a refund?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "_QT2GpYlWrE",
+    "categoria": "Modismos",
+    "frase_ing": "Break the ice",
+    "frase_esp": "Romper el hielo",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "e09xbAZ3nZc",
+    "categoria": "Modismos",
+    "frase_ing": "It’s not my cup of tea",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "hgz4wLXd3FM",
+    "categoria": "Modismos",
+    "frase_ing": "On the same page",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "Dee2UZiBnCg",
+    "categoria": "Modismos",
+    "frase_ing": "A piece of cake",
+    "frase_esp": "Pan comido",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "QkSBcNOCST0",
+    "categoria": "Frases para ganar tiempo",
+    "frase_ing": "Let me see...",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": true
+  },
+  {
+    "id": "vOScamqhWGM",
+    "categoria": "Frases para ganar tiempo",
+    "frase_ing": "That’s a tough one...",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "8vUFJ0ZWGH0",
+    "categoria": "Frases para ganar tiempo",
+    "frase_ing": "Just give me a second",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "F7kKGOJgygM",
+    "categoria": "Solicitudes y peticiones",
+    "frase_ing": "Would you mind repeating that?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "qNYqSqhlb5A",
+    "categoria": "Solicitudes y peticiones",
+    "frase_ing": "Can I ask you a favor?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "NXnzae93fws",
+    "categoria": "Solicitudes y peticiones",
+    "frase_ing": "May I borrow your pen?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "Ag6O72u0QqY",
+    "categoria": "Solicitudes y peticiones",
+    "frase_ing": "I’d appreciate your help",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "m0aKDOeDKHg",
+    "categoria": "Disculpas y explicaciones",
+    "frase_ing": "I’m sorry for the delay",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "ddfIm4n6Yss",
+    "categoria": "Disculpas y explicaciones",
+    "frase_ing": "It was a misunderstanding",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "cBu4JymQ4Zw",
+    "categoria": "Disculpas y explicaciones",
+    "frase_ing": "I apologize for the inconvenience",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "oeI2OLU8JgM",
+    "categoria": "Disculpas y explicaciones",
+    "frase_ing": "I’ll make sure it doesn’t happen again",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "AU0UgLdRUP0",
+    "categoria": "Confirmaciones y aclaraciones",
+    "frase_ing": "Did I get that right?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "iJOnHJqtvE8",
+    "categoria": "Confirmaciones y aclaraciones",
+    "frase_ing": "Just to be clear...",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "l8D1_ooBLZs",
+    "categoria": "Solicitar hablar despacio",
+    "frase_ing": "Can you speak more slowly?",
+    "frase_esp": "______",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "EhBhSKnKcXY",
+    "categoria": "Solicitar hablar despacio",
+    "frase_ing": "How do you pronounce this?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "rBvVfsvfPDk",
+    "categoria": "Solicitar hablar despacio",
+    "frase_ing": "What does this word mean?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "BUrFwQ-HfQc",
+    "categoria": "Solicitar hablar despacio",
+    "frase_ing": "What’s the difference between X and Y?",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "MUSbSia3INY",
+    "categoria": "A1",
+    "frase_ing": "Oh my God",
+    "frase_esp": "",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "QvjYYcT5llY",
+    "categoria": "A1",
+    "frase_ing": "We're going to talk about...",
+    "frase_esp": "Vamos a hablar de...",
+    "notas_uso": "",
+    "aprendida": false
+  },
+  {
+    "id": "MrtPGnIwI_8",
+    "categoria": "A1",
+    "frase_ing": "As you can see...",
+    "frase_esp": "Como puedes ver...",
+    "notas_uso": "",
+    "aprendida": false
+  }
+]

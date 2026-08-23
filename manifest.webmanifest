@@ -1,0 +1,17 @@
+{
+  "name": "VocabuLAB",
+  "short_name": "VocabuLAB",
+  "description": "Practica vocabulario y frases en ingles: ver, traducir, practicar y examinarte.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1714",
+  "theme_color": "#0d9488",
+  "orientation": "any",
+  "lang": "es-CO",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

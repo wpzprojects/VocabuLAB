@@ -1,0 +1,6122 @@
+[
+  {
+    "id": "ZzBRbwWqQLA",
+    "lista": "1",
+    "palabra_ing": "Arrow",
+    "palabra_esp": "Flecha",
+    "aprendida": true,
+    "contexto": "I've never used a bow and arrow"
+  },
+  {
+    "id": "HSD8j8UUP4o",
+    "lista": "1",
+    "palabra_ing": "As well",
+    "palabra_esp": "También",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "73ypNpNJCSk",
+    "lista": "1",
+    "palabra_ing": "As well as",
+    "palabra_esp": "Así como",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "S_mEaAYvBHA",
+    "lista": "1",
+    "palabra_ing": "Ask to",
+    "palabra_esp": "Pedir",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "fiin3DglQHQ",
+    "lista": "1",
+    "palabra_ing": "Attempt",
+    "palabra_esp": "Intentar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "CzHwvlX-Wl8",
+    "lista": "1",
+    "palabra_ing": "Bit",
+    "palabra_esp": "Morder (verbo), poco (adjetivo)",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "HIQIdy63fLg",
+    "lista": "1",
+    "palabra_ing": "Border",
+    "palabra_esp": "Frontera",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "mh1qWzz2iOY",
+    "lista": "1",
+    "palabra_ing": "By the way",
+    "palabra_esp": "Por cierto",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "E-Cx9Bh5Gh8",
+    "lista": "1",
+    "palabra_ing": "Carved",
+    "palabra_esp": "Tallado, esculpido",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "-Rdpz0Sfp2A",
+    "lista": "1",
+    "palabra_ing": "Chamber",
+    "palabra_esp": "Cámara, sala, aposento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "QqLGONZCG7w",
+    "lista": "1",
+    "palabra_ing": "Chest",
+    "palabra_esp": "Pecho",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "KmG1CV4nP9k",
+    "lista": "1",
+    "palabra_ing": "Confident",
+    "palabra_esp": "Seguro",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "r2LL-cvzUms",
+    "lista": "1",
+    "palabra_ing": "Courage",
+    "palabra_esp": "Coraje",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "tutCZjkgMhQ",
+    "lista": "1",
+    "palabra_ing": "Crowded",
+    "palabra_esp": "Atestado, lleno",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "XmBL1oR4uK0",
+    "lista": "1",
+    "palabra_ing": "Crouds",
+    "palabra_esp": "Multitudes",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "l3StZBdB5NA",
+    "lista": "1",
+    "palabra_ing": "Deployment",
+    "palabra_esp": "Despliegue",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "0jvhSG0DqQY",
+    "lista": "1",
+    "palabra_ing": "Despite",
+    "palabra_esp": "A pesar de (además)",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "zbGZPz3hqu8",
+    "lista": "1",
+    "palabra_ing": "Dive",
+    "palabra_esp": "Sumergirse, bucear",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "KlhpqXiRyqk",
+    "lista": "1",
+    "palabra_ing": "Doorstep",
+    "palabra_esp": "Umbral",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "6qGc9l8OY8E",
+    "lista": "1",
+    "palabra_ing": "Draw",
+    "palabra_esp": "Sacar, levantar, dibujar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "n83m-Q3VFIs",
+    "lista": "1",
+    "palabra_ing": "Dumb",
+    "palabra_esp": "Mudo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "c-s8c8fxXfQ",
+    "lista": "1",
+    "palabra_ing": "Ecouraged",
+    "palabra_esp": "Motivado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Q2bv7KtYaO8",
+    "lista": "1",
+    "palabra_ing": "Either",
+    "palabra_esp": "Cualquiera",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "jDYd0j6G5qI",
+    "lista": "1",
+    "palabra_ing": "Elbow",
+    "palabra_esp": "Codo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "y26qv04ZLUs",
+    "lista": "1",
+    "palabra_ing": "Embarrassed",
+    "palabra_esp": "Apenado, avergonzado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ZsKH2sclaRY",
+    "lista": "1",
+    "palabra_ing": "Embrace",
+    "palabra_esp": "Abarcar, abrazar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "dmPom4qzZOM",
+    "lista": "1",
+    "palabra_ing": "Enhanced",
+    "palabra_esp": "Mejorado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "vHWaVZfaBTA",
+    "lista": "1",
+    "palabra_ing": "Feed",
+    "palabra_esp": "Alimentar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "YGhrMgza2do",
+    "lista": "1",
+    "palabra_ing": "Feith",
+    "palabra_esp": "Fe",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "wnANJtx9MIs",
+    "lista": "1",
+    "palabra_ing": "Figure out",
+    "palabra_esp": "Averiguar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "x70m2lURcTE",
+    "lista": "1",
+    "palabra_ing": "Flour",
+    "palabra_esp": "Harina",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "1bJsPjDIyjQ",
+    "lista": "1",
+    "palabra_ing": "For instance",
+    "palabra_esp": "Por ejemplo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ci71FMsg8Jk",
+    "lista": "1",
+    "palabra_ing": "Further",
+    "palabra_esp": "Mas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "C_vtNGS8WC0",
+    "lista": "1",
+    "palabra_ing": "Garlic",
+    "palabra_esp": "Ajo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "AD7eknDhI7E",
+    "lista": "1",
+    "palabra_ing": "Go on",
+    "palabra_esp": "Ocurrir",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "ytAibkLmxKI",
+    "lista": "1",
+    "palabra_ing": "Greedy",
+    "palabra_esp": "Avaro, codicioso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "IYBudND1pS0",
+    "lista": "1",
+    "palabra_ing": "Hug",
+    "palabra_esp": "Abrazar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "--Ktr1oX7gc",
+    "lista": "1",
+    "palabra_ing": "Huge",
+    "palabra_esp": "Enorme",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "kDPDNxpymnk",
+    "lista": "1",
+    "palabra_ing": "Handsome",
+    "palabra_esp": "Elegante",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "2k-kHoQZQbA",
+    "lista": "1",
+    "palabra_ing": "Humble",
+    "palabra_esp": "Humilde",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "AhAnmc4x9_w",
+    "lista": "1",
+    "palabra_ing": "Harbor",
+    "palabra_esp": "Puerto",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "FnY0WxEMPoA",
+    "lista": "1",
+    "palabra_ing": "Injury",
+    "palabra_esp": "Lesión",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "V3XHywEPY5g",
+    "lista": "1",
+    "palabra_ing": "Illness",
+    "palabra_esp": "Enfermedad",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "UN_jNO47KB0",
+    "lista": "1",
+    "palabra_ing": "Issue/d",
+    "palabra_esp": "Asunto, emite/emitido",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "4AIkU6V7W3U",
+    "lista": "1",
+    "palabra_ing": "Issues",
+    "palabra_esp": "Problemas",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "IVINWvTqqyI",
+    "lista": "1",
+    "palabra_ing": "Jail",
+    "palabra_esp": "Carcel",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "CPtfUsKL9p0",
+    "lista": "1",
+    "palabra_ing": "Knee",
+    "palabra_esp": "Rodilla",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "gDrasFXKPhU",
+    "lista": "1",
+    "palabra_ing": "Knot",
+    "palabra_esp": "Nudo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "nIuGDoGnvdo",
+    "lista": "1",
+    "palabra_ing": "Labor",
+    "palabra_esp": "Mano de obra",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "gJIDl-l5m_M",
+    "lista": "1",
+    "palabra_ing": "Mad",
+    "palabra_esp": "Enojado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "NkWMYTTgats",
+    "lista": "1",
+    "palabra_ing": "Marvel",
+    "palabra_esp": "Maravilla",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "91rCqSW7I2U",
+    "lista": "1",
+    "palabra_ing": "Matter",
+    "palabra_esp": "Importar, importa",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "FnXWF4OlcJ4",
+    "lista": "1",
+    "palabra_ing": "Mesh",
+    "palabra_esp": "Malla",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "gerUrW9V4-k",
+    "lista": "1",
+    "palabra_ing": "Messy",
+    "palabra_esp": "Desordenado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "WcH_yLdYz6Y",
+    "lista": "1",
+    "palabra_ing": "Most of",
+    "palabra_esp": "La mayor parte de",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "3Agc5_09ZbE",
+    "lista": "1",
+    "palabra_ing": "No longer",
+    "palabra_esp": "Ya no",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "se1eiceD7ik",
+    "lista": "1",
+    "palabra_ing": "Offset",
+    "palabra_esp": "Compensar, desfase, desplazamiento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "2iGkS7Gicto",
+    "lista": "1",
+    "palabra_ing": "Ongoing",
+    "palabra_esp": "En curso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "3-4g_bvNrFU",
+    "lista": "1",
+    "palabra_ing": "Outcome, outcoms",
+    "palabra_esp": "Resultados",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "RgK7CnNvcdU",
+    "lista": "1",
+    "palabra_ing": "Outcoming",
+    "palabra_esp": "Próximo, Saliente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "lkQG5_kBmOc",
+    "lista": "1",
+    "palabra_ing": "Priceless",
+    "palabra_esp": "Invaluable",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "El8sudd_Rcs",
+    "lista": "1",
+    "palabra_ing": "Prompt",
+    "palabra_esp": "Inmediato, aviso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ie8REnEE2PM",
+    "lista": "1",
+    "palabra_ing": "Proud",
+    "palabra_esp": "Orgulloso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "jvAS_v2hrUA",
+    "lista": "1",
+    "palabra_ing": "Pick up",
+    "palabra_esp": "Levantar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "qzzuV4_Qo7U",
+    "lista": "1",
+    "palabra_ing": "Pick",
+    "palabra_esp": "Elegir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "AOHB7AJ56Y4",
+    "lista": "1",
+    "palabra_ing": "Quick",
+    "palabra_esp": "Rápido",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "vyb1pEdHGdA",
+    "lista": "1",
+    "palabra_ing": "Rather than",
+    "palabra_esp": "En vez de",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "YVtz1JvoACY",
+    "lista": "1",
+    "palabra_ing": "Rather",
+    "palabra_esp": "Preferir, más bien, bastante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "cB_zYUe7Hmc",
+    "lista": "1",
+    "palabra_ing": "Realize",
+    "palabra_esp": "Realizar, darse cuenta de",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "b1DSg7LLhso",
+    "lista": "1",
+    "palabra_ing": "Reliable",
+    "palabra_esp": "Confiable, seguro",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "hMep0-Z1h34",
+    "lista": "1",
+    "palabra_ing": "Release",
+    "palabra_esp": "Liberar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "vPEMlSGwY9k",
+    "lista": "1",
+    "palabra_ing": "Retrofit",
+    "palabra_esp": "Modernización",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "6Y_W4cLihhA",
+    "lista": "1",
+    "palabra_ing": "Reply",
+    "palabra_esp": "Responder",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "E8MUOMEXYOk",
+    "lista": "1",
+    "palabra_ing": "Rough",
+    "palabra_esp": "Aproximado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "W22WqGNskwU",
+    "lista": "1",
+    "palabra_ing": "Rubber",
+    "palabra_esp": "Goma",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "oP-YZHVjfd8",
+    "lista": "1",
+    "palabra_ing": "Shallow",
+    "palabra_esp": "Poco profundo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "aNNmsmxU_oE",
+    "lista": "1",
+    "palabra_ing": "Starving",
+    "palabra_esp": "Hambriento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "sZnxuSIG384",
+    "lista": "1",
+    "palabra_ing": "Strength",
+    "palabra_esp": "Fuerza, fortaleza",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "1Vtt50DGkUY",
+    "lista": "1",
+    "palabra_ing": "Spooky",
+    "palabra_esp": "Escalofriante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "wElWwLDZMyg",
+    "lista": "1",
+    "palabra_ing": "Such",
+    "palabra_esp": "Semejante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "YMnF3EBZPZs",
+    "lista": "1",
+    "palabra_ing": "So far",
+    "palabra_esp": "Hasta aqui",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "RAoPGf4DjxU",
+    "lista": "1",
+    "palabra_ing": "Still it",
+    "palabra_esp": "Aún así",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "2VFs9xphpnM",
+    "lista": "1",
+    "palabra_ing": "Straight",
+    "palabra_esp": "Derecho",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "36cKykoS__M",
+    "lista": "1",
+    "palabra_ing": "Survey",
+    "palabra_esp": "Encuesta, estudio, investigación",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "c-SfgEexUv8",
+    "lista": "1",
+    "palabra_ing": "Shy",
+    "palabra_esp": "Timido",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "mnRDSLWYFwc",
+    "lista": "1",
+    "palabra_ing": "Therefore",
+    "palabra_esp": "En consecuencia, por ende",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "tt1PiLO4x28",
+    "lista": "1",
+    "palabra_ing": "Threat",
+    "palabra_esp": "Amenaza",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "SPJ8u7iibWk",
+    "lista": "1",
+    "palabra_ing": "Tricky",
+    "palabra_esp": "Difícil, complicado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "oaEJO8DZO2k",
+    "lista": "1",
+    "palabra_ing": "Truly",
+    "palabra_esp": "Verdaderamente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "cxcQV7Tjz20",
+    "lista": "1",
+    "palabra_ing": "Vessel",
+    "palabra_esp": "Buque, recipiente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "hbfobmAEAoI",
+    "lista": "1",
+    "palabra_ing": "Weird",
+    "palabra_esp": "Raro, extraño",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "zgswzZB8KGc",
+    "lista": "1",
+    "palabra_ing": "Worksheet",
+    "palabra_esp": "Taller, hoja de trabajo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "iL77nqUioXo",
+    "lista": "1",
+    "palabra_ing": "Workshop",
+    "palabra_esp": "Curso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "iKX2aHd7Pjc",
+    "lista": "1",
+    "palabra_ing": "Worth",
+    "palabra_esp": "Vale la pena",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "cLZrRd4iv88",
+    "lista": "1",
+    "palabra_ing": "You gotta be kidding me",
+    "palabra_esp": "Tienes que estar bromeando",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "tFDaedi42Ys",
+    "lista": "1",
+    "palabra_ing": "Whatever you mean",
+    "palabra_esp": "Lo que sea que hayas querido decir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "rUiMx4p9L70",
+    "lista": "1",
+    "palabra_ing": "ASAP",
+    "palabra_esp": "As soon as posible",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "qCn91A95E3g",
+    "lista": "1",
+    "palabra_ing": "FYI",
+    "palabra_esp": "For your information",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "i-CCJGMKDMM",
+    "lista": "2",
+    "palabra_ing": "Accurate",
+    "palabra_esp": "Preciso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "dRc-gMSpQsw",
+    "lista": "2",
+    "palabra_ing": "Accuracy",
+    "palabra_esp": "Exactitud",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "BH6oMa9b4Mg",
+    "lista": "2",
+    "palabra_ing": "Alike",
+    "palabra_esp": "Similar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "6Uz7LRkTCXc",
+    "lista": "2",
+    "palabra_ing": "And so on",
+    "palabra_esp": "Etcétera",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "MqPPGJnOvRk",
+    "lista": "2",
+    "palabra_ing": "As far",
+    "palabra_esp": "En cuanto a",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "z689SjCF2bY",
+    "lista": "2",
+    "palabra_ing": "As long as",
+    "palabra_esp": "Mientras",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "dCBxA-8Rlh8",
+    "lista": "2",
+    "palabra_ing": "As of",
+    "palabra_esp": "A partir de",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "c4EDUgcBa_w",
+    "lista": "2",
+    "palabra_ing": "At least",
+    "palabra_esp": "Al menos",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "GaLhGoDTRBA",
+    "lista": "2",
+    "palabra_ing": "Assessment",
+    "palabra_esp": "Evaluación",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "SNM4GtxBYRo",
+    "lista": "2",
+    "palabra_ing": "Asset",
+    "palabra_esp": "Activo (propiedad con valor)",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "LGzUVLtTmgM",
+    "lista": "2",
+    "palabra_ing": "Aware",
+    "palabra_esp": "Consciente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "gZxKBUX05C8",
+    "lista": "2",
+    "palabra_ing": "Beings",
+    "palabra_esp": "Seres",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "GNTDnY3Ki_I",
+    "lista": "2",
+    "palabra_ing": "Blow",
+    "palabra_esp": "Explotar, soplar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Kzem97-8DZE",
+    "lista": "2",
+    "palabra_ing": "Cabbage",
+    "palabra_esp": "Repollo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "C6LG6y27jn0",
+    "lista": "2",
+    "palabra_ing": "Cinnamon",
+    "palabra_esp": "Canela",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "VUzVPv-xVcg",
+    "lista": "2",
+    "palabra_ing": "Chart",
+    "palabra_esp": "Cuadro, tabla",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "wP81rCXvr2A",
+    "lista": "2",
+    "palabra_ing": "Chewing",
+    "palabra_esp": "Masticando",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "a-zHAfwlvnc",
+    "lista": "2",
+    "palabra_ing": "Concerned",
+    "palabra_esp": "Preocupado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "YJZCUs2evTs",
+    "lista": "2",
+    "palabra_ing": "Concerns",
+    "palabra_esp": "Afecta, preocupaciones",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "UW4cTUiNPEI",
+    "lista": "2",
+    "palabra_ing": "Constrain",
+    "palabra_esp": "Obligar",
+    "aprendida": false,
+    "contexto": "Children are constrained to work in the way the book dictates"
+  },
+  {
+    "id": "wlTI7aTsiD0",
+    "lista": "2",
+    "palabra_ing": "Crate",
+    "palabra_esp": "Caja",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "4aBDp6Z1ezc",
+    "lista": "2",
+    "palabra_ing": "Desapoinment",
+    "palabra_esp": "Decepción",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "EzloWSXWSfs",
+    "lista": "2",
+    "palabra_ing": "Disclaimer",
+    "palabra_esp": "Advertencia, descargo de responsabilidad",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "pFGQnYIH6RY",
+    "lista": "2",
+    "palabra_ing": "Disturbing",
+    "palabra_esp": "Inquietante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "K2XxZpwvp5I",
+    "lista": "2",
+    "palabra_ing": "Doubt",
+    "palabra_esp": "Duda",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "8hUVhVEupqY",
+    "lista": "2",
+    "palabra_ing": "Draft(ing)",
+    "palabra_esp": "Borrador (redacción)",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "YNSKSnDXy6c",
+    "lista": "2",
+    "palabra_ing": "Due to",
+    "palabra_esp": "Debido a",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "pLhmyjyEfK0",
+    "lista": "2",
+    "palabra_ing": "Dust",
+    "palabra_esp": "Polvo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "AcbA9oVXYDI",
+    "lista": "2",
+    "palabra_ing": "Duty",
+    "palabra_esp": "Deber u obligación",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "kjdlbCCQc3E",
+    "lista": "2",
+    "palabra_ing": "Dying",
+    "palabra_esp": "Muriendo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ixZ6daRTawQ",
+    "lista": "2",
+    "palabra_ing": "Endeavour",
+    "palabra_esp": "Empeño",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "FoHvLStyoso",
+    "lista": "2",
+    "palabra_ing": "Fair",
+    "palabra_esp": "Justo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Jk06IpfXH34",
+    "lista": "2",
+    "palabra_ing": "Fancy",
+    "palabra_esp": "Elegante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "UV2H9qs4Ruw",
+    "lista": "2",
+    "palabra_ing": "Fist",
+    "palabra_esp": "Puño",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "2d9-GDYwXF8",
+    "lista": "2",
+    "palabra_ing": "Forbidden",
+    "palabra_esp": "Prohibido",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "v1oFb8T6N9A",
+    "lista": "2",
+    "palabra_ing": "Get fired",
+    "palabra_esp": "Despedido",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "_ae2mIjyqBw",
+    "lista": "2",
+    "palabra_ing": "Hang",
+    "palabra_esp": "Colgar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "eLTKfrqvvBY",
+    "lista": "2",
+    "palabra_ing": "Hang out",
+    "palabra_esp": "Pasar el rato, salir con",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "7Bq27oTBG14",
+    "lista": "2",
+    "palabra_ing": "Harmful",
+    "palabra_esp": "Dañino",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "Zn0ocDtwC0M",
+    "lista": "2",
+    "palabra_ing": "Harvest(ed)",
+    "palabra_esp": "Cosecha (cosechado)",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "-y3MrtgDJf8",
+    "lista": "2",
+    "palabra_ing": "Highlight",
+    "palabra_esp": "Destacado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "cB4hxPlvg4U",
+    "lista": "2",
+    "palabra_ing": "Hilarious",
+    "palabra_esp": "Gracioso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "KTMGfyFr36o",
+    "lista": "2",
+    "palabra_ing": "Hips",
+    "palabra_esp": "Caderas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "DQACMR6HcA4",
+    "lista": "2",
+    "palabra_ing": "Hired",
+    "palabra_esp": "Contratado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "3yvwiBzRrfI",
+    "lista": "2",
+    "palabra_ing": "Host",
+    "palabra_esp": "Anfitrión",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "qHFtti28ELM",
+    "lista": "2",
+    "palabra_ing": "Human being",
+    "palabra_esp": "Ser humano",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "z3ebUDbVpWA",
+    "lista": "2",
+    "palabra_ing": "Hunger",
+    "palabra_esp": "Hambre",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "4yoBn-cUdIU",
+    "lista": "2",
+    "palabra_ing": "I don't care",
+    "palabra_esp": "No me importa",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "nweT72Cl1Ak",
+    "lista": "2",
+    "palabra_ing": "I think so",
+    "palabra_esp": "Creo que si",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Xz5SFZOE-XE",
+    "lista": "2",
+    "palabra_ing": "Jealous",
+    "palabra_esp": "Celoso, envidioso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "G0Sp_GHy-Ck",
+    "lista": "2",
+    "palabra_ing": "Lame",
+    "palabra_esp": "Aburrido",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "sTI8w3SEyQI",
+    "lista": "2",
+    "palabra_ing": "Leader",
+    "palabra_esp": "Lider, dirigente o jefe",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "5aJZHNqABz4",
+    "lista": "2",
+    "palabra_ing": "Lead",
+    "palabra_esp": "Dirigir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "envcMpMaa2Q",
+    "lista": "2",
+    "palabra_ing": "Left over",
+    "palabra_esp": "Sobrar, sobrante",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "sV23W-81ICI",
+    "lista": "2",
+    "palabra_ing": "Likely",
+    "palabra_esp": "Probable",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "F6wR2waVLHk",
+    "lista": "2",
+    "palabra_ing": "Look forward",
+    "palabra_esp": "Esperar (espectativas de algo)",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "tyAiaxl3HXc",
+    "lista": "2",
+    "palabra_ing": "Long Term",
+    "palabra_esp": "A largo plazo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "5k5lDZq90RI",
+    "lista": "2",
+    "palabra_ing": "Loyalty",
+    "palabra_esp": "Lealtad",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "srmpPPQKQto",
+    "lista": "2",
+    "palabra_ing": "Maid",
+    "palabra_esp": "Mucama, sirvienta",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "1FEdilChUXY",
+    "lista": "2",
+    "palabra_ing": "Outbreak",
+    "palabra_esp": "Epidemia, estallido",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "t7gisiRoLR0",
+    "lista": "2",
+    "palabra_ing": "Pattern",
+    "palabra_esp": "Patrón",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Vq-8DHEKp5o",
+    "lista": "2",
+    "palabra_ing": "Purchase",
+    "palabra_esp": "Compra, comprar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "kGVG2-5_DUM",
+    "lista": "2",
+    "palabra_ing": "Raider",
+    "palabra_esp": "Asaltante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "F6HT4fAg-ok",
+    "lista": "2",
+    "palabra_ing": "Raids",
+    "palabra_esp": "Incursiones",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "hnaaKbQl5D4",
+    "lista": "2",
+    "palabra_ing": "Rejected",
+    "palabra_esp": "Rechazado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "3eheB6n1buw",
+    "lista": "2",
+    "palabra_ing": "Retrieve",
+    "palabra_esp": "Recuperar, recobrar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "q9Sm_bNu4aU",
+    "lista": "2",
+    "palabra_ing": "Runaway",
+    "palabra_esp": "Fugitivo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "KSkEBliZOHw",
+    "lista": "2",
+    "palabra_ing": "Shaky",
+    "palabra_esp": "Inestable, tembloroso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "G_2CktnIJRQ",
+    "lista": "2",
+    "palabra_ing": "Shame",
+    "palabra_esp": "Lastima, vergüenza",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "2Kop6vCU-oY",
+    "lista": "2",
+    "palabra_ing": "Slavery",
+    "palabra_esp": "Esclavitud",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "IK9IBAXbetI",
+    "lista": "2",
+    "palabra_ing": "Stack",
+    "palabra_esp": "Pila, pilar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "11YjWpI64-M",
+    "lista": "2",
+    "palabra_ing": "Struggle (ing)",
+    "palabra_esp": "Luchar (luchando)",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Ub7Uw_KvVnI",
+    "lista": "2",
+    "palabra_ing": "Summit",
+    "palabra_esp": "Cumbre (evento)",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "shWsr5L3Jg8",
+    "lista": "2",
+    "palabra_ing": "Swelling",
+    "palabra_esp": "Hinchazón",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "35xnTGr3lmw",
+    "lista": "2",
+    "palabra_ing": "Tail",
+    "palabra_esp": "Rabo, cola",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "0AE_PlHWSHQ",
+    "lista": "2",
+    "palabra_ing": "Target",
+    "palabra_esp": "Objetivo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "vTvVOLU3UN8",
+    "lista": "2",
+    "palabra_ing": "Targeted",
+    "palabra_esp": "Dirigido a",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "AFiPaGtli6c",
+    "lista": "2",
+    "palabra_ing": "Tongue",
+    "palabra_esp": "Lengua",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "PB5RRlzAmow",
+    "lista": "2",
+    "palabra_ing": "Throat",
+    "palabra_esp": "Garganta",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "icBt8dIvWIM",
+    "lista": "2",
+    "palabra_ing": "Thrust",
+    "palabra_esp": "Empuje",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "P5ZyN1bBG6I",
+    "lista": "2",
+    "palabra_ing": "Unlike",
+    "palabra_esp": "Diferente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "XiPX8q-nXAM",
+    "lista": "2",
+    "palabra_ing": "Upset",
+    "palabra_esp": "Decepcionado, molesto",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "lMKOki6yfj4",
+    "lista": "2",
+    "palabra_ing": "Warehouse",
+    "palabra_esp": "Deposito, almacen",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "w_QMDNtHkzU",
+    "lista": "2",
+    "palabra_ing": "Wax",
+    "palabra_esp": "Cera",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "JMlu2TxozME",
+    "lista": "2",
+    "palabra_ing": "Work out",
+    "palabra_esp": "Elaborar, resolver, ejercicio",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "kQ4-Z7yq5Jo",
+    "lista": "2",
+    "palabra_ing": "Wrap",
+    "palabra_esp": "Envoltura",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ow1vq2-5XwE",
+    "lista": "2",
+    "palabra_ing": "Willing",
+    "palabra_esp": "Dispuesto",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "hOpnlO2GYbE",
+    "lista": "3",
+    "palabra_ing": "Anchorage",
+    "palabra_esp": "Anclaje",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "AQys1Y4X2SA",
+    "lista": "3",
+    "palabra_ing": "Regarding",
+    "palabra_esp": "Respecto a",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "KYWkdBlcNjo",
+    "lista": "3",
+    "palabra_ing": "Sewerage",
+    "palabra_esp": "Alcantarillado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "L0PmjtAuU5E",
+    "lista": "3",
+    "palabra_ing": "Scope",
+    "palabra_esp": "Alcance",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "1zhRlHtsW8w",
+    "lista": "3",
+    "palabra_ing": "Upon",
+    "palabra_esp": "A, en, previa",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "zH9KGeeQ2WM",
+    "lista": "3",
+    "palabra_ing": "Invoice",
+    "palabra_esp": "Factura",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "sryZpdDgJco",
+    "lista": "3",
+    "palabra_ing": "Silk",
+    "palabra_esp": "Seda",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "GluOWAT0V_4",
+    "lista": "3",
+    "palabra_ing": "Shuffle",
+    "palabra_esp": "Aleatorio",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "g9Rxd3tQuzg",
+    "lista": "3",
+    "palabra_ing": "Raw materials",
+    "palabra_esp": "Materias primas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "5x7OkimgOVk",
+    "lista": "3",
+    "palabra_ing": "Fixed",
+    "palabra_esp": "Fijado, arreglado",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "JgbpzF6EAjc",
+    "lista": "3",
+    "palabra_ing": "Pour",
+    "palabra_esp": "Vertir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "fvdh5p6n8YI",
+    "lista": "3",
+    "palabra_ing": "Mess",
+    "palabra_esp": "Lío, desorden",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "psgm6lm0qrk",
+    "lista": "3",
+    "palabra_ing": "Merge",
+    "palabra_esp": "Fusionar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "MZunpOYFh2A",
+    "lista": "3",
+    "palabra_ing": "Trick",
+    "palabra_esp": "Truco",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "PxGJvJGPoHE",
+    "lista": "3",
+    "palabra_ing": "Riddle",
+    "palabra_esp": "Adivinanza",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "4axR7DPrJNk",
+    "lista": "3",
+    "palabra_ing": "Trigger",
+    "palabra_esp": "Desencadenante, detonante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "wMkHoegH5mk",
+    "lista": "3",
+    "palabra_ing": "Constraint",
+    "palabra_esp": "Restricción",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "OEm8320wu-g",
+    "lista": "3",
+    "palabra_ing": "Slope",
+    "palabra_esp": "Pendiente, cuesta",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "upTqM829d64",
+    "lista": "3",
+    "palabra_ing": "Whether",
+    "palabra_esp": "Si",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "dCINO-kXRgI",
+    "lista": "3",
+    "palabra_ing": "Milestone",
+    "palabra_esp": "Hito",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Qvt6DCCuBEQ",
+    "lista": "3",
+    "palabra_ing": "Clearance",
+    "palabra_esp": "Separación, despeje, distancia",
+    "aprendida": true,
+    "contexto": "Ground clearance line, phase clearance"
+  },
+  {
+    "id": "XDBcbZcoOxY",
+    "lista": "3",
+    "palabra_ing": "Availability",
+    "palabra_esp": "Disponibilidad",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "P1S4DcbpTj0",
+    "lista": "3",
+    "palabra_ing": "Summary",
+    "palabra_esp": "Resumen",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "VKsNOhrxPWs",
+    "lista": "3",
+    "palabra_ing": "Reliability",
+    "palabra_esp": "Confiabilidad",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "B8Qhzsi_ysA",
+    "lista": "3",
+    "palabra_ing": "Shrimp",
+    "palabra_esp": "Camarón",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "odUDrXDwiPg",
+    "lista": "3",
+    "palabra_ing": "Boil",
+    "palabra_esp": "Hervir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "inzbvy4QBXo",
+    "lista": "3",
+    "palabra_ing": "Sharp",
+    "palabra_esp": "Afilado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "IyWP5d6Q8hU",
+    "lista": "3",
+    "palabra_ing": "Wipe",
+    "palabra_esp": "Limpiar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "fTpbmxtRhIA",
+    "lista": "3",
+    "palabra_ing": "Best regards",
+    "palabra_esp": "Atentamente, saludos cordiales",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "hLPCrQDf1Uc",
+    "lista": "3",
+    "palabra_ing": "Solace",
+    "palabra_esp": "Consuelo",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "SHipPbyobUQ",
+    "lista": "3",
+    "palabra_ing": "Canvas",
+    "palabra_esp": "Lienzo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "n8fZYSJOShI",
+    "lista": "3",
+    "palabra_ing": "Care about",
+    "palabra_esp": "Preocuparse por",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "otabxw-1f90",
+    "lista": "3",
+    "palabra_ing": "Aim",
+    "palabra_esp": "Objetivo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "14Wf17Er9wI",
+    "lista": "3",
+    "palabra_ing": "Brave",
+    "palabra_esp": "Valiente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "HOZdch2sOaY",
+    "lista": "3",
+    "palabra_ing": "Rope",
+    "palabra_esp": "Cuerda",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "nCfsU0e4EJs",
+    "lista": "3",
+    "palabra_ing": "Overwhelmed, whelmed",
+    "palabra_esp": "Abrumado",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "KB9EaZ9U4Xk",
+    "lista": "3",
+    "palabra_ing": "Insane",
+    "palabra_esp": "Loco",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "9j8J-Rn2skA",
+    "lista": "3",
+    "palabra_ing": "Hike",
+    "palabra_esp": "Caminar, ir de excursión",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "yNBPWm6VDb8",
+    "lista": "3",
+    "palabra_ing": "Helmet",
+    "palabra_esp": "Casco",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "n7R6oz4vZ0c",
+    "lista": "3",
+    "palabra_ing": "Trust",
+    "palabra_esp": "Confianza",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ZbUsLyzfCeg",
+    "lista": "3",
+    "palabra_ing": "Rely",
+    "palabra_esp": "Confiar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "WozQnRgVFEg",
+    "lista": "3",
+    "palabra_ing": "Squeeze",
+    "palabra_esp": "Exprimir, apretar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "ADdp7_F4RwY",
+    "lista": "3",
+    "palabra_ing": "Stretch",
+    "palabra_esp": "Estirar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "9ZfesHe2NDo",
+    "lista": "3",
+    "palabra_ing": "Melt",
+    "palabra_esp": "Derretir, fundir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "_moTBcFME6E",
+    "lista": "3",
+    "palabra_ing": "Narrow",
+    "palabra_esp": "Estrecho",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "OQ6lZrbrTwA",
+    "lista": "3",
+    "palabra_ing": "Accomplish",
+    "palabra_esp": "Lograr",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "BAjMXwrs1HA",
+    "lista": "3",
+    "palabra_ing": "Encourage",
+    "palabra_esp": "Animar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "TXSwHhi_zjE",
+    "lista": "3",
+    "palabra_ing": "Hostages",
+    "palabra_esp": "Rehenes",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "g2O2_bkFTeo",
+    "lista": "3",
+    "palabra_ing": "Warn",
+    "palabra_esp": "Advertir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "QHeO5KhCx34",
+    "lista": "3",
+    "palabra_ing": "Easy-going",
+    "palabra_esp": "Relajado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "fuAu_PS9AUI",
+    "lista": "3",
+    "palabra_ing": "Accurately",
+    "palabra_esp": "Exactamente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "FwmB3l_kq2c",
+    "lista": "3",
+    "palabra_ing": "Allowance",
+    "palabra_esp": "Subsidio",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "YllhWCnZLhY",
+    "lista": "3",
+    "palabra_ing": "Contract",
+    "palabra_esp": "Contrato",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "-LvdKnk69C0",
+    "lista": "3",
+    "palabra_ing": "Cheerful",
+    "palabra_esp": "Alegre",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "v59bnAH5QBY",
+    "lista": "3",
+    "palabra_ing": "Reward",
+    "palabra_esp": "Recompensa",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "dO7VwXsJtzM",
+    "lista": "3",
+    "palabra_ing": "Peach",
+    "palabra_esp": "Melocotón",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "V6qjx9wgKEU",
+    "lista": "3",
+    "palabra_ing": "Withdraw",
+    "palabra_esp": "Retirar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "OuL9584WqnA",
+    "lista": "3",
+    "palabra_ing": "Accomplishments",
+    "palabra_esp": "Logros",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "UrHuekdy1rA",
+    "lista": "3",
+    "palabra_ing": "Resign",
+    "palabra_esp": "Renunciar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "crC6eEE1fVw",
+    "lista": "3",
+    "palabra_ing": "Brief",
+    "palabra_esp": "Breve",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "XzZGSXV929s",
+    "lista": "3",
+    "palabra_ing": "Bullet points",
+    "palabra_esp": "Viñetas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "HmnZH1FdI-8",
+    "lista": "3",
+    "palabra_ing": "Went on",
+    "palabra_esp": "Continuó",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "gO97gFS_AZE",
+    "lista": "3",
+    "palabra_ing": "Obey",
+    "palabra_esp": "Obedecer",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "rMXHHcpSEJk",
+    "lista": "3",
+    "palabra_ing": "Even",
+    "palabra_esp": "Incluso, aun",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "syEhLE2Bj5c",
+    "lista": "3",
+    "palabra_ing": "Gather",
+    "palabra_esp": "Reunir, recopilar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "YIPDGzAuh2Y",
+    "lista": "3",
+    "palabra_ing": "Key insights",
+    "palabra_esp": "Ideas clave",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "i0f4E9ccm04",
+    "lista": "3",
+    "palabra_ing": "Mindless",
+    "palabra_esp": "Imbecil",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "F-erLbsFZcA",
+    "lista": "3",
+    "palabra_ing": "Endlessly",
+    "palabra_esp": "Infinitamente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "7ZpMyywrB24",
+    "lista": "3",
+    "palabra_ing": "Claim",
+    "palabra_esp": "Afirmar, reclamar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "fD4IZq9Yfa0",
+    "lista": "3",
+    "palabra_ing": "Likewise",
+    "palabra_esp": "Igualmente, así mismo",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "zQUn5sz6p-Q",
+    "lista": "3",
+    "palabra_ing": "Deception",
+    "palabra_esp": "Engaño, mentira",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "Zv_POJUNgRg",
+    "lista": "3",
+    "palabra_ing": "For a while",
+    "palabra_esp": "Por un tiempo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "TgFcy5_LvLA",
+    "lista": "3",
+    "palabra_ing": "Commit",
+    "palabra_esp": "Cometer, comprometerse",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "KU2xuSCPpKw",
+    "lista": "3",
+    "palabra_ing": "Whenever",
+    "palabra_esp": "Cuando quiera",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "vaolMQyuqv0",
+    "lista": "3",
+    "palabra_ing": "Shocking",
+    "palabra_esp": "Chocante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "cUQOcFiChrI",
+    "lista": "4",
+    "palabra_ing": "Hold on",
+    "palabra_esp": "Esperar",
+    "aprendida": false,
+    "contexto": "Please hold on in the line"
+  },
+  {
+    "id": "ulBsAXXbQMA",
+    "lista": "4",
+    "palabra_ing": "Look like",
+    "palabra_esp": "Parece",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "DZy1_Z-vSGk",
+    "lista": "4",
+    "palabra_ing": "Show up",
+    "palabra_esp": "Aparecer, presentarse",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "zGJPB-rGL9I",
+    "lista": "4",
+    "palabra_ing": "Although",
+    "palabra_esp": "Aunque",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "qmkeLFzxpfo",
+    "lista": "4",
+    "palabra_ing": "Nevertheless",
+    "palabra_esp": "No obstante, sin embargo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ScXtsN7I5bg",
+    "lista": "4",
+    "palabra_ing": "Wealth",
+    "palabra_esp": "Riqueza",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "uezuUNIEuxU",
+    "lista": "4",
+    "palabra_ing": "Actually",
+    "palabra_esp": "De hecho, en realidad",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "eMxiGAufDtM",
+    "lista": "4",
+    "palabra_ing": "Currently",
+    "palabra_esp": "Actualmente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "4bpqwYgIaRE",
+    "lista": "4",
+    "palabra_ing": "Contest",
+    "palabra_esp": "Concurso",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "en1-ebH-3EY",
+    "lista": "4",
+    "palabra_ing": "Cousin",
+    "palabra_esp": "Primo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Pw-7Ey7Rc1g",
+    "lista": "4",
+    "palabra_ing": "Nephew",
+    "palabra_esp": "Sobrino",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "kkqJBRklbGc",
+    "lista": "4",
+    "palabra_ing": "Niece",
+    "palabra_esp": "Sobrina",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "cgADeR7H_ZA",
+    "lista": "4",
+    "palabra_ing": "Retirement",
+    "palabra_esp": "Jubilación",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "QukX_sPB9wY",
+    "lista": "4",
+    "palabra_ing": "Genre",
+    "palabra_esp": "Género",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "GiDva_LC73I",
+    "lista": "4",
+    "palabra_ing": "Ties",
+    "palabra_esp": "Vínculos, lazos",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "RAp_G4xjOsQ",
+    "lista": "4",
+    "palabra_ing": "Pray",
+    "palabra_esp": "Orar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "G3zSHpjXit8",
+    "lista": "4",
+    "palabra_ing": "Relief",
+    "palabra_esp": "Alivio",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "WDmtRJs-DqI",
+    "lista": "4",
+    "palabra_ing": "Journey",
+    "palabra_esp": "Viaje",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "CwcqXHrOeWY",
+    "lista": "4",
+    "palabra_ing": "Guidelines",
+    "palabra_esp": "Pautas, directrices",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "am8ad5hr1lY",
+    "lista": "4",
+    "palabra_ing": "Clues",
+    "palabra_esp": "Pistas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "rVoY54ONDXs",
+    "lista": "4",
+    "palabra_ing": "Streak",
+    "palabra_esp": "Racha",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "sWrEbmj1d44",
+    "lista": "4",
+    "palabra_ing": "Line up",
+    "palabra_esp": "Alinear",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "_zwThlQ0pCQ",
+    "lista": "4",
+    "palabra_ing": "Proper",
+    "palabra_esp": "Apropiado, adecuado",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "9SMvjv2UlGE",
+    "lista": "3",
+    "palabra_ing": "Gathering",
+    "palabra_esp": "Reunión, recolección",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "U_uC5rlWN2Q",
+    "lista": "4",
+    "palabra_ing": "Attachment",
+    "palabra_esp": "Adjunto, engrape",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "6iH3_qgSk1E",
+    "lista": "4",
+    "palabra_ing": "Insurance",
+    "palabra_esp": "Seguro",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "GcPZnRJrKcI",
+    "lista": "4",
+    "palabra_ing": "Loan",
+    "palabra_esp": "Préstamo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "5zIUofpdXY0",
+    "lista": "4",
+    "palabra_ing": "Stake",
+    "palabra_esp": "Apostar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "b-GubFUaUKM",
+    "lista": "4",
+    "palabra_ing": "Shield",
+    "palabra_esp": "Escudo, blindaje",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Cyn1TKCAd8o",
+    "lista": "4",
+    "palabra_ing": "Lift",
+    "palabra_esp": "Levantar, elevador",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "faMR6DIbn5E",
+    "lista": "4",
+    "palabra_ing": "Absence",
+    "palabra_esp": "Ausencia",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "V_Wl-3pNOQA",
+    "lista": "4",
+    "palabra_ing": "Breakdown",
+    "palabra_esp": "Avería, ruptura, descomponer en partes",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "84dhshphzjY",
+    "lista": "4",
+    "palabra_ing": "Disagreement",
+    "palabra_esp": "Desacuerdo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ZvCv6QF8FBw",
+    "lista": "4",
+    "palabra_ing": "Smooth",
+    "palabra_esp": "Fluido, suave",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "yMygxqcL-U8",
+    "lista": "4",
+    "palabra_ing": "Snap",
+    "palabra_esp": "Ajustar, quebrar, chasquear",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "sBwMJUZKYnU",
+    "lista": "4",
+    "palabra_ing": "Swing",
+    "palabra_esp": "Balanceo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "3qFq0eKIRoM",
+    "lista": "4",
+    "palabra_ing": "Uplift",
+    "palabra_esp": "Levantamiento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "QvVxy_CLPdg",
+    "lista": "4",
+    "palabra_ing": "Feeder",
+    "palabra_esp": "Alimentador",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "pQE7f4NDQaE",
+    "lista": "4",
+    "palabra_ing": "Sway",
+    "palabra_esp": "Balancear, balanceo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "XyKcqg-gdDI",
+    "lista": "4",
+    "palabra_ing": "Swap",
+    "palabra_esp": "Intercambio",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "YBCuhLJY6BU",
+    "lista": "4",
+    "palabra_ing": "Bracket",
+    "palabra_esp": "Soporte, paréntesis",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "yYDxCpSyx34",
+    "lista": "4",
+    "palabra_ing": "Deserve",
+    "palabra_esp": "Merecer",
+    "aprendida": true,
+    "contexto": "He deserves a place in formula 1"
+  },
+  {
+    "id": "RcSUB4Wc62U",
+    "lista": "4",
+    "palabra_ing": "Vest",
+    "palabra_esp": "Chaleco",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "LPF2_j5DLCA",
+    "lista": "4",
+    "palabra_ing": "Peas",
+    "palabra_esp": "Guisantes, arvejas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "khUYhZcFDrk",
+    "lista": "4",
+    "palabra_ing": "Beans",
+    "palabra_esp": "Frijoles",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "-CyU98hae3Q",
+    "lista": "4",
+    "palabra_ing": "Pear",
+    "palabra_esp": "Pera",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "9-835H3rLEo",
+    "lista": "4",
+    "palabra_ing": "Address",
+    "palabra_esp": "Dirigirse a, dirección",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "IZ8qOfmLRBE",
+    "lista": "4",
+    "palabra_ing": "Revenue",
+    "palabra_esp": "Ganancia, ingresos",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "jQlxc16kxek",
+    "lista": "4",
+    "palabra_ing": "Venture",
+    "palabra_esp": "Proyecto, empresa",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "2eRovunEvh8",
+    "lista": "4",
+    "palabra_ing": "Unease",
+    "palabra_esp": "Descontento, inquietud",
+    "aprendida": false,
+    "contexto": "Public unease about defense policy"
+  },
+  {
+    "id": "YHeXWwoPe_k",
+    "lista": "4",
+    "palabra_ing": "Badge",
+    "palabra_esp": "Insignia",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "5u3yyiqnQcE",
+    "lista": "4",
+    "palabra_ing": "Tariffs",
+    "palabra_esp": "Aranceles",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "EgTdfmsD568",
+    "lista": "4",
+    "palabra_ing": "Slap",
+    "palabra_esp": "Palmada, bofetada",
+    "aprendida": false,
+    "contexto": "My sister slapped my face"
+  },
+  {
+    "id": "kMV7dpH06Ys",
+    "lista": "4",
+    "palabra_ing": "Household",
+    "palabra_esp": "Hogar, familiar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "O4mClDhUAw8",
+    "lista": "4",
+    "palabra_ing": "Wholesale",
+    "palabra_esp": "Venta al por mayor",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "am_zv8DNGiA",
+    "lista": "4",
+    "palabra_ing": "Shift",
+    "palabra_esp": "Cambia, se traslada",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ilcQlN5VXKU",
+    "lista": "5",
+    "palabra_ing": "Abroad (L4 ok)",
+    "palabra_esp": "En el extranjero",
+    "aprendida": true,
+    "contexto": "We usually go abroad for a week in May"
+  },
+  {
+    "id": "x-b1x5qo5wA",
+    "lista": "4",
+    "palabra_ing": "Broadcasting",
+    "palabra_esp": "Radiodifusión",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "v0_qkJKlGOM",
+    "lista": "4",
+    "palabra_ing": "Household appliances",
+    "palabra_esp": "Electrodomésticos",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "dXTIAuus3nE",
+    "lista": "4",
+    "palabra_ing": "Lightsbulb",
+    "palabra_esp": "Bombillo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "5x28_RMbihY",
+    "lista": "4",
+    "palabra_ing": "Inventory",
+    "palabra_esp": "Inventario",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ZDrNtEbOpBk",
+    "lista": "4",
+    "palabra_ing": "Footwear",
+    "palabra_esp": "Calzado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "A2b7cWRCwLI",
+    "lista": "4",
+    "palabra_ing": "Shipping",
+    "palabra_esp": "Envío, enviando",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ODPhpSUx6pQ",
+    "lista": "4",
+    "palabra_ing": "Envoy",
+    "palabra_esp": "Enviado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "xAPDHho8R5A",
+    "lista": "4",
+    "palabra_ing": "Grab",
+    "palabra_esp": "Agarrar, arrebatar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "2BLxmQB9MNY",
+    "lista": "4",
+    "palabra_ing": "Charming",
+    "palabra_esp": "Encantador",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "RflC4WHmhRA",
+    "lista": "4",
+    "palabra_ing": "Jerk",
+    "palabra_esp": "Idiota",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "wyp8Pa35vBI",
+    "lista": "5",
+    "palabra_ing": "Resume",
+    "palabra_esp": "Reanudar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "LIt_nwTkQKI",
+    "lista": "5",
+    "palabra_ing": "Afterward",
+    "palabra_esp": "Después, más tarde",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "VAoZxOBI4PQ",
+    "lista": "5",
+    "palabra_ing": "Steward",
+    "palabra_esp": "Comisario, administrador",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "4V2qgZPK-VU",
+    "lista": "5",
+    "palabra_ing": "Zit",
+    "palabra_esp": "Grano, espinilla",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "DD0onO32iLE",
+    "lista": "5",
+    "palabra_ing": "Hairdresser",
+    "palabra_esp": "Peluquero",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "8YNDV0ocwws",
+    "lista": "5",
+    "palabra_ing": "Formerly",
+    "palabra_esp": "Anteriormente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "QEwkJP7_Mfg",
+    "lista": "5",
+    "palabra_ing": "Glowing",
+    "palabra_esp": "Brillante, resplandeciente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "iiIxbEL3je8",
+    "lista": "5",
+    "palabra_ing": "Grateful",
+    "palabra_esp": "Agradecido",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "_cDVcoPtpOc",
+    "lista": "5",
+    "palabra_ing": "Hide and seek",
+    "palabra_esp": "Escondite",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "m2c4ekwwB54",
+    "lista": "5",
+    "palabra_ing": "Hide",
+    "palabra_esp": "Esconder",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ZJx3Uir1leM",
+    "lista": "5",
+    "palabra_ing": "Seek",
+    "palabra_esp": "Buscar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "bKjgmS4VWMg",
+    "lista": "5",
+    "palabra_ing": "Cozy",
+    "palabra_esp": "Acogedor",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "-0LWShujjdM",
+    "lista": "5",
+    "palabra_ing": "Tales",
+    "palabra_esp": "Cuentos, mitos, leyendas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Ukzevauwmtc",
+    "lista": "5",
+    "palabra_ing": "Fairy",
+    "palabra_esp": "Hada",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "dDBsWDfnGZ4",
+    "lista": "5",
+    "palabra_ing": "Once upon a time",
+    "palabra_esp": "Érase una vez",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "CbJ7-CiLKd8",
+    "lista": "5",
+    "palabra_ing": "Debt",
+    "palabra_esp": "Deuda",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "yAHiTkbRB-c",
+    "lista": "5",
+    "palabra_ing": "Brake",
+    "palabra_esp": "Freno",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "6xhqsJ9pZsQ",
+    "lista": "5",
+    "palabra_ing": "Uncertainty",
+    "palabra_esp": "Incertidumbre",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Beqkzw7DNqg",
+    "lista": "5",
+    "palabra_ing": "Assess",
+    "palabra_esp": "Evaluar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "s7PY-ej2tvA",
+    "lista": "5",
+    "palabra_ing": "Feast",
+    "palabra_esp": "Festejar, banquete",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "bBR3RirsEsU",
+    "lista": "5",
+    "palabra_ing": "Gobble",
+    "palabra_esp": "Engullir, embutir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "LNM0mr2zptg",
+    "lista": "5",
+    "palabra_ing": "Spot",
+    "palabra_esp": "Lugar, mancha",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "U1PqA__kSqQ",
+    "lista": "5",
+    "palabra_ing": "Glossy",
+    "palabra_esp": "Brillante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "7VD-K1nak9g",
+    "lista": "5",
+    "palabra_ing": "Stuck",
+    "palabra_esp": "Atascado",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "VJnxh9x7bG4",
+    "lista": "5",
+    "palabra_ing": "Grave",
+    "palabra_esp": "Tumba",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "hgOq-qmSl1M",
+    "lista": "5",
+    "palabra_ing": "Proof",
+    "palabra_esp": "Prueba",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "J17QoLYRjFY",
+    "lista": "5",
+    "palabra_ing": "Catch",
+    "palabra_esp": "Atrapar, captura",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "lBneuCXv25c",
+    "lista": "5",
+    "palabra_ing": "Flat",
+    "palabra_esp": "Plano, apartamento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Ygx-_P5uvFs",
+    "lista": "5",
+    "palabra_ing": "Standalone",
+    "palabra_esp": "Independiente, autónomo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "O6feU_vVcJs",
+    "lista": "5",
+    "palabra_ing": "Gambling",
+    "palabra_esp": "Juego",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "nwa6NVVmyK0",
+    "lista": "5",
+    "palabra_ing": "Tang me up",
+    "palabra_esp": "Enredarme",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "VRzkdLUNFcY",
+    "lista": "5",
+    "palabra_ing": "Override",
+    "palabra_esp": "Anular, invalidar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "-J7GCfl7vJY",
+    "lista": "5",
+    "palabra_ing": "Annoying",
+    "palabra_esp": "Molesto, irritante",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "qGYxTrKErWU",
+    "lista": "5",
+    "palabra_ing": "Interval",
+    "palabra_esp": "Intervalo",
+    "aprendida": true,
+    "contexto": "Interval between Piastri and norris is 1,302 seconds"
+  },
+  {
+    "id": "eUw6zTpqup4",
+    "lista": "5",
+    "palabra_ing": "Disclosure",
+    "palabra_esp": "Divulgación",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Us3dEFRd4n0",
+    "lista": "5",
+    "palabra_ing": "Bundle",
+    "palabra_esp": "Haz, manojo",
+    "aprendida": true,
+    "contexto": "Hendrix grid have a bundle of cables"
+  },
+  {
+    "id": "I3DQsQcZXrE",
+    "lista": "5",
+    "palabra_ing": "Sturdy",
+    "palabra_esp": "Robusto, sólido",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "jKSQHGRDIxQ",
+    "lista": "5",
+    "palabra_ing": "Foundations",
+    "palabra_esp": "Cimientos",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "b6z3Ta0hDbg",
+    "lista": "5",
+    "palabra_ing": "Soil",
+    "palabra_esp": "Suelo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "mJx-qhqT1As",
+    "lista": "5",
+    "palabra_ing": "Backfill",
+    "palabra_esp": "Relleno",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "TUGGQibv3dw",
+    "lista": "5",
+    "palabra_ing": "Optimum spotting",
+    "palabra_esp": "Distribución óptima",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Vg3D7VX2GMA",
+    "lista": "5",
+    "palabra_ing": "Query",
+    "palabra_esp": "Consultar",
+    "aprendida": true,
+    "contexto": "Query available licences"
+  },
+  {
+    "id": "bINNLZx3U64",
+    "lista": "5",
+    "palabra_ing": "Newsletter",
+    "palabra_esp": "Boletín",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "u_Av237zG8o",
+    "lista": "5",
+    "palabra_ing": "Insights",
+    "palabra_esp": "Ideas, perspectivas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "DZdQyAHodo0",
+    "lista": "5",
+    "palabra_ing": "Coffin",
+    "palabra_esp": "Ataúd",
+    "aprendida": true,
+    "contexto": "The coffin in the grave"
+  },
+  {
+    "id": "aSiKEqnVujk",
+    "lista": "5",
+    "palabra_ing": "Plow",
+    "palabra_esp": "Atropellar, estrellar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "AH6z3JK9_94",
+    "lista": "5",
+    "palabra_ing": "Casualties",
+    "palabra_esp": "Victimas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "hmkgDrDNfI0",
+    "lista": "5",
+    "palabra_ing": "Witness",
+    "palabra_esp": "Testigo",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "CApy71pCN-4",
+    "lista": "5",
+    "palabra_ing": "Upward",
+    "palabra_esp": "Más de, hacia arriba",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "egIcW48F5GI",
+    "lista": "5",
+    "palabra_ing": "Scream",
+    "palabra_esp": "Gritar, chillar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "vVPRGaUTVUc",
+    "lista": "5",
+    "palabra_ing": "Skip",
+    "palabra_esp": "Omitir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "r_3Yl7tRoNY",
+    "lista": "5",
+    "palabra_ing": "Remainder",
+    "palabra_esp": "Resto",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "W9XCBFR1rw4",
+    "lista": "5",
+    "palabra_ing": "Survey point",
+    "palabra_esp": "Punto topográfico",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "2JxAWCfsadQ",
+    "lista": "6",
+    "palabra_ing": "Toggle",
+    "palabra_esp": "Alternar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "4JJnasvUMWk",
+    "lista": "6",
+    "palabra_ing": "Fence",
+    "palabra_esp": "Valla, cercado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "McFJ04znaWg",
+    "lista": "6",
+    "palabra_ing": "Swift",
+    "palabra_esp": "Veloz, rapido",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "TkNIMKmp0i4",
+    "lista": "6",
+    "palabra_ing": "Plenty",
+    "palabra_esp": "Mucho, infinidad",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "aVZzJGQHxvU",
+    "lista": "6",
+    "palabra_ing": "Anchor",
+    "palabra_esp": "Ancla",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "eecRydMQZOQ",
+    "lista": "6",
+    "palabra_ing": "Stiffness",
+    "palabra_esp": "Rigidez",
+    "aprendida": true,
+    "contexto": "Stiffness about Parkinson"
+  },
+  {
+    "id": "Yolw-h0wp-o",
+    "lista": "6",
+    "palabra_ing": "Outline",
+    "palabra_esp": "Contorno, describir, esquema",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "iBN8geljJ0g",
+    "lista": "6",
+    "palabra_ing": "Intended",
+    "palabra_esp": "Destinado a, prevista",
+    "aprendida": true,
+    "contexto": "Excercises that are intended to help students - Intended area"
+  },
+  {
+    "id": "S2kCKqfgnH4",
+    "lista": "6",
+    "palabra_ing": "Detach",
+    "palabra_esp": "Separar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "CTxw5ezIMR8",
+    "lista": "6",
+    "palabra_ing": "Regardless",
+    "palabra_esp": "A pesar de todo, independiente de",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Cb6dDWvjttA",
+    "lista": "6",
+    "palabra_ing": "Spark",
+    "palabra_esp": "Despierta, enciende, chispa",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "_EeRNICsMMk",
+    "lista": "6",
+    "palabra_ing": "Bending",
+    "palabra_esp": "Doblado, doblar, curvar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "7PjB0pHl6oE",
+    "lista": "6",
+    "palabra_ing": "Beam",
+    "palabra_esp": "Viga",
+    "aprendida": true,
+    "contexto": "Beams and columns of the building"
+  },
+  {
+    "id": "aR5voYN9JFQ",
+    "lista": "6",
+    "palabra_ing": "Gross area",
+    "palabra_esp": "Superficie bruta",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "agtrpx0jrvQ",
+    "lista": "6",
+    "palabra_ing": "Damper",
+    "palabra_esp": "Apagador, amortiguador",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "-jufGJByGlI",
+    "lista": "6",
+    "palabra_ing": "Tailored",
+    "palabra_esp": "A medida",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ie8cybka12U",
+    "lista": "6",
+    "palabra_ing": "Conquer",
+    "palabra_esp": "Conquistar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "-1pwixwoCmg",
+    "lista": "6",
+    "palabra_ing": "Finesse",
+    "palabra_esp": "Finura",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "g5xtgeB6zUg",
+    "lista": "6",
+    "palabra_ing": "Placement",
+    "palabra_esp": "Colocación",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ATg39TfoYw8",
+    "lista": "6",
+    "palabra_ing": "Firefighter",
+    "palabra_esp": "Bombero",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "oERNcyhWAwI",
+    "lista": "6",
+    "palabra_ing": "Partner",
+    "palabra_esp": "Socio, compañero",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "mWXByFJbqLM",
+    "lista": "6",
+    "palabra_ing": "Country house",
+    "palabra_esp": "Casa de campo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "uhZV1E9Q1wE",
+    "lista": "6",
+    "palabra_ing": "Thorough",
+    "palabra_esp": "Minucioso, exhaustivo",
+    "aprendida": true,
+    "contexto": "Planners need a thorough understanding of the subject"
+  },
+  {
+    "id": "duLGO8cC1ug",
+    "lista": "6",
+    "palabra_ing": "Traffic jam",
+    "palabra_esp": "Atasco",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "nZ7LRriOpHU",
+    "lista": "6",
+    "palabra_ing": "Acute",
+    "palabra_esp": "Agudo",
+    "aprendida": true,
+    "contexto": "An acute awareness of changing fashions"
+  },
+  {
+    "id": "HtjlXGI3Uvg",
+    "lista": "6",
+    "palabra_ing": "Sparkling",
+    "palabra_esp": "Espumoso, chispeante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "IkLcFjp3j1w",
+    "lista": "6",
+    "palabra_ing": "Overcomes",
+    "palabra_esp": "Supera",
+    "aprendida": true,
+    "contexto": "Overcomes the fear of speak in English"
+  },
+  {
+    "id": "UZK5E5Uwzvg",
+    "lista": "6",
+    "palabra_ing": "Solely",
+    "palabra_esp": "Únicamente",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "uJZ7yC0it_k",
+    "lista": "6",
+    "palabra_ing": "Convey",
+    "palabra_esp": "Transmitir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "mfwde4HLVUg",
+    "lista": "6",
+    "palabra_ing": "In such",
+    "palabra_esp": "En tal",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "kA_AShtgX08",
+    "lista": "6",
+    "palabra_ing": "Nuanced",
+    "palabra_esp": "Matizado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "3JUC3zSY1Ls",
+    "lista": "6",
+    "palabra_ing": "Foster",
+    "palabra_esp": "Respaldar, alentar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "PtruApITsEo",
+    "lista": "6",
+    "palabra_ing": "Groundbreaking",
+    "palabra_esp": "Innovador",
+    "aprendida": true,
+    "contexto": "The formula one is ever groungbreaking in tecnology"
+  },
+  {
+    "id": "x1vekt8MhWU",
+    "lista": "6",
+    "palabra_ing": "Needless",
+    "palabra_esp": "Innecesario",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "NPG9yJ2yFsQ",
+    "lista": "6",
+    "palabra_ing": "Achieve",
+    "palabra_esp": "Lograr",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "nTPuOj07SSM",
+    "lista": "6",
+    "palabra_ing": "Drawback",
+    "palabra_esp": "Inconveniente, retirarse",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "pUKO-QcWN24",
+    "lista": "6",
+    "palabra_ing": "Stunning",
+    "palabra_esp": "Impresionante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "6f5_kElDkZU",
+    "lista": "6",
+    "palabra_ing": "Ruled",
+    "palabra_esp": "Decidió",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "DFS33X2bZoY",
+    "lista": "6",
+    "palabra_ing": "The rear",
+    "palabra_esp": "La parte trasera",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "o-F4UoDSx7U",
+    "lista": "6",
+    "palabra_ing": "Leisure",
+    "palabra_esp": "Ocio",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "SdFY5fkQsew",
+    "lista": "6",
+    "palabra_ing": "Slang",
+    "palabra_esp": "Jerga",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "-EkSv-us-s4",
+    "lista": "6",
+    "palabra_ing": "In order to",
+    "palabra_esp": "Con el fin de",
+    "aprendida": true,
+    "contexto": "In order to find answers"
+  },
+  {
+    "id": "FfKTunhyygY",
+    "lista": "6",
+    "palabra_ing": "Lungs",
+    "palabra_esp": "Pulmones",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "JzXqRiHoC-0",
+    "lista": "6",
+    "palabra_ing": "Liver",
+    "palabra_esp": "Higado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "tckqD3BrqAM",
+    "lista": "6",
+    "palabra_ing": "Stomach",
+    "palabra_esp": "Estomago",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "a2_XHT5MJYs",
+    "lista": "6",
+    "palabra_ing": "Kidney",
+    "palabra_esp": "Riñón",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "LU18HBSQdks",
+    "lista": "6",
+    "palabra_ing": "Intestine",
+    "palabra_esp": "Intestino",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "W07KKHCEmig",
+    "lista": "6",
+    "palabra_ing": "Veins and arteries",
+    "palabra_esp": "Venas y arterias",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "YePunU5BTiM",
+    "lista": "6",
+    "palabra_ing": "Fridge",
+    "palabra_esp": "Nevera",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "aUpucPicdg8",
+    "lista": "6",
+    "palabra_ing": "Screwdriver",
+    "palabra_esp": "Destornillador",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "mlTLoZO_rpc",
+    "lista": "6",
+    "palabra_ing": "Hammer",
+    "palabra_esp": "Martillo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "qvwTaxKlBRU",
+    "lista": "6",
+    "palabra_ing": "Polisher",
+    "palabra_esp": "Pulidora",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "XeSRxcfEIVo",
+    "lista": "6",
+    "palabra_ing": "Pliers",
+    "palabra_esp": "Alicates",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "X8L8LzPqn4s",
+    "lista": "7",
+    "palabra_ing": "Vanish",
+    "palabra_esp": "Desaparecer",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "78cr4a7RvIw",
+    "lista": "7",
+    "palabra_ing": "Deadly",
+    "palabra_esp": "Mortal",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "jxeYWlNblac",
+    "lista": "7",
+    "palabra_ing": "Crumbled",
+    "palabra_esp": "Desmoronado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Dn9KyK9HDys",
+    "lista": "7",
+    "palabra_ing": "Peel",
+    "palabra_esp": "Pelar, descascarar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Se0sPTBLljk",
+    "lista": "7",
+    "palabra_ing": "Blend",
+    "palabra_esp": "Mezcla",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "zeRhNKIpHLo",
+    "lista": "7",
+    "palabra_ing": "Ashore",
+    "palabra_esp": "En tierra",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "3uSeqYMml6I",
+    "lista": "7",
+    "palabra_ing": "Shell",
+    "palabra_esp": "Cáscara, caparazón",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ymGnS7i4dmo",
+    "lista": "7",
+    "palabra_ing": "Prosecute",
+    "palabra_esp": "Procesar, enjuiciar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "c6vk__znuYg",
+    "lista": "7",
+    "palabra_ing": "So as to",
+    "palabra_esp": "Con el fin de",
+    "aprendida": true,
+    "contexto": "Synomym of \"in order to\""
+  },
+  {
+    "id": "B07lgt9ITH0",
+    "lista": "7",
+    "palabra_ing": "Stapler",
+    "palabra_esp": "Grapadora",
+    "aprendida": true,
+    "contexto": "Please give me the stapler to join the sheets"
+  },
+  {
+    "id": "-J8t0WutM9Y",
+    "lista": "7",
+    "palabra_ing": "Bind",
+    "palabra_esp": "Atar, unir",
+    "aprendida": true,
+    "contexto": "The books were bound together with ropes"
+  },
+  {
+    "id": "I4AWlzenw2Q",
+    "lista": "7",
+    "palabra_ing": "Remind",
+    "palabra_esp": "Recordar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "4MqSN9Ougj8",
+    "lista": "7",
+    "palabra_ing": "Bold",
+    "palabra_esp": "Negrita",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "eP5_VusLxg4",
+    "lista": "7",
+    "palabra_ing": "Crush",
+    "palabra_esp": "Aplastar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "vRbEykXSDeU",
+    "lista": "7",
+    "palabra_ing": "Cloves",
+    "palabra_esp": "Dientes, clavos",
+    "aprendida": true,
+    "contexto": "Garlic cloves"
+  },
+  {
+    "id": "pV61fwXGXdA",
+    "lista": "7",
+    "palabra_ing": "Supposed to",
+    "palabra_esp": "Se supone que",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "jhvMyQXAKWw",
+    "lista": "7",
+    "palabra_ing": "Dismiss",
+    "palabra_esp": "Descartar, despedir",
+    "aprendida": true,
+    "contexto": "He was dismissed of the company"
+  },
+  {
+    "id": "O8sB6yo5XAw",
+    "lista": "7",
+    "palabra_ing": "Stream",
+    "palabra_esp": "Secuencia, corriente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "aPkclkGtM9A",
+    "lista": "7",
+    "palabra_ing": "Deprecated",
+    "palabra_esp": "Obsoleto",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "UmbPD6uukUM",
+    "lista": "7",
+    "palabra_ing": "Inset",
+    "palabra_esp": "Insertado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "EcRvj7K2W4I",
+    "lista": "7",
+    "palabra_ing": "Barbed wire",
+    "palabra_esp": "Alambre de púas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "sBhW8r_mvvE",
+    "lista": "7",
+    "palabra_ing": "Boots",
+    "palabra_esp": "Botas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Zbas4aH2KUU",
+    "lista": "7",
+    "palabra_ing": "Berries",
+    "palabra_esp": "Bayas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "f3HMLbMDt_o",
+    "lista": "7",
+    "palabra_ing": "Velvet",
+    "palabra_esp": "Terciopelo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "dLDo37r0Azc",
+    "lista": "7",
+    "palabra_ing": "Ash/Ashes",
+    "palabra_esp": "Ceniza/Cenizas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "nVY9R13A1dM",
+    "lista": "7",
+    "palabra_ing": "Powder",
+    "palabra_esp": "Polvo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "8LHqtcxCP3o",
+    "lista": "7",
+    "palabra_ing": "Shelf/Shelves",
+    "palabra_esp": "Estante/s, repisa/s",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "z9iMpt3JU7Q",
+    "lista": "7",
+    "palabra_ing": "Subtly",
+    "palabra_esp": "Sutilmente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "0iGI3YEFN9k",
+    "lista": "7",
+    "palabra_ing": "Trash",
+    "palabra_esp": "Basura",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "dfEoLlEan_c",
+    "lista": "7",
+    "palabra_ing": "Novelty",
+    "palabra_esp": "Novedad, innovación",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "hcmF1KV3rjA",
+    "lista": "7",
+    "palabra_ing": "Playfulness",
+    "palabra_esp": "Alegría",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "SeCa1GCRTP8",
+    "lista": "7",
+    "palabra_ing": "Bladder",
+    "palabra_esp": "Vejiga",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "xs1gSOZRACk",
+    "lista": "7",
+    "palabra_ing": "Overhaul",
+    "palabra_esp": "Revisión, reparación general",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "z1YpAZQyUYY",
+    "lista": "7",
+    "palabra_ing": "Confine",
+    "palabra_esp": "Limitar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "WsmBg9L9WRo",
+    "lista": "7",
+    "palabra_ing": "Vending",
+    "palabra_esp": "Venta, distribución",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "1DCwfxSIAU8",
+    "lista": "7",
+    "palabra_ing": "Propose",
+    "palabra_esp": "Proponer, ofrecer",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "WYKaJhQ2R1A",
+    "lista": "7",
+    "palabra_ing": "Ribs",
+    "palabra_esp": "Costillas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "msUvWo3ANV8",
+    "lista": "7",
+    "palabra_ing": "At",
+    "palabra_esp": "En, arroba",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "V5DiWvf6_aM",
+    "lista": "7",
+    "palabra_ing": "At all",
+    "palabra_esp": "En absoluto, en lo más mínimo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "QovO_PPCG74",
+    "lista": "7",
+    "palabra_ing": "Autumn",
+    "palabra_esp": "Otoño",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "r__EyzqF8bQ",
+    "lista": "7",
+    "palabra_ing": "Biscuit",
+    "palabra_esp": "Bizcocho, galleta",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "CEJ7XQbZ4EU",
+    "lista": "7",
+    "palabra_ing": "Blanket",
+    "palabra_esp": "Manta, frazada",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "EH7rdOcqlVI",
+    "lista": "7",
+    "palabra_ing": "Blouse",
+    "palabra_esp": "Blusa",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "f5TQ5gFn4pM",
+    "lista": "7",
+    "palabra_ing": "Bookshelf",
+    "palabra_esp": "Estante de libros",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "s8hXjsD_Ne8",
+    "lista": "7",
+    "palabra_ing": "Butter",
+    "palabra_esp": "Mantequilla",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "sTRvW-lNvT0",
+    "lista": "7",
+    "palabra_ing": "Carpet",
+    "palabra_esp": "Alfombra",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Mn0xCAZfm-4",
+    "lista": "7",
+    "palabra_ing": "Clever",
+    "palabra_esp": "Hábil, inteligente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "x_1V31RuPcI",
+    "lista": "7",
+    "palabra_ing": "Close to",
+    "palabra_esp": "Cerca de, junto a",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "8vPDZSNOHt8",
+    "lista": "7",
+    "palabra_ing": "Clown",
+    "palabra_esp": "Payaso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "W8IOu-Dzbpg",
+    "lista": "7",
+    "palabra_ing": "Costume",
+    "palabra_esp": "Traje",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ac0oPMW4GBo",
+    "lista": "7",
+    "palabra_ing": "Cupboard",
+    "palabra_esp": "Armario",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "QLyQEN2ca6A",
+    "lista": "6",
+    "palabra_ing": "Dot",
+    "palabra_esp": "Punto",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "1WJ6s4ZPxBo",
+    "lista": "7",
+    "palabra_ing": "Envelope",
+    "palabra_esp": "Sobre, envoltura",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "33cJuY7BV_8",
+    "lista": "7",
+    "palabra_ing": "Fog/Foggy",
+    "palabra_esp": "Niebla, empañar/nublado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "edljDEgq0sk",
+    "lista": "7",
+    "palabra_ing": "Glad",
+    "palabra_esp": "Contento, alegre",
+    "aprendida": true,
+    "contexto": "I'm glad for your success"
+  },
+  {
+    "id": "pWnbeR7YP5I",
+    "lista": "8",
+    "palabra_ing": "Grapes",
+    "palabra_esp": "Uvas",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "4kHeIBBc3Bw",
+    "lista": "8",
+    "palabra_ing": "Guest",
+    "palabra_esp": "Huésped, invitado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "i1A6wiT2sgg",
+    "lista": "8",
+    "palabra_ing": "Hall",
+    "palabra_esp": "Sala, pasillo, vestibulo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "1irNMFjE108",
+    "lista": "8",
+    "palabra_ing": "Ill",
+    "palabra_esp": "Enfermo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "mztvJ0RnLuQ",
+    "lista": "8",
+    "palabra_ing": "Jam",
+    "palabra_esp": "Mermelada, atasco",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "xu3MT167moM",
+    "lista": "8",
+    "palabra_ing": "Kite",
+    "palabra_esp": "Cometa",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "HqH0hhXcfAI",
+    "lista": "8",
+    "palabra_ing": "Leather",
+    "palabra_esp": "Cuero",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "j7DnQZ9A72Y",
+    "lista": "8",
+    "palabra_ing": "Lie down",
+    "palabra_esp": "Acostarse",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "wCykzY_sjqE",
+    "lista": "8",
+    "palabra_ing": "Look after",
+    "palabra_esp": "Cuidar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "XuoxsVVy2eI",
+    "lista": "8",
+    "palabra_ing": "Look out",
+    "palabra_esp": "¡Cuidado!, ¡atención!",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "M48_nglzZqw",
+    "lista": "8",
+    "palabra_ing": "Lorry",
+    "palabra_esp": "Camión",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "IC1R0d86V5w",
+    "lista": "8",
+    "palabra_ing": "Mind",
+    "palabra_esp": "Mente, importar, cuidar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Xe84hbFRiPM",
+    "lista": "8",
+    "palabra_ing": "Motorway",
+    "palabra_esp": "Autopista",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "lKNpsmbZBFQ",
+    "lista": "8",
+    "palabra_ing": "Pepper",
+    "palabra_esp": "Pimienta",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Bw-vJ3FUON8",
+    "lista": "8",
+    "palabra_ing": "Pity",
+    "palabra_esp": "Lástima",
+    "aprendida": true,
+    "contexto": "Synonym of \"shame\""
+  },
+  {
+    "id": "C_QCqlEY2Lk",
+    "lista": "8",
+    "palabra_ing": "Quite",
+    "palabra_esp": "Bastante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "T5aM_KGUpVU",
+    "lista": "8",
+    "palabra_ing": "Raincoat",
+    "palabra_esp": "Impermeable",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "chgs-CatrP4",
+    "lista": "8",
+    "palabra_ing": "Sail",
+    "palabra_esp": "Navegar, vela",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "KybtHCa7Pc0",
+    "lista": "8",
+    "palabra_ing": "Take off",
+    "palabra_esp": "Retirar, largarse",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "0gY7QBwBLA0",
+    "lista": "8",
+    "palabra_ing": "Tent",
+    "palabra_esp": "Carpa, tienda",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "8CxXCDdu8MQ",
+    "lista": "8",
+    "palabra_ing": "Thirsty",
+    "palabra_esp": "Sediento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "iV2h7nQrnxA",
+    "lista": "8",
+    "palabra_ing": "Tidy",
+    "palabra_esp": "Ordenado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "5Qbjgg5-pGg",
+    "lista": "8",
+    "palabra_ing": "Try on",
+    "palabra_esp": "Probar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Q8l4-37ZtA8",
+    "lista": "8",
+    "palabra_ing": "Whole",
+    "palabra_esp": "Entero",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "G60gSnb7IO8",
+    "lista": "8",
+    "palabra_ing": "Burst",
+    "palabra_esp": "Explosión, estallar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "nNZxsqaA6Ow",
+    "lista": "8",
+    "palabra_ing": "Equipment",
+    "palabra_esp": "Equipo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "y-PA8m_RYbc",
+    "lista": "8",
+    "palabra_ing": "Boundary",
+    "palabra_esp": "Límite",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "QLJNmp_MQww",
+    "lista": "8",
+    "palabra_ing": "Sleeve",
+    "palabra_esp": "Manga",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "_gyvevw63Bk",
+    "lista": "8",
+    "palabra_ing": "Rated",
+    "palabra_esp": "Clasificado, calificado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "2RSf3bvT_VA",
+    "lista": "8",
+    "palabra_ing": "Leak",
+    "palabra_esp": "Fuga, escape, filtración",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "SD_pwFV3W9Y",
+    "lista": "8",
+    "palabra_ing": "Pipeline",
+    "palabra_esp": "Portafolio, proceso, tubería",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "GyRJfjCYrto",
+    "lista": "8",
+    "palabra_ing": "Cub, cubs",
+    "palabra_esp": "Cachorro, cachorros",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "GFW6iE0ceDs",
+    "lista": "8",
+    "palabra_ing": "Bolt",
+    "palabra_esp": "Perno",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "gRWAP2Qrgmo",
+    "lista": "8",
+    "palabra_ing": "Lightning",
+    "palabra_esp": "Rayo (visual)",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "J7p2KnJ5BKc",
+    "lista": "8",
+    "palabra_ing": "Thunder",
+    "palabra_esp": "Trueno",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "bp9lZzKV1RY",
+    "lista": "8",
+    "palabra_ing": "Citizenship",
+    "palabra_esp": "Ciudadanía",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "HAsRqYW2AGU",
+    "lista": "8",
+    "palabra_ing": "Blunder",
+    "palabra_esp": "Torpeza",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "9uR2GqVouNE",
+    "lista": "8",
+    "palabra_ing": "Eve",
+    "palabra_esp": "Víspera",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Iw7otbELPGM",
+    "lista": "8",
+    "palabra_ing": "Bishop",
+    "palabra_esp": "Obispo",
+    "aprendida": true,
+    "contexto": "The bishop gave blessings to everyone"
+  },
+  {
+    "id": "IWTX7g_tOm0",
+    "lista": "8",
+    "palabra_ing": "Suspected",
+    "palabra_esp": "Sospecha, sospechoso",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ovXbErwdhSs",
+    "lista": "8",
+    "palabra_ing": "Pawn shop",
+    "palabra_esp": "Casa de empeños",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "YezNjXuCm5Y",
+    "lista": "8",
+    "palabra_ing": "Split",
+    "palabra_esp": "Dividir, partir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "fnRnRk2oYcY",
+    "lista": "8",
+    "palabra_ing": "Point out",
+    "palabra_esp": "Indicar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "2JkgNWMuTzs",
+    "lista": "8",
+    "palabra_ing": "Stinking",
+    "palabra_esp": "Maloliente, apestar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "rWhoAaSqrEA",
+    "lista": "8",
+    "palabra_ing": "Wonder",
+    "palabra_esp": "Preguntarse, maravillarse",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "NUruxHRyxFw",
+    "lista": "8",
+    "palabra_ing": "Seal",
+    "palabra_esp": "Sello, foca",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Fuj6EFmylP0",
+    "lista": "8",
+    "palabra_ing": "Traceback",
+    "palabra_esp": "Rastreo, seguimiento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "UF0a5RfTQFE",
+    "lista": "8",
+    "palabra_ing": "Append",
+    "palabra_esp": "Añadir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "7zaQ_qu36fY",
+    "lista": "8",
+    "palabra_ing": "Outer",
+    "palabra_esp": "Exterior",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "7Fm6ECTEVVo",
+    "lista": "8",
+    "palabra_ing": "Knight",
+    "palabra_esp": "Caballero",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "tY9Qga68GPk",
+    "lista": "8",
+    "palabra_ing": "Odd",
+    "palabra_esp": "Impar, extraño",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "MfS-2y_eCu8",
+    "lista": "8",
+    "palabra_ing": "Yield",
+    "palabra_esp": "Producir, rendimiento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "3MDdJQeWqP4",
+    "lista": "8",
+    "palabra_ing": "Evens",
+    "palabra_esp": "Pares",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Ygi1y1wsQYY",
+    "lista": "8",
+    "palabra_ing": "Greet",
+    "palabra_esp": "Saludar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "QjHZF8HsiTg",
+    "lista": "9",
+    "palabra_ing": "Neither",
+    "palabra_esp": "Ninguno, tampoco",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "fRHqYdGYASQ",
+    "lista": "9",
+    "palabra_ing": "Wisdom",
+    "palabra_esp": "Sabiduría",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "JXSKiEGUxJc",
+    "lista": "9",
+    "palabra_ing": "Bless",
+    "palabra_esp": "Bendecir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "-QAXlP5U_E4",
+    "lista": "9",
+    "palabra_ing": "Mince",
+    "palabra_esp": "Picar",
+    "aprendida": true,
+    "contexto": "Mince parsley and basil"
+  },
+  {
+    "id": "hS-YcpnPvic",
+    "lista": "9",
+    "palabra_ing": "Parsley",
+    "palabra_esp": "Perejil",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "NWKVYcw2QWA",
+    "lista": "9",
+    "palabra_ing": "Basil",
+    "palabra_esp": "Albahaca",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ruhVsU77--A",
+    "lista": "9",
+    "palabra_ing": "Garnish",
+    "palabra_esp": "Guarnición, adorno, aderezo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "JnLkqGkoyXc",
+    "lista": "9",
+    "palabra_ing": "Slice",
+    "palabra_esp": "Rebanada, loncha",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Aj4gQgndr7o",
+    "lista": "9",
+    "palabra_ing": "Lump",
+    "palabra_esp": "Trozo, terrón, grumo",
+    "aprendida": true,
+    "contexto": "There was a lump of ice floating in the milk"
+  },
+  {
+    "id": "_sgjJyw2G-E",
+    "lista": "9",
+    "palabra_ing": "Ham",
+    "palabra_esp": "Jamón",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "RhPDwR4hkRA",
+    "lista": "9",
+    "palabra_ing": "Pulley",
+    "palabra_esp": "Polea",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "gJUMxkAnaow",
+    "lista": "9",
+    "palabra_ing": "Find out",
+    "palabra_esp": "Descubrir",
+    "aprendida": true,
+    "contexto": "She find out her gift unwrapping it"
+  },
+  {
+    "id": "JqWfYn86xa4",
+    "lista": "9",
+    "palabra_ing": "Even though",
+    "palabra_esp": "A pesar de, aunque",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "epbKoCm-TSs",
+    "lista": "9",
+    "palabra_ing": "Chairman",
+    "palabra_esp": "Presidente",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "3ifJ58zCN0E",
+    "lista": "9",
+    "palabra_ing": "Bitter",
+    "palabra_esp": "Amargo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "NPe119EDOuM",
+    "lista": "9",
+    "palabra_ing": "Strike",
+    "palabra_esp": "Huelga, ataque",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "9m7KT2qRUUM",
+    "lista": "9",
+    "palabra_ing": "Blackout",
+    "palabra_esp": "Apagón, perdida de conocimiento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "OqRUH0h1t1U",
+    "lista": "9",
+    "palabra_ing": "Withstand",
+    "palabra_esp": "Resistir",
+    "aprendida": true,
+    "contexto": "The structure had been designed to withstand winds of more than 100 mph"
+  },
+  {
+    "id": "mhA1NMfnY3g",
+    "lista": "9",
+    "palabra_ing": "Tip off",
+    "palabra_esp": "Informar, advertir",
+    "aprendida": true,
+    "contexto": "Arrests came after a member tip off to the police"
+  },
+  {
+    "id": "QPETr8XQVRg",
+    "lista": "9",
+    "palabra_ing": "Refuse",
+    "palabra_esp": "Rechazar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "za45iaJAQmg",
+    "lista": "9",
+    "palabra_ing": "Tap",
+    "palabra_esp": "Toma, grifo, derivación",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "dQ_Pm_xjGDM",
+    "lista": "9",
+    "palabra_ing": "Rule out",
+    "palabra_esp": "Excluir",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "To74vcuz_SI",
+    "lista": "9",
+    "palabra_ing": "Stir",
+    "palabra_esp": "Agitar, remover",
+    "aprendida": true,
+    "contexto": "Stir it up"
+  },
+  {
+    "id": "19J3y5uotbw",
+    "lista": "9",
+    "palabra_ing": "Rooster",
+    "palabra_esp": "Gallo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "IFYiR8OJsQg",
+    "lista": "9",
+    "palabra_ing": "Bug",
+    "palabra_esp": "Error",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "xWK9tqRtukU",
+    "lista": "9",
+    "palabra_ing": "Tracking",
+    "palabra_esp": "Seguimiento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "XnQ2yBqfuzk",
+    "lista": "9",
+    "palabra_ing": "Overlap",
+    "palabra_esp": "Superposición, solapamiento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "thj-QFxPjWw",
+    "lista": "9",
+    "palabra_ing": "Counter",
+    "palabra_esp": "Mostrador, ventanilla",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "JLn1VufkjGw",
+    "lista": "9",
+    "palabra_ing": "Submission",
+    "palabra_esp": "Presentación, envío",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "X--7EXSmu7k",
+    "lista": "9",
+    "palabra_ing": "Nearterm",
+    "palabra_esp": "A corto plazo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "BQiSs6erYFk",
+    "lista": "9",
+    "palabra_ing": "Addressed",
+    "palabra_esp": "Abordado, dirigido",
+    "aprendida": true,
+    "contexto": "Addressed to United States"
+  },
+  {
+    "id": "0e_8Kbg9eyo",
+    "lista": "9",
+    "palabra_ing": "Wake",
+    "palabra_esp": "Estela, despertar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "goym3BtfXCA",
+    "lista": "9",
+    "palabra_ing": "Statement",
+    "palabra_esp": "Declaración, estado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "t0nvbbex5BE",
+    "lista": "9",
+    "palabra_ing": "Drop",
+    "palabra_esp": "Caida",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "loFJCBVmUWY",
+    "lista": "9",
+    "palabra_ing": "Lumpsum",
+    "palabra_esp": "Suma global",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "4fDuwxPPHEY",
+    "lista": "9",
+    "palabra_ing": "Ladder",
+    "palabra_esp": "Escalera",
+    "aprendida": true,
+    "contexto": "He climbed the ladder to fix the roof"
+  },
+  {
+    "id": "AaKGur0sZkA",
+    "lista": "9",
+    "palabra_ing": "Drizzling",
+    "palabra_esp": "Llovizna, lloviznando",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "UGm1F8zzT6I",
+    "lista": "9",
+    "palabra_ing": "Downpour",
+    "palabra_esp": "Aguacero, chaparrón, diluvio",
+    "aprendida": true,
+    "contexto": "A sudden downpour had filled the streets and drains with water"
+  },
+  {
+    "id": "bh7QGapalAM",
+    "lista": "9",
+    "palabra_ing": "Because of",
+    "palabra_esp": "Debido a, por",
+    "aprendida": true,
+    "contexto": "The issue is that because of this fear you don't advance"
+  },
+  {
+    "id": "lRJLRdIj7VI",
+    "lista": "9",
+    "palabra_ing": "Undergoing",
+    "palabra_esp": "Someterse",
+    "aprendida": true,
+    "contexto": "The baby will be undergoing a life-saving brain operation"
+  },
+  {
+    "id": "yZGE_4o7gAQ",
+    "lista": "9",
+    "palabra_ing": "Inquire",
+    "palabra_esp": "Preguntar, indagar",
+    "aprendida": true,
+    "contexto": "He inquired about houses for sale"
+  },
+  {
+    "id": "faP13CEaBRI",
+    "lista": "9",
+    "palabra_ing": "Log",
+    "palabra_esp": "Registro",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "CFuTbx0OM58",
+    "lista": "9",
+    "palabra_ing": "Bash",
+    "palabra_esp": "Intento, golpetazo",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "GXQ-yqiJwNw",
+    "lista": "9",
+    "palabra_ing": "Engage",
+    "palabra_esp": "Comprometerse, engancharse",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "8fvBvabgtA0",
+    "lista": "9",
+    "palabra_ing": "Mindfulness",
+    "palabra_esp": "Conciencia, atención plena",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "uC_5nydFiT8",
+    "lista": "9",
+    "palabra_ing": "Crafting",
+    "palabra_esp": "Elaboración, artesania",
+    "aprendida": true,
+    "contexto": "Crafting has emerged as a form of self-expression"
+  },
+  {
+    "id": "MLTBoZSYX8A",
+    "lista": "9",
+    "palabra_ing": "Displacement",
+    "palabra_esp": "Desplazamiento",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "quwf9KnePVo",
+    "lista": "9",
+    "palabra_ing": "Sure thing",
+    "palabra_esp": "Claro, por supuesto",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "1jDsMKkwgYA",
+    "lista": "9",
+    "palabra_ing": "Afraid",
+    "palabra_esp": "Preocupado, asustado",
+    "aprendida": true,
+    "contexto": "What are you afraid of?"
+  },
+  {
+    "id": "4VWcxkWR9GA",
+    "lista": "9",
+    "palabra_ing": "Mindset",
+    "palabra_esp": "Mentalidad",
+    "aprendida": true,
+    "contexto": "I feel so good about my winning mindset"
+  },
+  {
+    "id": "mxZRSoTCv_0",
+    "lista": "9",
+    "palabra_ing": "Submitted",
+    "palabra_esp": "Enviado, presentado",
+    "aprendida": true,
+    "contexto": "Please indicate date submitted"
+  },
+  {
+    "id": "iW2-aatgJp4",
+    "lista": "9",
+    "palabra_ing": "Leverage",
+    "palabra_esp": "Aprovechar, apalancamiento",
+    "aprendida": true,
+    "contexto": "The organization needs to leverage its key resources"
+  },
+  {
+    "id": "dr4Kq5hD2PI",
+    "lista": "9",
+    "palabra_ing": "Squirrel",
+    "palabra_esp": "Ardilla",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "j8ejmJeYWQ0",
+    "lista": "9",
+    "palabra_ing": "Trending",
+    "palabra_esp": "Tendencias",
+    "aprendida": true,
+    "contexto": "Today's top trending topics"
+  },
+  {
+    "id": "jvNthbz3rNY",
+    "lista": "9",
+    "palabra_ing": "Lever",
+    "palabra_esp": "Palanca",
+    "aprendida": true,
+    "contexto": "Give me a lever and I will move the world"
+  },
+  {
+    "id": "1NBLZqWmbyc",
+    "lista": "10",
+    "palabra_ing": "Craving",
+    "palabra_esp": "Antojo, ansia",
+    "aprendida": true,
+    "contexto": "I'm craving of a beans with pig's trotters"
+  },
+  {
+    "id": "6NeMtlxTIaM",
+    "lista": "10",
+    "palabra_ing": "Clamps",
+    "palabra_esp": "Grapas, abrazaderas",
+    "aprendida": true,
+    "contexto": "Clamps for the through section of the span"
+  },
+  {
+    "id": "nRXS96_fznQ",
+    "lista": "10",
+    "palabra_ing": "Ruling span (RS)",
+    "palabra_esp": "Vano de control, regulador",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "OenLBCnlYjQ",
+    "lista": "10",
+    "palabra_ing": "Chill",
+    "palabra_esp": "Frío, escalofrío",
+    "aprendida": true,
+    "contexto": "There was a chill in the air"
+  },
+  {
+    "id": "kPzekYRMN_0",
+    "lista": "10",
+    "palabra_ing": "Awesome",
+    "palabra_esp": "Impresionante, genial",
+    "aprendida": true,
+    "contexto": "The awesome power of the atomic bomb"
+  },
+  {
+    "id": "PpZJD8XW6XQ",
+    "lista": "10",
+    "palabra_ing": "On behalf of",
+    "palabra_esp": "En nombre de",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "pM7SKd0fJRI",
+    "lista": "10",
+    "palabra_ing": "Attend",
+    "palabra_esp": "Asistir",
+    "aprendida": true,
+    "contexto": "Two must-attend events"
+  },
+  {
+    "id": "b5KvnqU-amc",
+    "lista": "10",
+    "palabra_ing": "Refurbishment",
+    "palabra_esp": "Remodelacion, restauración",
+    "aprendida": true,
+    "contexto": "Health assessment and refurbishment of overhead lines"
+  },
+  {
+    "id": "jhSwDafwoWo",
+    "lista": "10",
+    "palabra_ing": "Flexible AC transmission systems",
+    "palabra_esp": "Sistemas de transmisión de CA flexibles",
+    "aprendida": true,
+    "contexto": "FACTS"
+  },
+  {
+    "id": "w_dlZ4zEzvE",
+    "lista": "10",
+    "palabra_ing": "Entrepreneur",
+    "palabra_esp": "Emprendedor, empresario",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "mxXZPWDWHhM",
+    "lista": "10",
+    "palabra_ing": "Affair",
+    "palabra_esp": "Asunto, amorío",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "sfwZUkRJmVQ",
+    "lista": "10",
+    "palabra_ing": "Kitties",
+    "palabra_esp": "Gatitos",
+    "aprendida": true,
+    "contexto": "Lovely kitties"
+  },
+  {
+    "id": "ZOv3-7sEsf4",
+    "lista": "10",
+    "palabra_ing": "Rid",
+    "palabra_esp": "Deshacerse",
+    "aprendida": true,
+    "contexto": "We now have the greatest chance ever to rid the world of nuclear weapons"
+  },
+  {
+    "id": "k_9uAcihpCY",
+    "lista": "10",
+    "palabra_ing": "Rude",
+    "palabra_esp": "Grosero",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "6skPAajaEYg",
+    "lista": "10",
+    "palabra_ing": "Lazy",
+    "palabra_esp": "Vago, perezoso",
+    "aprendida": true,
+    "contexto": "He was too lazy to cook"
+  },
+  {
+    "id": "UHcC6vCInzg",
+    "lista": "10",
+    "palabra_ing": "Raise",
+    "palabra_esp": "Aumentar, subir, levantar",
+    "aprendida": true,
+    "contexto": "The bank raised interest rates"
+  },
+  {
+    "id": "ZyaELT0W0wM",
+    "lista": "10",
+    "palabra_ing": "Stand up for",
+    "palabra_esp": "Defender",
+    "aprendida": true,
+    "contexto": "To stand up for your conviction"
+  },
+  {
+    "id": "De7U8B7usp4",
+    "lista": "10",
+    "palabra_ing": "Joyful",
+    "palabra_esp": "Alegre",
+    "aprendida": true,
+    "contexto": "I like listen to joyful music"
+  },
+  {
+    "id": "jdA0P-2WsPQ",
+    "lista": "10",
+    "palabra_ing": "Candle",
+    "palabra_esp": "Vela",
+    "aprendida": true,
+    "contexto": "A cylinder of wax with a central wick that is lit to produce light as it burns"
+  },
+  {
+    "id": "LWKbmVKi6RA",
+    "lista": "10",
+    "palabra_ing": "Setbacks",
+    "palabra_esp": "Contratiempos, reveses",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "7wSNpC8jKbA",
+    "lista": "10",
+    "palabra_ing": "Calm down",
+    "palabra_esp": "Cálmate, calma",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "6JR4gg2RVKI",
+    "lista": "10",
+    "palabra_ing": "Stand out",
+    "palabra_esp": "Destacar",
+    "aprendida": false,
+    "contexto": "Standing out for myself"
+  },
+  {
+    "id": "xvhwnboOJU8",
+    "lista": "10",
+    "palabra_ing": "Feature",
+    "palabra_esp": "Característica",
+    "aprendida": true,
+    "contexto": "Special feature, facial features"
+  },
+  {
+    "id": "MdjFQc04ZNY",
+    "lista": "10",
+    "palabra_ing": "Featuring, feat. / feat",
+    "palabra_esp": "Incluyendo, con / hazaña, logro",
+    "aprendida": true,
+    "contexto": "Shakira feat. Maluma / The bridge is a feat of engineering"
+  },
+  {
+    "id": "8WZ5vu_sORU",
+    "lista": "10",
+    "palabra_ing": "Naughty",
+    "palabra_esp": "Travieso/a",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "fWpDqA1ANNw",
+    "lista": "10",
+    "palabra_ing": "Standings",
+    "palabra_esp": "Clasificación, posiciones",
+    "aprendida": true,
+    "contexto": "Drivers standings"
+  },
+  {
+    "id": "mj5F_9bi8SM",
+    "lista": "10",
+    "palabra_ing": "Gap",
+    "palabra_esp": "Diferencia, hueco",
+    "aprendida": true,
+    "contexto": "The gap with the Leader is 12 seconds"
+  },
+  {
+    "id": "dOeZD5dVS_U",
+    "lista": "10",
+    "palabra_ing": "Through",
+    "palabra_esp": "A través de",
+    "aprendida": true,
+    "contexto": "He walked through the door"
+  },
+  {
+    "id": "PuSQCnVVNDI",
+    "lista": "10",
+    "palabra_ing": "Lashed",
+    "palabra_esp": "Atado",
+    "aprendida": true,
+    "contexto": "Lashed cables"
+  },
+  {
+    "id": "T-zJvUOxfY4",
+    "lista": "10",
+    "palabra_ing": "Twisted",
+    "palabra_esp": "Trenzado, retorcido",
+    "aprendida": true,
+    "contexto": "Twisted cable"
+  },
+  {
+    "id": "6mu8qRuX01I",
+    "lista": "10",
+    "palabra_ing": "Creep",
+    "palabra_esp": "Arrastrarse",
+    "aprendida": true,
+    "contexto": "For he can creep"
+  },
+  {
+    "id": "TFSKGARFS4o",
+    "lista": "10",
+    "palabra_ing": "Batch",
+    "palabra_esp": "Lote",
+    "aprendida": true,
+    "contexto": "Batch modify (all structures will be modify)"
+  },
+  {
+    "id": "TMBU5jMjwZ8",
+    "lista": "10",
+    "palabra_ing": "Guy",
+    "palabra_esp": "Tipo, retenida (en redes)",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "i_layvE2KzY",
+    "lista": "10",
+    "palabra_ing": "Mermaid",
+    "palabra_esp": "Sirena",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "swHuQiqf1Dk",
+    "lista": "10",
+    "palabra_ing": "Flip",
+    "palabra_esp": "Voltear, dar la vuelta",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "dALz7qFccFo",
+    "lista": "10",
+    "palabra_ing": "Crow, raven",
+    "palabra_esp": "Cuervo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "loyzBDIMkkk",
+    "lista": "11",
+    "palabra_ing": "Show off",
+    "palabra_esp": "Presumir",
+    "aprendida": false,
+    "contexto": "He shows off his new tennis"
+  },
+  {
+    "id": "haeQCiZz0gI",
+    "lista": "10",
+    "palabra_ing": "Heritage",
+    "palabra_esp": "Heriencia",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "pIhSC6HTNjI",
+    "lista": "10",
+    "palabra_ing": "Vowed",
+    "palabra_esp": "Prometió, juró",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "2uzXvxbSBJc",
+    "lista": "10",
+    "palabra_ing": "Lobster",
+    "palabra_esp": "Langosta",
+    "aprendida": true,
+    "contexto": "She eats lobster with shrimps"
+  },
+  {
+    "id": "l_txo56lX9s",
+    "lista": "10",
+    "palabra_ing": "Curb",
+    "palabra_esp": "Frenar",
+    "aprendida": false,
+    "contexto": "Yield an agreement to curb Iranian uranium enrichment"
+  },
+  {
+    "id": "Z4IWbEmqHB4",
+    "lista": "10",
+    "palabra_ing": "Deer",
+    "palabra_esp": "Ciervo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "esSTEJZrWjI",
+    "lista": "10",
+    "palabra_ing": "Sacred",
+    "palabra_esp": "Sagrado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "DU7SP6St5Wk",
+    "lista": "10",
+    "palabra_ing": "Creed",
+    "palabra_esp": "Credo",
+    "aprendida": true,
+    "contexto": "Assassin's creed"
+  },
+  {
+    "id": "kO_Fz3MU4jg",
+    "lista": "10",
+    "palabra_ing": "Steering wheel",
+    "palabra_esp": "Volante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "1Ls2SxmV6-8",
+    "lista": "10",
+    "palabra_ing": "Refrain",
+    "palabra_esp": "Abstenerse",
+    "aprendida": false,
+    "contexto": "He called on all sides to refrain from escalating the conflict"
+  },
+  {
+    "id": "fIdE07TutdM",
+    "lista": "10",
+    "palabra_ing": "Appeal",
+    "palabra_esp": "Apelar",
+    "aprendida": false,
+    "contexto": "He appeals to the judge"
+  },
+  {
+    "id": "Bxh1slRpaiM",
+    "lista": "10",
+    "palabra_ing": "Breakout",
+    "palabra_esp": "Escapar, evadir",
+    "aprendida": false,
+    "contexto": "A prison breakout"
+  },
+  {
+    "id": "tUmmgOABAP4",
+    "lista": "10",
+    "palabra_ing": "Blame",
+    "palabra_esp": "Culpa, culpar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "l0diBzwnIws",
+    "lista": "10",
+    "palabra_ing": "Footage",
+    "palabra_esp": "Imágenes, metraje",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "feQuj6eWl8g",
+    "lista": "10",
+    "palabra_ing": "Chirping",
+    "palabra_esp": "Cantando, chirreando",
+    "aprendida": false,
+    "contexto": "Crickets chirping"
+  },
+  {
+    "id": "o-JQzZaiDbA",
+    "lista": "10",
+    "palabra_ing": "Sniffling",
+    "palabra_esp": "Resfriado, sollozando",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "1hulNYtbMko",
+    "lista": "11",
+    "palabra_ing": "Sniff",
+    "palabra_esp": "Oler, olfatear, husmear",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "RXJr6sFKj9M",
+    "lista": "10",
+    "palabra_ing": "Till",
+    "palabra_esp": "Hasta",
+    "aprendida": true,
+    "contexto": "Synomym of \"until\""
+  },
+  {
+    "id": "MbfZcepzZaA",
+    "lista": "11",
+    "palabra_ing": "Scrub",
+    "palabra_esp": "Fregar, molestar",
+    "aprendida": false,
+    "contexto": "We scrub his wife till he tired"
+  },
+  {
+    "id": "9u6GxPxPd2Y",
+    "lista": "10",
+    "palabra_ing": "Chatter",
+    "palabra_esp": "Charla",
+    "aprendida": true,
+    "contexto": "Indistinct chatter"
+  },
+  {
+    "id": "a-M4WwotMYU",
+    "lista": "10",
+    "palabra_ing": "Turkey",
+    "palabra_esp": "Pavo, Turquía",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "A_DFAu07NPw",
+    "lista": "11",
+    "palabra_ing": "Sunrise",
+    "palabra_esp": "Amanecer",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Grl3z7BaEqo",
+    "lista": "11",
+    "palabra_ing": "Sunset",
+    "palabra_esp": "Atardecer, puesta de sol",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "JyHAnHt1wSE",
+    "lista": "11",
+    "palabra_ing": "Accountable",
+    "palabra_esp": "Responsable",
+    "aprendida": false,
+    "contexto": "Synomym of \"responsible\""
+  },
+  {
+    "id": "nEEVpzqwICU",
+    "lista": "11",
+    "palabra_ing": "Slip",
+    "palabra_esp": "Resbalar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "SgusX1L4W7g",
+    "lista": "11",
+    "palabra_ing": "Terrified",
+    "palabra_esp": "Atemorizado",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "sh9JCl5PTUg",
+    "lista": "11",
+    "palabra_ing": "Basement",
+    "palabra_esp": "Sótano",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "GnTjdQHIHLw",
+    "lista": "11",
+    "palabra_ing": "Slam",
+    "palabra_esp": "Golpe, portazo",
+    "aprendida": false,
+    "contexto": "He slams the door behind him as he leaves"
+  },
+  {
+    "id": "dlp0nvxSyjs",
+    "lista": "11",
+    "palabra_ing": "Ain't",
+    "palabra_esp": "No es",
+    "aprendida": false,
+    "contexto": "That ain't him"
+  },
+  {
+    "id": "JychEVtsOik",
+    "lista": "11",
+    "palabra_ing": "Sworn",
+    "palabra_esp": "Jurado",
+    "aprendida": false,
+    "contexto": "I could have sworn you just said I have no future"
+  },
+  {
+    "id": "HibrZ6WgBGM",
+    "lista": "11",
+    "palabra_ing": "Swarm",
+    "palabra_esp": "Enjambre",
+    "aprendida": false,
+    "contexto": "Swarm bees"
+  },
+  {
+    "id": "wLltdONxFDM",
+    "lista": "11",
+    "palabra_ing": "Toll",
+    "palabra_esp": "Número de, peaje",
+    "aprendida": false,
+    "contexto": "Rising death toll"
+  },
+  {
+    "id": "eGPl4iWTjCU",
+    "lista": "11",
+    "palabra_ing": "Clay",
+    "palabra_esp": "Arcilla",
+    "aprendida": false,
+    "contexto": "I need clay to play"
+  },
+  {
+    "id": "X7tp0dcCsNs",
+    "lista": "11",
+    "palabra_ing": "Waste",
+    "palabra_esp": "Desperdiciar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "DuK3H2CKmOQ",
+    "lista": "11",
+    "palabra_ing": "Overshadow",
+    "palabra_esp": "Eclipsar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "CBa4MIqZkg8",
+    "lista": "11",
+    "palabra_ing": "Regain",
+    "palabra_esp": "Recuperar",
+    "aprendida": false,
+    "contexto": "I would quickly regain the rest"
+  },
+  {
+    "id": "Ug-X_vgJ_9w",
+    "lista": "11",
+    "palabra_ing": "Efforts",
+    "palabra_esp": "Esfuerzos",
+    "aprendida": true,
+    "contexto": "Promotional and Sales Efforts"
+  },
+  {
+    "id": "b3HZ8YbtTmc",
+    "lista": "11",
+    "palabra_ing": "Support",
+    "palabra_esp": "Apoyo, apoyar",
+    "aprendida": false,
+    "contexto": "He had supported the efforts to get the agreement"
+  },
+  {
+    "id": "5KEDsWpfBFY",
+    "lista": "11",
+    "palabra_ing": "Step out",
+    "palabra_esp": "Salir",
+    "aprendida": false,
+    "contexto": "Step out of your comfort zone"
+  },
+  {
+    "id": "Phem-iNYaUY",
+    "lista": "11",
+    "palabra_ing": "Ignite",
+    "palabra_esp": "Encender",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "GJS0dcMA864",
+    "lista": "11",
+    "palabra_ing": "Last but not least",
+    "palabra_esp": "Por último, pero no menos importante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "Lvvxg_qULzg",
+    "lista": "11",
+    "palabra_ing": "Rhetoric",
+    "palabra_esp": "Retórica",
+    "aprendida": false,
+    "contexto": "Study of the effective communication"
+  },
+  {
+    "id": "gymexxLwBH0",
+    "lista": "11",
+    "palabra_ing": "Jailbreak",
+    "palabra_esp": "Fuga",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ill-pCG-8I0",
+    "lista": "11",
+    "palabra_ing": "Bare",
+    "palabra_esp": "Desnudo, descubierto",
+    "aprendida": false,
+    "contexto": "Annealed Bare Copper"
+  },
+  {
+    "id": "TDFRzyGXfLw",
+    "lista": "11",
+    "palabra_ing": "Anneal",
+    "palabra_esp": "Recocer",
+    "aprendida": false,
+    "contexto": "Copper tubes must be annealed after bending or they will be brittle"
+  },
+  {
+    "id": "dTMNVI9NMaM",
+    "lista": "11",
+    "palabra_ing": "Brittle",
+    "palabra_esp": "Fragil, quebradizo",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "R20qNrOsELk",
+    "lista": "11",
+    "palabra_ing": "Liability",
+    "palabra_esp": "Responsabilidad",
+    "aprendida": false,
+    "contexto": "Synomym of \"responsibility\" or \"accountability\""
+  },
+  {
+    "id": "01YvMDJXxg4",
+    "lista": "11",
+    "palabra_ing": "Surrender",
+    "palabra_esp": "Rendirse",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "SRLIR0z5DbQ",
+    "lista": "11",
+    "palabra_ing": "Remark",
+    "palabra_esp": "Comentario, observación",
+    "aprendida": false,
+    "contexto": "His remarks were a defiant response to Israel"
+  },
+  {
+    "id": "UFJ46aqh874",
+    "lista": "11",
+    "palabra_ing": "Defiant",
+    "palabra_esp": "Desafiante",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "8ScX1Rgo-wQ",
+    "lista": "11",
+    "palabra_ing": "Benchmark",
+    "palabra_esp": "Punto de referencia, comparación",
+    "aprendida": false,
+    "contexto": "We are benchmarking our performance against external criteria"
+  },
+  {
+    "id": "iglf6OagVyE",
+    "lista": "11",
+    "palabra_ing": "Check it out",
+    "palabra_esp": "Mira esto, échale un vistazo",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "1XVoDsEf9xs",
+    "lista": "11",
+    "palabra_ing": "Lounge",
+    "palabra_esp": "Sala, estancia",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "CJYcENoODxk",
+    "lista": "11",
+    "palabra_ing": "Top notch",
+    "palabra_esp": "De primera categoría",
+    "aprendida": false,
+    "contexto": "A top notch hotel"
+  },
+  {
+    "id": "28KCbv0aB9Q",
+    "lista": "11",
+    "palabra_ing": "Kind",
+    "palabra_esp": "Amable",
+    "aprendida": false,
+    "contexto": "You are so kind"
+  },
+  {
+    "id": "QXA65y6j458",
+    "lista": "11",
+    "palabra_ing": "Couch",
+    "palabra_esp": "Sofá",
+    "aprendida": false,
+    "contexto": "The beautiful couch in the lounge"
+  },
+  {
+    "id": "8G2qcqcQk8w",
+    "lista": "11",
+    "palabra_ing": "Strand",
+    "palabra_esp": "Hebra, filamento, hilo",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "8484yHHXdEc",
+    "lista": "11",
+    "palabra_ing": "Stingy",
+    "palabra_esp": "Tacaño",
+    "aprendida": false,
+    "contexto": "My friend doesn't spend money, he's too stingy"
+  },
+  {
+    "id": "nlmygJ2TrxA",
+    "lista": "11",
+    "palabra_ing": "Elder",
+    "palabra_esp": "Mayor, anciano",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "pIuB2LHMHmc",
+    "lista": "11",
+    "palabra_ing": "Acquaintance",
+    "palabra_esp": "Conocido",
+    "aprendida": false,
+    "contexto": "Is he an acquaintance or a strange person to you?"
+  },
+  {
+    "id": "HqqDwFa5F4c",
+    "lista": "11",
+    "palabra_ing": "Trait",
+    "palabra_esp": "Rasgo, característica",
+    "aprendida": false,
+    "contexto": "Synomym of \"feature\""
+  },
+  {
+    "id": "r7bfFV4v288",
+    "lista": "11",
+    "palabra_ing": "Backlog",
+    "palabra_esp": "Lista de tareas/pedidos pendientes",
+    "aprendida": false,
+    "contexto": "We need to reduce the backlog of customer support tickets"
+  },
+  {
+    "id": "rJKnqX96Vw4",
+    "lista": "11",
+    "palabra_ing": "Refund",
+    "palabra_esp": "Reembolso",
+    "aprendida": false,
+    "contexto": "Can I get a refund?"
+  },
+  {
+    "id": "4bIZPGBKwhI",
+    "lista": "11",
+    "palabra_ing": "Blast",
+    "palabra_esp": "Explosión, ráfaga",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "9vyBIa6vXSA",
+    "lista": "11",
+    "palabra_ing": "Persuade",
+    "palabra_esp": "Persuadir",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "DJMWmeZppBs",
+    "lista": "11",
+    "palabra_ing": "Finest",
+    "palabra_esp": "Mejores, lo mejor",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "L7t1am-cb6Y",
+    "lista": "11",
+    "palabra_ing": "Anger",
+    "palabra_esp": "Enojo",
+    "aprendida": false,
+    "contexto": "Fear leads to anger, anger leads to hate, hate leads to suffering"
+  },
+  {
+    "id": "U0xWb9C4dkI",
+    "lista": "11",
+    "palabra_ing": "Stuff",
+    "palabra_esp": "Cosas",
+    "aprendida": false,
+    "contexto": "Industrial production, making stuff"
+  },
+  {
+    "id": "i9x-J643xXs",
+    "lista": "11",
+    "palabra_ing": "Lasts",
+    "palabra_esp": "Dura/durar",
+    "aprendida": false,
+    "contexto": "Lasts ten times longer"
+  },
+  {
+    "id": "2u2_hKJttro",
+    "lista": "11",
+    "palabra_ing": "Boiler",
+    "palabra_esp": "Caldera",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "1N9e8_0oYYA",
+    "lista": "11",
+    "palabra_ing": "Spare",
+    "palabra_esp": "Repuesto",
+    "aprendida": false,
+    "contexto": "Few people had spare cash for inessentials"
+  },
+  {
+    "id": "vNhD5KshokE",
+    "lista": "11",
+    "palabra_ing": "Stem",
+    "palabra_esp": "Tallo",
+    "aprendida": false,
+    "contexto": "The main stem of the wing feathers"
+  },
+  {
+    "id": "waLBzLjYGhc",
+    "lista": "12",
+    "palabra_ing": "Wheat",
+    "palabra_esp": "Trigo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "JrC_PBFkOOo",
+    "lista": "12",
+    "palabra_ing": "Cucumber",
+    "palabra_esp": "Pepino",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "HZG8UtmqXVI",
+    "lista": "12",
+    "palabra_ing": "Vulture",
+    "palabra_esp": "Buitre",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "UjC-5zDdlnM",
+    "lista": "12",
+    "palabra_ing": "Flea",
+    "palabra_esp": "Pulga",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "THL5p_ajpLs",
+    "lista": "12",
+    "palabra_ing": "Hummingbird",
+    "palabra_esp": "Colibrí",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "OkvR7DeTjnI",
+    "lista": "12",
+    "palabra_ing": "Ostrich",
+    "palabra_esp": "Avestruz",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "7zIXEGPlBpg",
+    "lista": "12",
+    "palabra_ing": "Oat",
+    "palabra_esp": "Avena",
+    "aprendida": false,
+    "contexto": "Rolled oats"
+  },
+  {
+    "id": "M-fmMRDyudg",
+    "lista": "12",
+    "palabra_ing": "Toast",
+    "palabra_esp": "Tostada",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "8enut-PKrDg",
+    "lista": "12",
+    "palabra_ing": "Enthusiasm",
+    "palabra_esp": "Estusiasmo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "-3EMn8djw3I",
+    "lista": "12",
+    "palabra_ing": "Dump",
+    "palabra_esp": "Vertedero",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "Nq5mICEQfR0",
+    "lista": "12",
+    "palabra_ing": "Sleep in",
+    "palabra_esp": "Dormir/levantarse tarde",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ZSwmJ17nKQA",
+    "lista": "12",
+    "palabra_ing": "Squid",
+    "palabra_esp": "Calamar",
+    "aprendida": true,
+    "contexto": "The squid game"
+  },
+  {
+    "id": "EAFk4Bqtl2w",
+    "lista": "12",
+    "palabra_ing": "Comprehensive",
+    "palabra_esp": "Integral, exhaustivo",
+    "aprendida": false,
+    "contexto": "A comprehensive list of sources"
+  },
+  {
+    "id": "CTfb_oKz3Co",
+    "lista": "12",
+    "palabra_ing": "Fairly",
+    "palabra_esp": "Bastante, equitativamente",
+    "aprendida": false,
+    "contexto": "Fortunately it’s a fairly simple device"
+  },
+  {
+    "id": "53JyRsJSlHA",
+    "lista": "12",
+    "palabra_ing": "Right away",
+    "palabra_esp": "De inmediato",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "p7hpy3qdJYo",
+    "lista": "12",
+    "palabra_ing": "Vacuum",
+    "palabra_esp": "Vacío",
+    "aprendida": true,
+    "contexto": "Outdoor vacuum circuit braker"
+  },
+  {
+    "id": "wnEDKklGFVo",
+    "lista": "12",
+    "palabra_ing": "Tip",
+    "palabra_esp": "Punta, consejo",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "ppIhViwMjSw",
+    "lista": "12",
+    "palabra_ing": "Pigeon",
+    "palabra_esp": "Paloma",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "VvwLljuXSks",
+    "lista": "12",
+    "palabra_ing": "Barley",
+    "palabra_esp": "Cebada",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "kC2Iq_SYdL4",
+    "lista": "12",
+    "palabra_ing": "Steer",
+    "palabra_esp": "Dirige",
+    "aprendida": false,
+    "contexto": "Steer your conversations"
+  },
+  {
+    "id": "OfoCEsjs0bw",
+    "lista": "12",
+    "palabra_ing": "Look over",
+    "palabra_esp": "Revisar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "_A6eu6WCy2A",
+    "lista": "12",
+    "palabra_ing": "Figment",
+    "palabra_esp": "Producto",
+    "aprendida": false,
+    "contexto": "An opinion is just a figment of someone's imagination"
+  },
+  {
+    "id": "ZWSjREGelrY",
+    "lista": "12",
+    "palabra_ing": "Clasp",
+    "palabra_esp": "Cierre",
+    "aprendida": false,
+    "contexto": "Lobster clasp"
+  },
+  {
+    "id": "TcHkGPuulnY",
+    "lista": "12",
+    "palabra_ing": "Strand",
+    "palabra_esp": "Hilo",
+    "aprendida": false,
+    "contexto": "Outer strand diameter"
+  },
+  {
+    "id": "2lTv3pOvIas",
+    "lista": "12",
+    "palabra_ing": "Commitment",
+    "palabra_esp": "Compromiso",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "wjVbgKFKh-M",
+    "lista": "12",
+    "palabra_ing": "Provide",
+    "palabra_esp": "Proporcionar",
+    "aprendida": true,
+    "contexto": "How to provide speech structure and flow"
+  },
+  {
+    "id": "Rm39ikFU_Y8",
+    "lista": "12",
+    "palabra_ing": "Regrets",
+    "palabra_esp": "Arrepentimientos",
+    "aprendida": true,
+    "contexto": "Do you have any regrets?"
+  },
+  {
+    "id": "Lba1Ma0fypI",
+    "lista": "12",
+    "palabra_ing": "Needle",
+    "palabra_esp": "Aguja",
+    "aprendida": true,
+    "contexto": "I fix the shirt with thread and needle"
+  },
+  {
+    "id": "ofD4Re4MgfQ",
+    "lista": "12",
+    "palabra_ing": "Liabilities",
+    "palabra_esp": "Obligaciones, deudas, pasivo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "LAThdDUoc2A",
+    "lista": "12",
+    "palabra_ing": "Framing",
+    "palabra_esp": "Enmarcado, estructuras",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "0N99i2U1xMM",
+    "lista": "12",
+    "palabra_ing": "Hornet",
+    "palabra_esp": "Avispón",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "aa_nRPc-Fro",
+    "lista": "12",
+    "palabra_ing": "Flatten",
+    "palabra_esp": "Aplanar",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "d06L59VnT_0",
+    "lista": "12",
+    "palabra_ing": "Hub",
+    "palabra_esp": "Centro, eje",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "34t97ZRPO6E",
+    "lista": "12",
+    "palabra_ing": "Sink",
+    "palabra_esp": "Hundir, drenaje",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "WH5sxwWp-Ek",
+    "lista": "12",
+    "palabra_ing": "Faithfull",
+    "palabra_esp": "Fiel",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "6DJ9NAYFSdc",
+    "lista": "12",
+    "palabra_ing": "Horseback riding",
+    "palabra_esp": "Montar a caballo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "qMq2CVS297Y",
+    "lista": "12",
+    "palabra_ing": "Forecast",
+    "palabra_esp": "Pronostico",
+    "aprendida": false,
+    "contexto": "Weather forecast"
+  },
+  {
+    "id": "1BdRYKmQKYA",
+    "lista": "12",
+    "palabra_ing": "Implies",
+    "palabra_esp": "Implica, involucra",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "1_Yuwi1Tp8I",
+    "lista": "12",
+    "palabra_ing": "Tightening",
+    "palabra_esp": "Apretado",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "2-7AMjRBt-g",
+    "lista": "12",
+    "palabra_ing": "Mild",
+    "palabra_esp": "Leve, suave",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "SWK1hbzAPpU",
+    "lista": "12",
+    "palabra_ing": "Shrink",
+    "palabra_esp": "Encojer",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "S1MqTCwS7rg",
+    "lista": "12",
+    "palabra_ing": "Run out",
+    "palabra_esp": "Terminarse, salir corriendo",
+    "aprendida": true,
+    "contexto": ""
+  },
+  {
+    "id": "ge5YzPey5y4",
+    "lista": "12",
+    "palabra_ing": "Prior",
+    "palabra_esp": "Previo",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "M6nMg626hCI",
+    "lista": "12",
+    "palabra_ing": "Investor",
+    "palabra_esp": "Inversor, accionista",
+    "aprendida": false,
+    "contexto": "Investor day"
+  },
+  {
+    "id": "9VfJrk2mnhI",
+    "lista": "12",
+    "palabra_ing": "Affordable",
+    "palabra_esp": "Asequible, accesible",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "r2rf59NXhLg",
+    "lista": "12",
+    "palabra_ing": "Embedding",
+    "palabra_esp": "Incrustar, representación vectorial",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "K4CDTqhwTIo",
+    "lista": "12",
+    "palabra_ing": "Tough",
+    "palabra_esp": "Difícil",
+    "aprendida": false,
+    "contexto": "Similar to challenging"
+  },
+  {
+    "id": "BGmT_g6g-xI",
+    "lista": "12",
+    "palabra_ing": "On account of",
+    "palabra_esp": "A causa de",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "btl0EfA4Pw0",
+    "lista": "12",
+    "palabra_ing": "Spill",
+    "palabra_esp": "Derramar",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "cEFJfZ-pvQA",
+    "lista": "12",
+    "palabra_ing": "Pottery",
+    "palabra_esp": "Cerámica, alfareria",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "d1RY6yQ3mTI",
+    "lista": "13",
+    "palabra_ing": "Call for",
+    "palabra_esp": "Requiere, exige",
+    "aprendida": false,
+    "contexto": "Our plan will call for a lot of money"
+  },
+  {
+    "id": "kYpBe4tfEUQ",
+    "lista": "13",
+    "palabra_ing": "Awe",
+    "palabra_esp": "Temor",
+    "aprendida": false,
+    "contexto": "With awe and fear"
+  },
+  {
+    "id": "z6ofmI_YpNk",
+    "lista": "13",
+    "palabra_ing": "Sword",
+    "palabra_esp": "Espada",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "ftkGcy9Lvpw",
+    "lista": "13",
+    "palabra_ing": "Rush",
+    "palabra_esp": "Apresurarse, correr",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "cK83Y4u0rUs",
+    "lista": "13",
+    "palabra_ing": "Numb",
+    "palabra_esp": "Entumecido",
+    "aprendida": false,
+    "contexto": "Confortable numb"
+  },
+  {
+    "id": "Pdz9GRO301g",
+    "lista": "13",
+    "palabra_ing": "Push up",
+    "palabra_esp": "Hacer subir, levantamiento",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "QUaozLuW8po",
+    "lista": "13",
+    "palabra_ing": "Fees",
+    "palabra_esp": "Tasas",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "xaKzi6Q2tMM",
+    "lista": "13",
+    "palabra_ing": "Hive",
+    "palabra_esp": "Colmena",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "JgBPUsDm8ww",
+    "lista": "13",
+    "palabra_ing": "Foundry",
+    "palabra_esp": "Fundición",
+    "aprendida": false,
+    "contexto": ""
+  },
+  {
+    "id": "1U9_acCDuj0",
+    "lista": "13",
+    "palabra_ing": "Built in",
+    "palabra_esp": "Incorporado",
+    "aprendida": false,
+    "contexto": ""
+  }
+]
