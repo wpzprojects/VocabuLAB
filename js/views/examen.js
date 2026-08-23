@@ -14,7 +14,7 @@ export async function render(container) {
 
   container.append(
     el("h1", { class: "page-title" }, "Test de vocabulario"),
-    el("p", { class: "page-subtitle" }, "Escribe la traduccion de cada palabra y comprueba tu resultado.")
+    el("p", { class: "page-subtitle" }, "Pon a prueba tu vocabulario.")
   );
 
   const listaSelect = el("select", {}, [

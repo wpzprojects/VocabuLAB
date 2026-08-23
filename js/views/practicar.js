@@ -12,7 +12,7 @@ export async function render(container) {
 
   container.append(
     el("h1", { class: "page-title" }, "Practicar vocabulario"),
-    el("p", { class: "page-subtitle" }, "Revisa tus palabras en tarjetas y marca las que ya te aprendiste.")
+    el("p", { class: "page-subtitle" }, "Repasa tus palabras con tarjetas.")
   );
 
   const listaSelect = el("select", {}, [

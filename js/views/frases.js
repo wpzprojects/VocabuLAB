@@ -13,7 +13,7 @@ export async function render(container) {
 
   container.append(
     el("h1", { class: "page-title" }, "Frases comunes"),
-    el("p", { class: "page-subtitle" }, "Frases de uso frecuente en ingles, organizadas por categoria.")
+    el("p", { class: "page-subtitle" }, "Frases frecuentes en ingles por categoria.")
   );
 
   const toolbar = el("div", { class: "toolbar" });

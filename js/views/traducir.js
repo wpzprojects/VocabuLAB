@@ -12,7 +12,7 @@ export async function render(container) {
 
   container.append(
     el("h1", { class: "page-title" }, "Traducir"),
-    el("p", { class: "page-subtitle" }, "Traduce un texto y, si quieres, guardalo como palabra nueva en tu vocabulario.")
+    el("p", { class: "page-subtitle" }, "Traduce y guardalo como palabra nueva.")
   );
 
   const card = el("div", { class: "card" });

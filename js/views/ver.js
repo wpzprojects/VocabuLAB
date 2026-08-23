@@ -14,7 +14,7 @@ export async function render(container) {
 
   container.append(
     el("h1", { class: "page-title" }, "Palabras"),
-    el("p", { class: "page-subtitle" }, "Tu vocabulario en ingles: busca, filtra por lista, y agrega o edita palabras.")
+    el("p", { class: "page-subtitle" }, "Busca, filtra y edita tu vocabulario.")
   );
 
   const toolbar = el("div", { class: "toolbar" });
