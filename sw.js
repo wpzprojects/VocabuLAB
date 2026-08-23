@@ -6,7 +6,7 @@
 // Sube este numero en cada deploy que toque algun archivo cacheado (css/js/
 // icons/data) - si sw.js no cambia de bytes, el navegador nunca detecta que
 // hay una version nueva que instalar y la app queda sirviendo la cache vieja.
-const CACHE_VERSION = "v24";
+const CACHE_VERSION = "v27";
 const CACHE_NAME = `vocabulab-${CACHE_VERSION}`;
 
 const SCOPE = self.registration.scope;
@@ -24,6 +24,7 @@ const APP_SHELL = [
   "js/icons.js",
   "js/store.js",
   "js/translate.js",
+  "js/palabraModal.js",
   "js/util/format.js",
   "js/views/ver.js",
   "js/views/traducir.js",

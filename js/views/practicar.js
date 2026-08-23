@@ -37,7 +37,7 @@ export async function render(container) {
     el("div", { class: "field" }, [
       el("span", { class: "field-title" }, "Idioma"),
       el("label", { class: "toggle-row" }, [
-        el("span", {}, "Espanol primero"),
+        el("span", {}, "Intercambiar"),
         el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
       ]),
     ]),
