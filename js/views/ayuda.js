@@ -79,6 +79,24 @@ export async function render(container) {
   );
 
   container.append(buildRestoreCard());
+  container.append(buildDeveloperCard());
+}
+
+function buildDeveloperCard() {
+  return el("div", { class: "card dev-card" }, [
+    el("div", { class: "dev-header" }, [
+      el("span", { class: "dev-avatar" }, "WP"),
+      el("div", {}, [
+        el("p", { class: "dev-name" }, "Wilsson Uriel Perez Valero"),
+        el("p", { class: "dev-role" }, "Desarrollador de VocabuLAB"),
+      ]),
+    ]),
+    el("div", { class: "dev-contact" }, [
+      el("a", { href: "mailto:wperez.net@hotmail.com" }, "wperez.net@hotmail.com"),
+      el("a", { href: "tel:+573104762477" }, "+57 310 476 2477"),
+    ]),
+    el("p", { class: "dev-footer" }, "Colombia · 2026"),
+  ]);
 }
 
 function buildRestoreCard() {
