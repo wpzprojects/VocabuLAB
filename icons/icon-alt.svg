@@ -8,13 +8,10 @@
   <g clip-path="url(#sq3)">
     <g transform="translate(-14,52)">
       <!-- back flashcard, outline only -->
-      <rect x="239" y="194" width="630" height="450" rx="44" fill="none" stroke="#D97757" stroke-width="18" opacity="0.85" transform="rotate(8 554 419)"/>
+      <rect x="239" y="194" width="630" height="450" rx="44" fill="none" stroke="#FAF9F5" stroke-width="18" opacity="0.55" transform="rotate(8 554 419)"/>
       <!-- front flashcard, solid orange, with a single letter -->
       <rect x="179" y="284" width="630" height="450" rx="44" fill="#D97757" transform="rotate(-6 494 509)"/>
       <text x="494" y="584" text-anchor="middle" font-family="'DejaVu Sans', Arial, sans-serif" font-weight="700" font-size="300" fill="#262624" transform="rotate(-6 494 509)">Ab</text>
     </g>
   </g>
-  <!-- outer frame around the whole icon, same orange -->
-  <path d="M512 40 C 850 40 984 174 984 512 C 984 850 850 984 512 984 C 174 984 40 850 40 512 C 40 174 174 40 512 40 Z"
-        fill="none" stroke="#D97757" stroke-width="28"/>
 </svg>

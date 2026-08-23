@@ -31,7 +31,7 @@ MASKABLE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1
   <rect width="1024" height="1024" fill="#262624"/>
   <g transform="translate(512,512) scale(0.72) translate(-512,-512)">
     <g transform="translate(-14,52)">
-      <rect x="239" y="194" width="630" height="450" rx="44" fill="none" stroke="#FAF9F5" stroke-width="18" opacity="0.55" transform="rotate(8 554 419)"/>
+      <rect x="239" y="194" width="630" height="450" rx="44" fill="none" stroke="#D97757" stroke-width="18" opacity="0.85" transform="rotate(8 554 419)"/>
       <rect x="179" y="284" width="630" height="450" rx="44" fill="#D97757" transform="rotate(-6 494 509)"/>
       <text x="494" y="584" text-anchor="middle" font-family="'DejaVu Sans', Arial, sans-serif" font-weight="700" font-size="300" fill="#262624" transform="rotate(-6 494 509)">Ab</text>
     </g>
