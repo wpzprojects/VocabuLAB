@@ -37,8 +37,8 @@
   --accent-soft: #3a2a22;
   --accent-contrast: #ffffff;
 
-  --success: #fd8875;
-  --success-soft: #3a211c;
+  --success: #8fae6f;
+  --success-soft: #202b1a;
   /* --warning fue #e0a83e (ambar) -- se usa como borde de las tarjetas
      "pendientes" en Practicar; volver a ese valor si el rojo no convence. */
   --warning: #e5484d;

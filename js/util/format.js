@@ -51,6 +51,89 @@ export function maxNumeric(rows, key) {
   return nums.length ? String(Math.max(...nums)) : "";
 }
 
+const TILDES = { á: "a", é: "e", í: "i", ó: "o", ú: "u", ü: "u" };
+const LEADING_FILLERS = new Set(["a", "an", "the", "to", "el", "la", "los", "las", "un", "una", "unos", "unas"]);
+
+// Normaliza una respuesta para comparar en el Examen: minusculas, sin
+// puntuacion final ni espacios de mas, sin tildes (a-e-i-o-u, pero NO toca
+// la ñ -- en espanol es una letra distinta, no una vocal acentuada), y sin
+// un articulo/palabra de relleno al inicio (the/a/an, el/la/los/las/un...).
+export function normalizeAnswer(value) {
+  let s = String(value)
+    .trim()
+    .toLowerCase()
+    .replace(/[áéíóúü]/g, (c) => TILDES[c])
+    .replace(/[.,;:!?¿¡]+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const words = s.split(" ");
+  if (words.length > 1 && LEADING_FILLERS.has(words[0])) {
+    s = words.slice(1).join(" ");
+  }
+  return s;
+}
+
+// Distancia de edicion (Levenshtein) entre dos strings, para tolerar
+// pequenos errores de tipeo en el Examen.
+function levenshtein(a, b) {
+  const m = a.length;
+  const n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  const dp = new Array(n + 1);
+  for (let j = 0; j <= n; j++) dp[j] = j;
+  for (let i = 1; i <= m; i++) {
+    let prev = dp[0];
+    dp[0] = i;
+    for (let j = 1; j <= n; j++) {
+      const temp = dp[j];
+      dp[j] = a[i - 1] === b[j - 1] ? prev : 1 + Math.min(prev, dp[j], dp[j - 1]);
+      prev = temp;
+    }
+  }
+  return dp[n];
+}
+
+// Cuantos errores de tipeo se toleran segun el largo de la palabra: 0 para
+// palabras muy cortas (donde 1 error ya cambia el significado), 1 para
+// palabras medianas, 2 para palabras largas.
+function typoTolerance(len) {
+  if (len <= 3) return 0;
+  if (len <= 7) return 1;
+  return 2;
+}
+
+// Separa un campo de traduccion del Examen en todas las respuestas validas:
+// por comas ("De hecho, en realidad"), por barras ("emite/emitido"), y por
+// aclaraciones entre parentesis -- tanto el texto de afuera como el de
+// adentro cuentan por separado (ej. "Cumbre (evento)" acepta "cumbre" o
+// "evento"; "Morder (verbo), poco (adjetivo)" acepta cualquiera de las 4).
+function expandAlternatives(expectedRaw) {
+  const out = new Set();
+  for (const piece of String(expectedRaw).split(",")) {
+    for (const sub of piece.split("/")) {
+      const sinParentesis = sub.replace(/\([^)]*\)/g, "");
+      const norm1 = normalizeAnswer(sinParentesis);
+      if (norm1) out.add(norm1);
+      for (const m of sub.match(/\(([^)]*)\)/g) || []) {
+        const norm2 = normalizeAnswer(m.slice(1, -1));
+        if (norm2) out.add(norm2);
+      }
+    }
+  }
+  return [...out];
+}
+
+// Compara la respuesta del usuario contra la(s) traduccion(es) correcta(s)
+// del Examen. Acepta pequenos errores de tipeo via distancia de edicion.
+export function isCorrectAnswer(userAnswer, expectedRaw) {
+  const answer = normalizeAnswer(userAnswer);
+  if (!answer) return false;
+  return expandAlternatives(expectedRaw).some(
+    (alt) => answer === alt || levenshtein(answer, alt) <= typoTolerance(alt.length)
+  );
+}
+
 // Id corto y suficientemente unico para filas nuevas creadas en el navegador
 // (reemplaza el __PowerAppsId__ que generaba Power Apps).
 export function uid() {

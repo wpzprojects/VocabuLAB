@@ -1,8 +1,11 @@
 // Pantalla "Examen" (5. Pantalla_Examen): quiz de escritura -- se muestra
-// una palabra y hay que escribir su traduccion; compara sin distinguir
-// mayusculas/minusculas y lleva un contador de aciertos/total.
+// una palabra y hay que escribir su traduccion. La validacion (ver
+// isCorrectAnswer en util/format.js) es flexible: ignora mayusculas,
+// tildes, puntuacion final, un articulo inicial (the/el/la/un...), acepta
+// cualquiera de las traducciones si hay varias separadas por coma, y
+// tolera 1-2 errores de tipeo segun el largo de la palabra.
 
-import { el, distinct } from "../util/format.js";
+import { el, distinct, isCorrectAnswer } from "../util/format.js";
 import { getVocabulario } from "../store.js";
 
 export async function render(container) {
@@ -108,7 +111,7 @@ export async function render(container) {
 
       function evaluate() {
         if (input.disabled) return;
-        const ok = input.value.trim().toLowerCase() === expected.trim().toLowerCase();
+        const ok = isCorrectAnswer(input.value, expected);
         rowEl.classList.add(ok ? "correct" : "incorrect");
         input.disabled = true;
         checkBtn.disabled = true;
