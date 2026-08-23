@@ -83,7 +83,7 @@ export async function render(container) {
     const primary = state.swap ? row.palabra_esp : row.palabra_ing;
     const secondary = state.swap ? row.palabra_ing : row.palabra_esp;
 
-    const card = el("div", { class: `flash-card${row.aprendida ? " learned" : ""}` });
+    const card = el("div", { class: `flash-card${row.aprendida ? "" : " pending"}` });
     const secondaryEl = el("div", { class: "flash-secondary", hidden: true }, secondary);
     const contextEl = row.contexto ? el("div", { class: "flash-context", hidden: true }, row.contexto) : null;
     const main = el("div", { class: "flash-main" }, [
@@ -106,7 +106,7 @@ export async function render(container) {
     learnedCheck.addEventListener("change", async () => {
       await setAprendida(row.id, learnedCheck.checked);
       row.aprendida = learnedCheck.checked;
-      card.classList.toggle("learned", learnedCheck.checked);
+      card.classList.toggle("pending", !learnedCheck.checked);
     });
     const learnedToggle = el("label", { class: "toggle-row" }, [
       el("span", {}, "Aprendida"),

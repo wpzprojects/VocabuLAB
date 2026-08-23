@@ -252,7 +252,7 @@ tbody tr.clickable:focus-visible { outline: 2px solid var(--focus-ring); outline
 .flash-card .flash-secondary { color: var(--accent-strong); font-weight: 600; margin-top: 2px; }
 .flash-card .flash-context { color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 4px; }
 .flash-card .flash-actions { display: flex; align-items: center; gap: var(--space-3); flex: 0 0 auto; }
-.flash-card.learned { border-color: var(--success); }
+.flash-card.pending { border-color: var(--warning); }
 
 .toggle-row { display: flex; align-items: center; gap: var(--space-2); font-size: 0.85rem; font-weight: 600; }
 .toggle-switch { position: relative; width: 40px; height: 22px; flex: 0 0 auto; }
