@@ -68,42 +68,42 @@ export async function render(container) {
         el("th", {}, "Espanol"),
         el("th", {}, "Categoria"),
         el("th", {}, "Aprendida"),
-        el("th", {}, ""),
       ]),
     ]);
     const tbody = el("tbody", {});
     filtered.forEach((row) => {
       const learnedCheck = el("input", { type: "checkbox", checked: row.aprendida || null });
+      learnedCheck.addEventListener("click", (e) => e.stopPropagation());
       learnedCheck.addEventListener("change", async () => {
         await setFraseAprendida(row.id, learnedCheck.checked);
         row.aprendida = learnedCheck.checked;
       });
 
-      const editBtn = el("button", { class: "btn btn-sm", onclick: () => openModal(row) }, "Editar");
-      const delBtn = el(
-        "button",
-        {
-          class: "btn btn-sm btn-danger",
-          onclick: async () => {
-            if (!confirm(`Eliminar "${row.frase_ing}"?`)) return;
-            await deleteFrase(row.id);
-            await render0();
-          },
-        },
-        "Borrar"
-      );
-
       tbody.append(
-        el("tr", {}, [
-          el("td", {}, row.frase_ing),
-          el("td", {}, row.frase_esp),
-          el("td", {}, escapeHtml(row.categoria || "—")),
-          el("td", {}, learnedCheck),
-          el("td", { class: "row-actions" }, [editBtn, delBtn]),
-        ])
+        el(
+          "tr",
+          {
+            class: "clickable",
+            tabindex: "0",
+            onclick: () => openModal(row),
+            onkeydown: (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openModal(row);
+              }
+            },
+          },
+          [
+            el("td", {}, row.frase_ing),
+            el("td", {}, row.frase_esp),
+            el("td", {}, escapeHtml(row.categoria || "—")),
+            el("td", {}, learnedCheck),
+          ]
+        )
       );
     });
     resultsWrap.append(el("div", { class: "table-wrap" }, el("table", {}, [thead, tbody])));
+    resultsWrap.append(el("p", { class: "text-sm text-muted" }, "Toca una fila para editarla o borrarla."));
   }
 
   async function render0() {
@@ -147,6 +147,27 @@ export async function render(container) {
 
     const cancelBtn = el("button", { class: "btn" }, "Cancelar");
     const saveBtn = el("button", { class: "btn btn-primary" }, "Guardar");
+    const deleteBtn = row
+      ? el(
+          "button",
+          {
+            class: "btn btn-danger",
+            onclick: async () => {
+              if (!confirm(`Eliminar "${row.frase_ing}"?`)) return;
+              await deleteFrase(row.id);
+              closeModal();
+              await render0();
+            },
+          },
+          "Borrar"
+        )
+      : null;
+    const actions = row
+      ? el("div", { class: "modal-actions modal-actions--split" }, [
+          deleteBtn,
+          el("div", { class: "modal-actions-group" }, [cancelBtn, saveBtn]),
+        ])
+      : el("div", { class: "modal-actions" }, [cancelBtn, saveBtn]);
     const modal = el("div", { class: "modal" }, [
       el("h2", {}, row ? "Editar frase" : "Nueva frase"),
       el("div", { class: "field" }, [el("label", {}, "Categoria"), catInput]),
@@ -154,7 +175,7 @@ export async function render(container) {
       el("div", { class: "field" }, [el("label", {}, "Frase en espanol"), espInput]),
       el("div", { class: "field" }, [el("label", {}, "Notas de uso"), notasInput]),
       errorMsg,
-      el("div", { class: "modal-actions" }, [cancelBtn, saveBtn]),
+      actions,
     ]);
     backdrop.append(modal);
 

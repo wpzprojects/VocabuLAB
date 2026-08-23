@@ -119,6 +119,7 @@ button { font-family: inherit; }
 .field { display: flex; flex-direction: column; gap: var(--space-1); margin-bottom: var(--space-4); }
 .field label { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); }
 .field .hint { font-size: 0.78rem; color: var(--text-faint); }
+.field-title { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); }
 input[type="text"], input[type="number"], input[type="search"], select, textarea {
   font: inherit;
   font-size: 0.95rem;
@@ -182,11 +183,11 @@ tbody tr.clickable:focus-visible { outline: 2px solid var(--focus-ring); outline
   display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 999px;
   font-size: 0.72rem; font-weight: 700; background: var(--bg-sunken); color: var(--text-muted);
 }
-.badge-success { background: var(--success-soft); color: var(--success); }
+.badge-success { background: var(--accent); color: var(--accent-contrast); }
 
 /* ---------- modal ---------- */
 .modal-backdrop {
-  position: fixed; inset: 0; background: rgba(6, 15, 12, 0.5);
+  position: fixed; inset: 0; background: rgba(15, 13, 11, 0.6);
   display: flex; align-items: center; justify-content: center; padding: var(--space-4);
   z-index: 100;
 }
@@ -212,7 +213,7 @@ tbody tr.clickable:focus-visible { outline: 2px solid var(--focus-ring); outline
 .flash-card .flash-secondary { color: var(--accent-strong); font-weight: 600; margin-top: 2px; }
 .flash-card .flash-context { color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 4px; }
 .flash-card .flash-actions { display: flex; align-items: center; gap: var(--space-3); flex: 0 0 auto; }
-.flash-card.learned { border-color: var(--success); background: var(--success-soft); }
+.flash-card.learned { border-color: var(--success); }
 
 .toggle-row { display: flex; align-items: center; gap: var(--space-2); font-size: 0.85rem; font-weight: 600; }
 .toggle-switch { position: relative; width: 40px; height: 22px; flex: 0 0 auto; }

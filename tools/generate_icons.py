@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "icons"
 OUT.mkdir(exist_ok=True)
 
-BG = (13, 148, 136, 255)   # var(--accent)
+BG = (217, 119, 87, 255)   # var(--accent)
 FG = (255, 255, 255, 255)
 
 # Dos paginas de un libro abierto, en un viewBox de 24x24 (lineas rectas para
