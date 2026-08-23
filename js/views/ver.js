@@ -67,35 +67,35 @@ export async function render(container) {
         el("th", {}, "Espanol"),
         el("th", {}, "Lista"),
         el("th", {}, "Aprendida"),
-        el("th", {}, ""),
       ]),
     ]);
     const tbody = el("tbody", {});
     filtered.forEach((row) => {
-      const editBtn = el("button", { class: "btn btn-sm", onclick: () => openModal(row) }, "Editar");
-      const delBtn = el(
-        "button",
-        {
-          class: "btn btn-sm btn-danger",
-          onclick: async () => {
-            if (!confirm(`Eliminar "${row.palabra_ing}"?`)) return;
-            await deletePalabra(row.id);
-            await render0();
-          },
-        },
-        "Borrar"
-      );
       tbody.append(
-        el("tr", {}, [
-          el("td", {}, row.palabra_ing),
-          el("td", {}, row.palabra_esp),
-          el("td", {}, escapeHtml(row.lista || "—")),
-          el("td", {}, row.aprendida ? el("span", { class: "badge badge-success" }, "Si") : el("span", { class: "badge" }, "No")),
-          el("td", { class: "row-actions" }, [editBtn, delBtn]),
-        ])
+        el(
+          "tr",
+          {
+            class: "clickable",
+            tabindex: "0",
+            onclick: () => openModal(row),
+            onkeydown: (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openModal(row);
+              }
+            },
+          },
+          [
+            el("td", {}, row.palabra_ing),
+            el("td", {}, row.palabra_esp),
+            el("td", {}, escapeHtml(row.lista || "—")),
+            el("td", {}, row.aprendida ? el("span", { class: "badge badge-success" }, "Si") : el("span", { class: "badge" }, "No")),
+          ]
+        )
       );
     });
     resultsWrap.append(el("div", { class: "table-wrap" }, el("table", {}, [thead, tbody])));
+    resultsWrap.append(el("p", { class: "text-sm text-muted" }, "Toca una fila para editarla o borrarla."));
   }
 
   async function render0() {
@@ -149,7 +149,28 @@ export async function render(container) {
 
     const cancelBtn = el("button", { class: "btn" }, "Cancelar");
     const saveBtn = el("button", { class: "btn btn-primary" }, "Guardar");
-    const modal = el("div", { class: "modal" }, [form, el("div", { class: "modal-actions" }, [cancelBtn, saveBtn])]);
+    const deleteBtn = row
+      ? el(
+          "button",
+          {
+            class: "btn btn-danger",
+            onclick: async () => {
+              if (!confirm(`Eliminar "${row.palabra_ing}"?`)) return;
+              await deletePalabra(row.id);
+              closeModal();
+              await render0();
+            },
+          },
+          "Borrar"
+        )
+      : null;
+    const actions = row
+      ? el("div", { class: "modal-actions modal-actions--split" }, [
+          deleteBtn,
+          el("div", { class: "modal-actions-group" }, [cancelBtn, saveBtn]),
+        ])
+      : el("div", { class: "modal-actions" }, [cancelBtn, saveBtn]);
+    const modal = el("div", { class: "modal" }, [form, actions]);
 
     backdrop.append(modal);
 

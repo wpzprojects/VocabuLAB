@@ -174,7 +174,7 @@ thead th {
 tbody td { padding: var(--space-3); border-top: 1px solid var(--border); }
 tbody tr:hover { background: var(--bg-sunken); }
 tbody tr.clickable { cursor: pointer; }
-.row-actions { display: flex; gap: var(--space-1); justify-content: flex-end; white-space: nowrap; }
+tbody tr.clickable:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: -2px; }
 
 .empty-state { text-align: center; padding: var(--space-7) var(--space-4); color: var(--text-muted); }
 
@@ -197,6 +197,8 @@ tbody tr.clickable { cursor: pointer; }
 }
 .modal h2 { font-size: 1.1rem; }
 .modal-actions { display: flex; justify-content: flex-end; gap: var(--space-3); margin-top: var(--space-5); }
+.modal-actions--split { justify-content: space-between; flex-wrap: wrap; }
+.modal-actions-group { display: flex; gap: var(--space-3); }
 
 /* ---------- flashcards (Practicar) ---------- */
 .flash-toolbar { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: flex-end; margin-bottom: var(--space-4); }
@@ -240,6 +242,7 @@ tbody tr.clickable { cursor: pointer; }
 @media (max-width: 720px) {
   .content { padding: var(--space-4); }
   .flash-card { flex-direction: column; align-items: stretch; }
+  .flash-card .flash-main { flex: 1 1 auto; }
   .flash-card .flash-actions { justify-content: space-between; }
 }
 

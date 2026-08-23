@@ -1,7 +1,9 @@
 """
 Genera iconos PWA placeholder (PNG, sin dependencias externas: solo zlib de
 la libreria estandar) hasta que el usuario aporte un logo definitivo.
-Dibuja un rayo blanco simple sobre fondo solido color de marca.
+Dibuja un libro abierto blanco simple sobre fondo solido color de marca,
+representativo de una app de vocabulario (mismo tema que el icono "book"
+usado como marca en la barra superior, ver js/icons.js).
 
 Uso: python tools/generate_icons.py
 Salida: icons/icon-192.png, icons/icon-512.png, icons/icon-maskable-512.png
@@ -17,8 +19,13 @@ OUT.mkdir(exist_ok=True)
 BG = (13, 148, 136, 255)   # var(--accent)
 FG = (255, 255, 255, 255)
 
-# Poligono de un rayo, en un viewBox de 24x24 (mismo trazo que js/icons.js "bolt")
-BOLT = [(13, 2), (4, 14), (10, 14), (9, 22), (18, 10), (12, 10), (13, 2)]
+# Dos paginas de un libro abierto, en un viewBox de 24x24 (lineas rectas para
+# poder rasterizarlas con point_in_polygon; deja un pequeno hueco central que
+# sugiere el lomo/canal del libro).
+PAGES = [
+    [(2, 5), (11.4, 3.8), (11.4, 20.2), (2, 19)],
+    [(22, 5), (12.6, 3.8), (12.6, 20.2), (22, 19)],
+]
 
 
 def point_in_polygon(x, y, poly):
@@ -37,7 +44,7 @@ def point_in_polygon(x, y, poly):
 def render(size, padding_frac, rounded=True):
     pad = size * padding_frac
     scale = (size - 2 * pad) / 24
-    poly = [(pad + px * scale, pad + py * scale) for px, py in BOLT]
+    polys = [[(pad + px * scale, pad + py * scale) for px, py in page] for page in PAGES]
     corner_r = size * 0.18 if rounded else 0
 
     rows = []
@@ -53,7 +60,7 @@ def render(size, padding_frac, rounded=True):
                         in_bg = False
             if not in_bg:
                 row.extend((0, 0, 0, 0))
-            elif point_in_polygon(x + 0.5, y + 0.5, poly):
+            elif any(point_in_polygon(x + 0.5, y + 0.5, poly) for poly in polys):
                 row.extend(FG)
             else:
                 row.extend(BG)
