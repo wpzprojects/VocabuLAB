@@ -169,6 +169,7 @@ select {
 }
 input:disabled, select:disabled { opacity: 0.55; }
 .checkbox-row { display: flex; align-items: center; gap: var(--space-2); font-size: 0.88rem; color: var(--text-muted); }
+.checkbox-row input[type="checkbox"] { width: 18px; height: 18px; flex: 0 0 auto; accent-color: var(--accent); }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
@@ -240,8 +241,9 @@ tbody tr.clickable:focus-visible { outline: 2px solid var(--focus-ring); outline
 .modal-actions-group { display: flex; gap: var(--space-3); }
 
 /* ---------- flashcards (Practicar) ---------- */
-.flash-toolbar { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: flex-end; margin-bottom: var(--space-4); }
+.flash-toolbar { display: flex; gap: var(--space-6); flex-wrap: wrap; align-items: flex-end; margin-bottom: var(--space-4); }
 .flash-toolbar .field { margin-bottom: 0; min-width: 150px; flex: 1 1 150px; }
+.flash-toolbar .field.field-auto { min-width: 0; flex: 0 0 auto; }
 .flash-list { display: flex; flex-direction: column; gap: var(--space-3); }
 .flash-card {
   background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-md);
@@ -274,10 +276,15 @@ tbody tr.clickable:focus-visible { outline: 2px solid var(--focus-ring); outline
 }
 .quiz-row.correct { border-color: var(--success); background: var(--success-soft); }
 .quiz-row.incorrect { border-color: var(--danger); background: var(--danger-soft); }
-.quiz-row .quiz-prompt { font-weight: 700; }
+.quiz-row .quiz-prompt {
+  font-weight: 700; display: flex; align-items: baseline; gap: var(--space-2); flex-wrap: wrap;
+}
+.quiz-row .quiz-correct { font-weight: 600; font-size: 0.88rem; color: var(--text-muted); }
+.quiz-row.correct .quiz-correct { color: var(--success); }
+.quiz-row.incorrect .quiz-correct { color: var(--danger); }
 .quiz-row .quiz-answer-row { display: flex; gap: var(--space-2); align-items: center; flex-wrap: wrap; }
 .quiz-row .quiz-answer-row input { flex: 1 1 200px; }
-.quiz-score { font-weight: 800; font-size: 1.1rem; }
+.quiz-score { font-weight: 800; font-size: 1.1rem; align-self: center; margin-left: auto; }
 
 @media (max-width: 720px) {
   .content { padding: var(--space-4); }

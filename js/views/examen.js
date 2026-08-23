@@ -44,14 +44,14 @@ export async function render(container) {
   );
   container.append(
     el("div", { class: "flash-toolbar" }, [
-      el("div", { class: "field" }, [
+      el("div", { class: "field field-auto" }, [
         el("span", { class: "field-title" }, "Orden"),
-        el("label", { class: "checkbox-row" }, [aleatorioCheck, "Aleatorio"]),
+        el("label", { class: "checkbox-row" }, ["Aleatorio", aleatorioCheck]),
       ]),
-      el("div", { class: "field" }, [
-        el("span", { class: "field-title" }, "Direccion"),
+      el("div", { class: "field field-auto" }, [
+        el("span", { class: "field-title" }, "Idioma"),
         el("label", { class: "toggle-row" }, [
-          el("span", {}, "Intercambiar idioma"),
+          el("span", {}, "Intercambiar"),
           el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
         ]),
       ]),
@@ -106,6 +106,7 @@ export async function render(container) {
       const expected = state.swap ? row.palabra_ing : row.palabra_esp;
 
       const rowEl = el("div", { class: "quiz-row" });
+      const promptEl = el("div", { class: "quiz-prompt" }, prompt);
       const input = el("input", { type: "text", placeholder: "Tu respuesta..." });
       const checkBtn = el("button", { class: "btn btn-sm" }, "Evaluar");
 
@@ -115,6 +116,7 @@ export async function render(container) {
         rowEl.classList.add(ok ? "correct" : "incorrect");
         input.disabled = true;
         checkBtn.disabled = true;
+        promptEl.append(el("span", { class: "quiz-correct" }, `→ ${expected}`));
         aciertos += ok ? 1 : 0;
         total += 1;
         updateScore();
@@ -125,10 +127,7 @@ export async function render(container) {
         if (e.key === "Enter") evaluate();
       });
 
-      rowEl.append(
-        el("div", { class: "quiz-prompt" }, prompt),
-        el("div", { class: "quiz-answer-row" }, [input, checkBtn])
-      );
+      rowEl.append(promptEl, el("div", { class: "quiz-answer-row" }, [input, checkBtn]));
       list.append(rowEl);
     });
   }
