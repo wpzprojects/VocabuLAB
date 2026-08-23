@@ -8,4 +8,5 @@ export const navLinks = [
   { key: "practicar", title: "Practicar", icon: "clock", hash: "#/practicar" },
   { key: "frases", title: "Frases", icon: "chat", hash: "#/frases" },
   { key: "examen", title: "Examen", icon: "check", hash: "#/examen" },
+  { key: "ayuda", title: "Ayuda", icon: "help", hash: "#/ayuda" },
 ];

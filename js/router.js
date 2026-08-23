@@ -23,6 +23,7 @@ const routeTable = [
   ["/practicar", () => import("./views/practicar.js")],
   ["/frases", () => import("./views/frases.js")],
   ["/examen", () => import("./views/examen.js")],
+  ["/ayuda", () => import("./views/ayuda.js")],
 ].map(([pattern, load]) => ({ ...compile(pattern), pattern, load }));
 
 function currentPath() {
