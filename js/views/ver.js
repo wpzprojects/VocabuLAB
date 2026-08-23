@@ -1,11 +1,12 @@
 // Pantalla "Ver" (1. Pantalla_Ver): lista de vocabulario con selector de
 // Lista, buscador, orden A-Z y CRUD (Nuevo/Editar/Borrar).
 
-import { el, debounce, distinct } from "../util/format.js";
-import { getVocabulario, addPalabra, updatePalabra, deletePalabra, exportCsv } from "../store.js";
+import { el, debounce, distinct, maxNumeric } from "../util/format.js";
+import { getVocabulario, addPalabra, updatePalabra, deletePalabra, exportVocabularioCsv } from "../store.js";
 
 export async function render(container) {
   const rows = await getVocabulario();
+  const listaDefault = maxNumeric(rows, "lista");
 
   let sortDesc = false;
   let listaFiltro = "";
@@ -116,7 +117,9 @@ export async function render(container) {
     sortDesc = !sortDesc;
     applyFilters();
   });
-  exportBtn.addEventListener("click", () => exportCsv());
+  exportBtn.addEventListener("click", () => {
+    if (confirm("Descargar vocabulario_*.csv con el estado actual?")) exportVocabularioCsv();
+  });
   newBtn.addEventListener("click", () => openModal(null));
 
   applyFilters();
@@ -132,7 +135,14 @@ export async function render(container) {
 
     const ingInput = el("input", { type: "text", value: row?.palabra_ing || "", required: true });
     const espInput = el("input", { type: "text", value: row?.palabra_esp || "", required: true });
-    const listaInput = el("input", { type: "text", value: row?.lista ?? "", placeholder: "1, 2, 3..." });
+    const listaInput = el("input", {
+      type: "number",
+      min: "0",
+      step: "1",
+      inputmode: "numeric",
+      value: row ? row.lista ?? "" : listaDefault,
+      placeholder: "1, 2, 3...",
+    });
     const contextoInput = el("textarea", { rows: 3, placeholder: "Ej: I've never used a bow and arrow" }, row?.contexto || "");
     const errorMsg = el("p", { class: "text-sm", style: "color:var(--danger)" }, "");
 
@@ -183,7 +193,12 @@ export async function render(container) {
         errorMsg.textContent = "Ingles y espanol son obligatorios.";
         return;
       }
-      const payload = { palabra_ing, palabra_esp, lista: listaInput.value.trim(), contexto: contextoInput.value.trim() };
+      const listaRaw = listaInput.value.trim();
+      if (listaRaw && !/^\d+$/.test(listaRaw)) {
+        errorMsg.textContent = "Lista debe ser un numero entero (sin decimales ni texto).";
+        return;
+      }
+      const payload = { palabra_ing, palabra_esp, lista: listaRaw, contexto: contextoInput.value.trim() };
       if (row) await updatePalabra(row.id, payload);
       else await addPalabra(payload);
       closeModal();

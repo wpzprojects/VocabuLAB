@@ -39,6 +39,18 @@ export function distinct(rows, key) {
   );
 }
 
+// Valor numerico mas alto de una columna (para prellenar "Lista" con la
+// ultima lista existente al crear una palabra); ignora valores vacios o no
+// numericos.
+export function maxNumeric(rows, key) {
+  const nums = rows
+    .map((r) => r[key])
+    .filter((v) => v !== null && v !== undefined && String(v).trim() !== "")
+    .map(Number)
+    .filter((n) => Number.isFinite(n));
+  return nums.length ? String(Math.max(...nums)) : "";
+}
+
 // Id corto y suficientemente unico para filas nuevas creadas en el navegador
 // (reemplaza el __PowerAppsId__ que generaba Power Apps).
 export function uid() {

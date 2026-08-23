@@ -2,7 +2,7 @@
 // aplicado a Frases_Comunes, con un toggle inline de "Aprendida" por fila.
 
 import { el, escapeHtml, debounce, distinct } from "../util/format.js";
-import { getFrases, addFrase, updateFrase, deleteFrase, setFraseAprendida } from "../store.js";
+import { getFrases, addFrase, updateFrase, deleteFrase, setFraseAprendida, exportFrasesCsv } from "../store.js";
 
 export async function render(container) {
   const rows = await getFrases();
@@ -23,12 +23,14 @@ export async function render(container) {
   ]);
   const searchInput = el("input", { type: "search", placeholder: "Buscar frase..." });
   const sortBtn = el("button", { class: "btn" }, "A-Z");
+  const exportBtn = el("button", { class: "btn" }, "Exportar CSV");
   const newBtn = el("button", { class: "btn btn-primary" }, "+ Nueva frase");
 
   toolbar.append(
     el("div", { class: "field" }, [el("label", {}, "Categoria"), catSelect]),
     el("div", { class: "field search" }, [el("label", {}, "Buscar"), searchInput]),
     sortBtn,
+    exportBtn,
     newBtn
   );
   container.append(toolbar);
@@ -125,6 +127,9 @@ export async function render(container) {
   sortBtn.addEventListener("click", () => {
     sortDesc = !sortDesc;
     applyFilters();
+  });
+  exportBtn.addEventListener("click", () => {
+    if (confirm("Descargar frases_*.csv con el estado actual?")) exportFrasesCsv();
   });
   newBtn.addEventListener("click", () => openModal(null));
 

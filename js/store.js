@@ -111,9 +111,8 @@ export async function setFraseAprendida(id, aprendida) {
 
 // ---------------- Backup / exportacion ----------------
 
-export async function exportCsv() {
+export async function exportVocabularioCsv() {
   const vocab = await getVocabulario();
-  const frases = await getFrases();
   const stamp = new Date().toISOString().slice(0, 10);
 
   downloadCsv(
@@ -127,6 +126,11 @@ export async function exportCsv() {
     ],
     vocab.map((r) => ({ ...r, aprendida_txt: r.aprendida ? "Si" : "No" }))
   );
+}
+
+export async function exportFrasesCsv() {
+  const frases = await getFrases();
+  const stamp = new Date().toISOString().slice(0, 10);
 
   downloadCsv(
     `frases_${stamp}.csv`,
