@@ -29,6 +29,10 @@ TRANSPARENT = Color(0, 0, 0, 0)
 
 MASKABLE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
   <rect width="1024" height="1024" fill="#262624"/>
+  <!-- anillo decorativo, como circulo (no squircle) y adentro de la
+       "safe zone" (~80% del lienzo) para que no se corte sin importar
+       la forma que use el sistema para enmascarar el icono -->
+  <circle cx="512" cy="512" r="385" fill="none" stroke="#D97757" stroke-width="24"/>
   <g transform="translate(512,512) scale(0.72) translate(-512,-512)">
     <g transform="translate(-14,52)">
       <rect x="239" y="194" width="630" height="450" rx="44" fill="none" stroke="#D97757" stroke-width="18" opacity="0.85" transform="rotate(8 554 419)"/>
