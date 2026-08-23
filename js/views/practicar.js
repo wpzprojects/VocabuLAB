@@ -3,7 +3,8 @@
 // primero, boton "Ver" para revelar la traduccion, y marcar Aprendida.
 
 import { el, distinct } from "../util/format.js";
-import { getVocabulario, updatePalabra, setAprendida } from "../store.js";
+import { getVocabulario, setAprendida } from "../store.js";
+import { openPalabraModal } from "../palabraModal.js";
 
 export async function render(container) {
   const rows = await getVocabulario();
@@ -141,47 +142,12 @@ export async function render(container) {
   const backdrop = el("div", { class: "modal-backdrop", hidden: true });
   container.append(backdrop);
 
-  function openEditModal(row) {
-    backdrop.innerHTML = "";
-    backdrop.hidden = false;
-
-    const ingInput = el("input", { type: "text", value: row.palabra_ing });
-    const espInput = el("input", { type: "text", value: row.palabra_esp });
-    const listaInput = el("input", { type: "text", value: row.lista ?? "" });
-    const contextoInput = el("textarea", { rows: 3 }, row.contexto || "");
-
-    const cancelBtn = el("button", { class: "btn" }, "Cancelar");
-    const saveBtn = el("button", { class: "btn btn-primary" }, "Guardar cambios");
-    const modal = el("div", { class: "modal" }, [
-      el("h2", {}, "Editar palabra"),
-      el("div", { class: "field" }, [el("label", {}, "Palabra en ingles"), ingInput]),
-      el("div", { class: "field" }, [el("label", {}, "Palabra en espanol"), espInput]),
-      el("div", { class: "field" }, [el("label", {}, "Lista"), listaInput]),
-      el("div", { class: "field" }, [el("label", {}, "Palabra en contexto"), contextoInput]),
-      el("div", { class: "modal-actions" }, [cancelBtn, saveBtn]),
-    ]);
-    backdrop.append(modal);
-
-    cancelBtn.addEventListener("click", closeModal);
-    backdrop.addEventListener("click", (e) => {
-      if (e.target === backdrop) closeModal();
-    });
-    saveBtn.addEventListener("click", async () => {
-      const patch = {
-        palabra_ing: ingInput.value.trim(),
-        palabra_esp: espInput.value.trim(),
-        lista: listaInput.value.trim(),
-        contexto: contextoInput.value.trim(),
-      };
-      await updatePalabra(row.id, patch);
-      Object.assign(row, patch);
-      closeModal();
-      applyFilters();
-    });
+  async function render0() {
+    container.innerHTML = "";
+    await render(container);
   }
 
-  function closeModal() {
-    backdrop.hidden = true;
-    backdrop.innerHTML = "";
+  function openEditModal(row) {
+    openPalabraModal(backdrop, { row, onSaved: render0, onDeleted: render0 });
   }
 }

@@ -44,7 +44,7 @@ const SECCIONES = [
     titulo: "Examen",
     items: [
       "Genera un cuestionario con tu vocabulario: filtra por Lista, Aprendida, o limita el numero de palabras.",
-      "Orden aleatoriza las preguntas; Direccion cambia si te pregunta la palabra en ingles o en espanol.",
+      "Orden aleatoriza las preguntas; Idioma cambia si te pregunta la palabra en ingles o en espanol.",
       "Escribe tu respuesta y presiona Evaluar (o Enter) para revisar; el resultado se acumula arriba.",
       "Reset test vuelve a generar el cuestionario desde cero con los filtros actuales.",
     ],

@@ -1,7 +1,7 @@
 // Pantalla "Frases" (4. Pantalla_Frases): mismo patron de Ver (lista + CRUD)
 // aplicado a Frases_Comunes, con un toggle inline de "Aprendida" por fila.
 
-import { el, escapeHtml, debounce, distinct } from "../util/format.js";
+import { el, debounce, distinct } from "../util/format.js";
 import { getFrases, addFrase, updateFrase, deleteFrase, setFraseAprendida, exportFrasesCsv } from "../store.js";
 
 export async function render(container) {
@@ -98,7 +98,7 @@ export async function render(container) {
           [
             el("td", {}, row.frase_ing),
             el("td", {}, row.frase_esp),
-            el("td", {}, escapeHtml(row.categoria || "—")),
+            el("td", {}, row.categoria || "—"),
             el("td", {}, learnedCheck),
           ]
         )
@@ -185,9 +185,12 @@ export async function render(container) {
     backdrop.append(modal);
 
     cancelBtn.addEventListener("click", closeModal);
-    backdrop.addEventListener("click", (e) => {
-      if (e.target === backdrop) closeModal();
-    });
+    if (!backdrop.dataset.modalBound) {
+      backdrop.dataset.modalBound = "1";
+      backdrop.addEventListener("click", (e) => {
+        if (e.target === backdrop) closeModal();
+      });
+    }
     saveBtn.addEventListener("click", async () => {
       const frase_ing = ingInput.value.trim();
       const frase_esp = espInput.value.trim();

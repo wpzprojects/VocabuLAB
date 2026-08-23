@@ -75,9 +75,16 @@ export function openPalabraModal(backdrop, { row = null, defaults = {}, onSaved,
   }
 
   cancelBtn.addEventListener("click", closeModal);
-  backdrop.addEventListener("click", (e) => {
-    if (e.target === backdrop) closeModal();
-  });
+  // El listener de "click afuera cierra" se ata una sola vez por backdrop
+  // (no en cada apertura), para no ir acumulando listeners repetidos. Como
+  // closeModal solo toca el backdrop (nunca datos de esta apertura puntual),
+  // el de la primera apertura sigue sirviendo para todas las siguientes.
+  if (!backdrop.dataset.modalBound) {
+    backdrop.dataset.modalBound = "1";
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop) closeModal();
+    });
+  }
   saveBtn.addEventListener("click", async () => {
     const palabra_ing = ingInput.value.trim();
     const palabra_esp = espInput.value.trim();
