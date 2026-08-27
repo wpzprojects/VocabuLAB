@@ -55,7 +55,12 @@ export async function render(container) {
 
   function renderResults(filtered) {
     resultsWrap.innerHTML = "";
-    resultsWrap.append(el("p", { class: "row-count" }, `Selecciona una fila para editar · Filas: ${filtered.length}`));
+    resultsWrap.append(
+      el("div", { class: "row-count row-count-split" }, [
+        el("span", {}, "Selecciona una fila para editar"),
+        el("span", {}, `Filas: ${filtered.length}`),
+      ])
+    );
 
     if (filtered.length === 0) {
       resultsWrap.append(el("div", { class: "empty-state" }, el("p", {}, "No hay palabras con esos filtros.")));

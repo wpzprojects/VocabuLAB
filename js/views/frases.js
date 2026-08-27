@@ -5,6 +5,8 @@ import { el, debounce, distinct, confirmAction } from "../util/format.js";
 import { icon } from "../icons.js";
 import { getFrases, addFrase, updateFrase, deleteFrase, setFraseAprendida, exportFrasesCsv } from "../store.js";
 
+const SIN_CATEGORIA = "__sin_categoria__";
+
 export async function render(container) {
   const rows = await getFrases();
 
@@ -20,6 +22,7 @@ export async function render(container) {
 
   const catSelect = el("select", {}, [
     el("option", { value: "" }, "Todas"),
+    el("option", { value: SIN_CATEGORIA }, "Sin categoria"),
     ...distinct(rows, "categoria").map((v) => el("option", { value: v }, String(v))),
   ]);
   const searchInput = el("input", { type: "search", placeholder: "Buscar frase..." });
@@ -54,7 +57,11 @@ export async function render(container) {
   }
 
   function applyFilters() {
-    let filtered = rows.filter((r) => !categoriaFiltro || r.categoria === categoriaFiltro);
+    let filtered = rows.filter((r) => {
+      if (!categoriaFiltro) return true;
+      if (categoriaFiltro === SIN_CATEGORIA) return !r.categoria;
+      return r.categoria === categoriaFiltro;
+    });
     if (query) {
       const q = query.toLowerCase();
       filtered = filtered.filter(
@@ -74,7 +81,12 @@ export async function render(container) {
 
   function renderResults(filtered) {
     resultsWrap.innerHTML = "";
-    resultsWrap.append(el("p", { class: "row-count" }, `Selecciona una fila para editar · Filas: ${filtered.length}`));
+    resultsWrap.append(
+      el("div", { class: "row-count row-count-split" }, [
+        el("span", {}, "Selecciona una fila para editar"),
+        el("span", {}, `Filas: ${filtered.length}`),
+      ])
+    );
 
     if (filtered.length === 0) {
       resultsWrap.append(el("div", { class: "empty-state" }, el("p", {}, "No hay frases con esos filtros.")));

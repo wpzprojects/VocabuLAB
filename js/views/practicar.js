@@ -28,16 +28,21 @@ export async function render(container) {
   const aleatorioCheck = el("input", { type: "checkbox" });
   const swapToggle = el("input", { type: "checkbox" });
 
-  const toolbar = el("div", { class: "flash-toolbar" }, [
-    el("div", { class: "field" }, [el("label", {}, "Lista"), listaSelect]),
-    el("div", { class: "field" }, [el("label", {}, "Aprendidas"), aprendidaSelect]),
-    el("label", { class: "checkbox-row field-auto" }, ["Orden aleatorio", aleatorioCheck]),
-    el("label", { class: "toggle-row field-auto" }, [
-      el("span", {}, "Intercambiar idioma"),
-      el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
-    ]),
-  ]);
-  container.append(toolbar);
+  container.append(
+    el("div", { class: "flash-toolbar gap-sm" }, [
+      el("div", { class: "field" }, [el("label", {}, "Lista"), listaSelect]),
+      el("div", { class: "field" }, [el("label", {}, "Aprendidas"), aprendidaSelect]),
+    ])
+  );
+  container.append(
+    el("div", { class: "flash-toolbar" }, [
+      el("label", { class: "checkbox-row field-auto" }, ["Orden aleatorio", aleatorioCheck]),
+      el("label", { class: "toggle-row toggle-plain field-auto" }, [
+        el("span", {}, "Intercambiar idioma"),
+        el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
+      ]),
+    ])
+  );
 
   const countEl = el("p", { class: "row-count" }, "");
   const list = el("div", { class: "flash-list" });

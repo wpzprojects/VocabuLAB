@@ -44,7 +44,7 @@ export async function render(container) {
   container.append(
     el("div", { class: "flash-toolbar" }, [
       el("label", { class: "checkbox-row field-auto" }, ["Orden aleatorio", aleatorioCheck]),
-      el("label", { class: "toggle-row field-auto" }, [
+      el("label", { class: "toggle-row toggle-plain field-auto" }, [
         el("span", {}, "Intercambiar idioma"),
         el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
       ]),
