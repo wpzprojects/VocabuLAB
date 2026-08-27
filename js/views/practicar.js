@@ -30,17 +30,11 @@ export async function render(container) {
 
   const toolbar = el("div", { class: "flash-toolbar" }, [
     el("div", { class: "field" }, [el("label", {}, "Lista"), listaSelect]),
-    el("div", { class: "field" }, [el("label", {}, "Aprendida"), aprendidaSelect]),
-    el("div", { class: "field field-auto" }, [
-      el("span", { class: "field-title" }, "Orden"),
-      el("label", { class: "checkbox-row" }, ["Aleatorio", aleatorioCheck]),
-    ]),
-    el("div", { class: "field field-auto" }, [
-      el("span", { class: "field-title" }, "Idioma"),
-      el("label", { class: "toggle-row" }, [
-        el("span", {}, "Intercambiar"),
-        el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
-      ]),
+    el("div", { class: "field" }, [el("label", {}, "Aprendidas"), aprendidaSelect]),
+    el("label", { class: "checkbox-row field-auto" }, ["Orden aleatorio", aleatorioCheck]),
+    el("label", { class: "toggle-row field-auto" }, [
+      el("span", {}, "Intercambiar idioma"),
+      el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
     ]),
   ]);
   container.append(toolbar);
@@ -93,7 +87,7 @@ export async function render(container) {
       ...(contextEl ? [contextEl] : []),
     ]);
 
-    const revealBtn = el("button", { class: "btn btn-sm" }, "Ver");
+    const revealBtn = el("button", { class: "btn btn-sm btn-reveal" }, "Ver");
     revealBtn.addEventListener("click", () => {
       secondaryEl.hidden = !secondaryEl.hidden;
       if (contextEl) contextEl.hidden = secondaryEl.hidden;

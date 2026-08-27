@@ -1,7 +1,7 @@
 // Pantalla "Frases" (4. Pantalla_Frases): mismo patron de Ver (lista + CRUD)
 // aplicado a Frases_Comunes, con un toggle inline de "Aprendida" por fila.
 
-import { el, debounce, distinct } from "../util/format.js";
+import { el, debounce, distinct, confirmAction } from "../util/format.js";
 import { getFrases, addFrase, updateFrase, deleteFrase, setFraseAprendida, exportFrasesCsv } from "../store.js";
 
 export async function render(container) {
@@ -10,33 +10,43 @@ export async function render(container) {
   let categoriaFiltro = "";
   let query = "";
   let sortDesc = false;
+  let aleatorio = false;
 
   container.append(
     el("h1", { class: "page-title" }, "Frases comunes"),
     el("p", { class: "page-subtitle" }, "Frases frecuentes en ingles por categoria.")
   );
 
-  const toolbar = el("div", { class: "toolbar" });
   const catSelect = el("select", {}, [
     el("option", { value: "" }, "Todas"),
     ...distinct(rows, "categoria").map((v) => el("option", { value: v }, String(v))),
   ]);
   const searchInput = el("input", { type: "search", placeholder: "Buscar frase..." });
   const sortBtn = el("button", { class: "btn" }, "A-Z");
+  const shuffleBtn = el("button", { class: "btn" }, "Aleatorizar");
   const exportBtn = el("button", { class: "btn" }, "Exportar CSV");
   const newBtn = el("button", { class: "btn btn-primary" }, "+ Nueva frase");
 
-  toolbar.append(
-    el("div", { class: "field" }, [el("label", {}, "Categoria"), catSelect]),
-    el("div", { class: "field search" }, [el("label", {}, "Buscar"), searchInput]),
-    sortBtn,
-    exportBtn,
-    newBtn
-  );
+  const toolbar = el("div", { class: "toolbar" }, [
+    el("div", { class: "toolbar-row" }, [
+      el("div", { class: "field" }, [el("label", {}, "Categoria"), catSelect]),
+      el("div", { class: "field search" }, [el("label", {}, "Buscar"), searchInput]),
+    ]),
+    el("div", { class: "toolbar-row" }, [sortBtn, shuffleBtn, exportBtn, newBtn]),
+  ]);
   container.append(toolbar);
 
   const resultsWrap = el("div", {});
   container.append(resultsWrap);
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
 
   function applyFilters() {
     let filtered = rows.filter((r) => !categoriaFiltro || r.categoria === categoriaFiltro);
@@ -49,15 +59,17 @@ export async function render(container) {
           (r.notas_uso || "").toLowerCase().includes(q)
       );
     }
-    filtered = [...filtered].sort((a, b) =>
-      sortDesc ? b.frase_ing.localeCompare(a.frase_ing, "es") : a.frase_ing.localeCompare(b.frase_ing, "es")
-    );
+    filtered = aleatorio
+      ? shuffle(filtered)
+      : [...filtered].sort((a, b) =>
+          sortDesc ? b.frase_ing.localeCompare(a.frase_ing, "es") : a.frase_ing.localeCompare(b.frase_ing, "es")
+        );
     renderResults(filtered);
   }
 
   function renderResults(filtered) {
     resultsWrap.innerHTML = "";
-    resultsWrap.append(el("p", { class: "row-count" }, `Filas: ${filtered.length}`));
+    resultsWrap.append(el("p", { class: "row-count" }, `Selecciona una fila para editar · Filas: ${filtered.length}`));
 
     if (filtered.length === 0) {
       resultsWrap.append(el("div", { class: "empty-state" }, el("p", {}, "No hay frases con esos filtros.")));
@@ -67,9 +79,8 @@ export async function render(container) {
     const thead = el("thead", {}, [
       el("tr", {}, [
         el("th", {}, "Ingles"),
+        el("th", { class: "col-center" }, "Aprendida"),
         el("th", {}, "Espanol"),
-        el("th", {}, "Categoria"),
-        el("th", {}, "Aprendida"),
       ]),
     ]);
     const tbody = el("tbody", {});
@@ -97,15 +108,13 @@ export async function render(container) {
           },
           [
             el("td", {}, row.frase_ing),
+            el("td", { class: "col-center" }, learnedCheck),
             el("td", {}, row.frase_esp),
-            el("td", {}, row.categoria || "—"),
-            el("td", {}, learnedCheck),
           ]
         )
       );
     });
     resultsWrap.append(el("div", { class: "table-wrap" }, el("table", {}, [thead, tbody])));
-    resultsWrap.append(el("p", { class: "text-sm text-muted" }, "Toca una fila para editarla o borrarla."));
   }
 
   async function render0() {
@@ -125,11 +134,16 @@ export async function render(container) {
     }, 200)
   );
   sortBtn.addEventListener("click", () => {
+    aleatorio = false;
     sortDesc = !sortDesc;
     applyFilters();
   });
-  exportBtn.addEventListener("click", () => {
-    if (confirm("Descargar frases_*.csv con el estado actual?")) exportFrasesCsv();
+  shuffleBtn.addEventListener("click", () => {
+    aleatorio = true;
+    applyFilters();
+  });
+  exportBtn.addEventListener("click", async () => {
+    if (await confirmAction("Descargar frases_*.csv con el estado actual?")) exportFrasesCsv();
   });
   newBtn.addEventListener("click", () => openModal(null));
 
@@ -144,11 +158,32 @@ export async function render(container) {
     backdrop.innerHTML = "";
     backdrop.hidden = false;
 
-    const catInput = el("input", { type: "text", value: row?.categoria || "" });
+    const categorias = distinct(rows, "categoria");
     const ingInput = el("input", { type: "text", value: row?.frase_ing || "" });
     const espInput = el("input", { type: "text", value: row?.frase_esp || "" });
     const notasInput = el("textarea", { rows: 2, placeholder: "Notas de uso (opcional)" }, row?.notas_uso || "");
     const errorMsg = el("p", { class: "text-sm", style: "color:var(--danger)" }, "");
+
+    const yaEsCategoriaConocida = row?.categoria && categorias.includes(row.categoria);
+    const catSelectModal = el("select", {}, [
+      el("option", { value: "" }, "Sin categoria"),
+      ...categorias.map((v) => el("option", { value: v }, String(v))),
+    ]);
+    if (yaEsCategoriaConocida) catSelectModal.value = row.categoria;
+
+    const nuevaCatCheck = el("input", { type: "checkbox", checked: row?.categoria && !yaEsCategoriaConocida ? "" : null });
+    const nuevaCatInput = el("input", {
+      type: "text",
+      placeholder: "Nombre de la categoria",
+      value: row?.categoria && !yaEsCategoriaConocida ? row.categoria : "",
+      hidden: !nuevaCatCheck.checked || null,
+    });
+    nuevaCatCheck.addEventListener("change", () => {
+      nuevaCatInput.hidden = !nuevaCatCheck.checked;
+      catSelectModal.disabled = nuevaCatCheck.checked;
+      if (nuevaCatCheck.checked) nuevaCatInput.focus();
+    });
+    catSelectModal.disabled = nuevaCatCheck.checked;
 
     const cancelBtn = el("button", { class: "btn" }, "Cancelar");
     const saveBtn = el("button", { class: "btn btn-primary" }, "Guardar");
@@ -158,7 +193,8 @@ export async function render(container) {
           {
             class: "btn btn-danger",
             onclick: async () => {
-              if (!confirm(`Eliminar "${row.frase_ing}"?`)) return;
+              const ok = await confirmAction(`Eliminar "${row.frase_ing}"? Esta accion no se puede deshacer.`, { danger: true, okLabel: "Eliminar" });
+              if (!ok) return;
               await deleteFrase(row.id);
               closeModal();
               await render0();
@@ -175,9 +211,13 @@ export async function render(container) {
       : el("div", { class: "modal-actions" }, [cancelBtn, saveBtn]);
     const modal = el("div", { class: "modal" }, [
       el("h2", {}, row ? "Editar frase" : "Nueva frase"),
-      el("div", { class: "field" }, [el("label", {}, "Categoria"), catInput]),
       el("div", { class: "field" }, [el("label", {}, "Frase en ingles"), ingInput]),
       el("div", { class: "field" }, [el("label", {}, "Frase en espanol"), espInput]),
+      el("div", { class: "field" }, [el("label", {}, "Categoria existente"), catSelectModal]),
+      el("div", { class: "field" }, [
+        el("label", { class: "checkbox-row" }, [nuevaCatCheck, "Agregar categoria nueva"]),
+        nuevaCatInput,
+      ]),
       el("div", { class: "field" }, [el("label", {}, "Notas de uso"), notasInput]),
       errorMsg,
       actions,
@@ -198,7 +238,8 @@ export async function render(container) {
         errorMsg.textContent = "Ingles y espanol son obligatorios.";
         return;
       }
-      const payload = { categoria: catInput.value.trim(), frase_ing, frase_esp, notas_uso: notasInput.value.trim() };
+      const categoria = nuevaCatCheck.checked ? nuevaCatInput.value.trim() : catSelectModal.value;
+      const payload = { categoria, frase_ing, frase_esp, notas_uso: notasInput.value.trim() };
       if (row) await updateFrase(row.id, payload);
       else await addFrase(payload);
       closeModal();

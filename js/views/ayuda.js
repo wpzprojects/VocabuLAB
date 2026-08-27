@@ -2,8 +2,17 @@
 // en el original de Power Apps, es contenido estatico agregado en la
 // migracion para orientar al usuario.
 
-import { el } from "../util/format.js";
-import { importVocabularioCsv, importFrasesCsv } from "../store.js";
+import { el, distinct, confirmAction } from "../util/format.js";
+import {
+  importVocabularioCsv,
+  importFrasesCsv,
+  getVocabulario,
+  getFrases,
+  deletePalabrasByLista,
+  deleteFrasesByCategoria,
+} from "../store.js";
+
+const APP_VERSION = "1.0.0";
 
 const SECCIONES = [
   {
@@ -33,14 +42,6 @@ const SECCIONES = [
     ],
   },
   {
-    titulo: "Frases",
-    items: [
-      "Mismo patron que Palabras, pero para frases de uso frecuente organizadas por Categoria en vez de Lista.",
-      "Toca una fila para editarla o borrarla; el casillero de Aprendida se marca directo desde la tabla.",
-      "Tiene su propio boton Exportar CSV, independiente del de Palabras.",
-    ],
-  },
-  {
     titulo: "Examen",
     items: [
       "Genera un cuestionario con tu vocabulario: filtra por Lista, Aprendida, o limita el numero de palabras.",
@@ -49,16 +50,27 @@ const SECCIONES = [
       "Reset test vuelve a generar el cuestionario desde cero con los filtros actuales.",
     ],
   },
+  {
+    titulo: "Frases",
+    items: [
+      "Mismo patron que Palabras, pero para frases de uso frecuente organizadas por Categoria en vez de Lista.",
+      "Toca una fila para editarla o borrarla; el casillero de Aprendida se marca directo desde la tabla.",
+      "Tiene su propio boton Exportar CSV, independiente del de Palabras.",
+    ],
+  },
 ];
 
 export async function render(container) {
-  container.append(
+  const wrap = el("div", { class: "view-ayuda" });
+  container.append(wrap);
+
+  wrap.append(
     el("h1", { class: "page-title" }, "Ayuda"),
     el("p", { class: "page-subtitle" }, "Como funciona cada pantalla de la app.")
   );
 
   SECCIONES.forEach((seccion) => {
-    container.append(
+    wrap.append(
       el("div", { class: "card" }, [
         el("h2", { class: "section-title", style: "margin-top:0" }, seccion.titulo),
         el(
@@ -70,7 +82,7 @@ export async function render(container) {
     );
   });
 
-  container.append(
+  wrap.append(
     el("p", { class: "text-sm text-muted" }, [
       "Todo lo que agregues, edites, borres o marques como aprendida se guarda solo en este navegador/dispositivo (localStorage) — usa ",
       el("strong", {}, "Exportar CSV"),
@@ -78,8 +90,50 @@ export async function render(container) {
     ])
   );
 
-  container.append(buildRestoreCard());
-  container.append(buildDeveloperCard());
+  const [vocab, frases] = await Promise.all([getVocabulario(), getFrases()]);
+  wrap.append(buildAdvancedCard(vocab, frases));
+  wrap.append(buildRestoreCard());
+  wrap.append(buildDeveloperCard());
+}
+
+function buildAdvancedCard(vocab, frases) {
+  return el("div", { class: "card" }, [
+    el("h2", { class: "section-title", style: "margin-top:0" }, "Opciones avanzadas"),
+    el("p", { class: "text-sm text-muted" }, "Borra en bloque palabras o frases completas. No se puede deshacer."),
+    buildBulkDeleteField("Borrar palabras por lista", distinct(vocab, "lista"), deletePalabrasByLista, "palabras"),
+    buildBulkDeleteField("Borrar frases por categoria", distinct(frases, "categoria"), deleteFrasesByCategoria, "frases"),
+  ]);
+}
+
+function buildBulkDeleteField(label, options, deleteFn, plural) {
+  const select = el(
+    "select",
+    { disabled: options.length ? null : true },
+    options.length ? options.map((v) => el("option", { value: v }, String(v))) : [el("option", { value: "" }, "(sin datos)")]
+  );
+  const deleteBtn = el("button", { class: "btn btn-danger", disabled: options.length ? null : true }, "Borrar");
+  const statusMsg = el("p", { class: "text-sm", hidden: true }, "");
+
+  deleteBtn.addEventListener("click", async () => {
+    const value = select.value;
+    if (!value) return;
+    const ok = await confirmAction(
+      `Esto borrara permanentemente todas las ${plural} de "${value}". No se puede deshacer.`,
+      { danger: true, okLabel: "Borrar" }
+    );
+    if (!ok) return;
+    const n = await deleteFn(value);
+    statusMsg.style.color = "var(--success)";
+    statusMsg.textContent = `Listo: se borraron ${n} ${plural}.`;
+    statusMsg.hidden = false;
+  });
+
+  return el("div", { class: "field" }, [
+    el("label", {}, label),
+    select,
+    el("div", { class: "btn-row", style: "margin-top:var(--space-2)" }, [deleteBtn]),
+    statusMsg,
+  ]);
 }
 
 function buildDeveloperCard() {
@@ -95,7 +149,7 @@ function buildDeveloperCard() {
       el("a", { href: "mailto:wperez.net@hotmail.com" }, "wperez.net@hotmail.com"),
       el("a", { href: "tel:+573104762477" }, "+57 310 476 2477"),
     ]),
-    el("p", { class: "dev-footer" }, "Colombia · 2026"),
+    el("p", { class: "dev-footer" }, `Colombia · 2026 · v${APP_VERSION}`),
   ]);
 }
 
@@ -122,9 +176,11 @@ function buildImportField(label, importFn) {
     const file = fileInput.files[0];
     fileInput.value = "";
     if (!file) return;
-    if (!confirm(`Esto reemplaza TODOS los datos actuales con el contenido de "${file.name}". No se puede deshacer. Continuar?`)) {
-      return;
-    }
+    const ok = await confirmAction(
+      `Esto reemplaza TODOS los datos actuales con el contenido de "${file.name}". No se puede deshacer. Continuar?`,
+      { danger: true, okLabel: "Continuar" }
+    );
+    if (!ok) return;
     try {
       const text = await file.text();
       const count = await importFn(text);

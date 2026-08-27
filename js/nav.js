@@ -6,7 +6,7 @@ export const navLinks = [
   { key: "ver", title: "Palabras", icon: "eye", hash: "#/" },
   { key: "traducir", title: "Traducir", icon: "sync", hash: "#/traducir" },
   { key: "practicar", title: "Practicar", icon: "clock", hash: "#/practicar" },
-  { key: "frases", title: "Frases", icon: "chat", hash: "#/frases" },
   { key: "examen", title: "Examen", icon: "check", hash: "#/examen" },
+  { key: "frases", title: "Frases", icon: "chat", hash: "#/frases" },
   { key: "ayuda", title: "Ayuda", icon: "help", hash: "#/ayuda" },
 ];

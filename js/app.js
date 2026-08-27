@@ -3,11 +3,13 @@ import { navLinks } from "./nav.js";
 import { initRouter } from "./router.js";
 
 const topnav = document.getElementById("topnav");
+const topbarActions = document.getElementById("topbar-actions");
 const mount = document.getElementById("app");
 
 document.getElementById("brand-mark").innerHTML = '<img src="icons/icon.svg" alt="" width="28" height="28">';
 
 topnav.innerHTML = navLinks
+  .filter((link) => link.key !== "ayuda")
   .map(
     (link) => `
     <a class="topnav-link" data-key="${link.key}" href="${link.hash}">
@@ -17,9 +19,15 @@ topnav.innerHTML = navLinks
   )
   .join("");
 
+const ayudaLink = navLinks.find((link) => link.key === "ayuda");
+topbarActions.innerHTML = `
+  <a class="icon-btn" data-key="${ayudaLink.key}" href="${ayudaLink.hash}" aria-label="${ayudaLink.title}" title="${ayudaLink.title}">
+    ${icon(ayudaLink.icon)}
+  </a>`;
+
 function setActiveLink(path) {
   const section = path.split("/").filter(Boolean)[0] || "ver";
-  topnav.querySelectorAll(".topnav-link").forEach((a) => {
+  document.querySelectorAll("[data-key]").forEach((a) => {
     a.classList.toggle("active", a.dataset.key === section);
   });
 }

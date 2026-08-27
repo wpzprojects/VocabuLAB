@@ -75,6 +75,15 @@ export async function setAprendida(id, aprendida) {
   return updatePalabra(id, { aprendida });
 }
 
+export async function deletePalabrasByLista(lista) {
+  let rows = await getVocabulario();
+  const before = rows.length;
+  rows = rows.filter((r) => String(r.lista) !== String(lista));
+  vocabCache = rows;
+  persist(KEY_VOCAB, rows);
+  return before - rows.length;
+}
+
 // ---------------- Frases comunes ----------------
 
 export async function getFrases() {
@@ -107,6 +116,15 @@ export async function deleteFrase(id) {
 
 export async function setFraseAprendida(id, aprendida) {
   return updateFrase(id, { aprendida });
+}
+
+export async function deleteFrasesByCategoria(categoria) {
+  let rows = await getFrases();
+  const before = rows.length;
+  rows = rows.filter((r) => r.categoria !== categoria);
+  frasesCache = rows;
+  persist(KEY_FRASES, rows);
+  return before - rows.length;
 }
 
 // ---------------- Backup / exportacion ----------------

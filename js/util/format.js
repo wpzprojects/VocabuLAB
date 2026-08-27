@@ -200,6 +200,56 @@ export function parseCsv(text) {
     .map((r) => Object.fromEntries(headers.map((h, i) => [h, r[i] ?? ""])));
 }
 
+// Modal de confirmacion propio de la app (reemplaza el confirm() nativo del
+// navegador, cuyo encabezado -- controlado por el navegador, no por nosotros
+// -- no se puede personalizar). Se ancla a document.body para poder
+// invocarse desde cualquier vista sin depender de su backdrop local.
+export function confirmAction(message, { title = "VocabuLAB dice:", okLabel = "Aceptar", cancelLabel = "Cancelar", danger = false } = {}) {
+  return new Promise((resolve) => {
+    const backdrop = el("div", { class: "modal-backdrop" });
+    const cancelBtn = el("button", { class: "btn" }, cancelLabel);
+    const okBtn = el("button", { class: danger ? "btn btn-danger" : "btn btn-primary" }, okLabel);
+    const modal = el("div", { class: "modal" }, [
+      el("h2", {}, title),
+      el("p", {}, message),
+      el("div", { class: "modal-actions" }, [cancelBtn, okBtn]),
+    ]);
+    backdrop.append(modal);
+    document.body.append(backdrop);
+
+    function close(result) {
+      backdrop.remove();
+      resolve(result);
+    }
+    cancelBtn.addEventListener("click", () => close(false));
+    okBtn.addEventListener("click", () => close(true));
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop) close(false);
+    });
+    okBtn.focus();
+  });
+}
+
+// Bloquea simbolos de calculadora (+ - * / e .) en un input de entero
+// positivo (ej. "Lista"), tanto al tipear como al pegar texto.
+export function bindIntegerInput(input) {
+  const allowedKeys = ["Backspace", "Delete", "Tab", "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End", "Enter"];
+  input.addEventListener("keydown", (e) => {
+    if (allowedKeys.includes(e.key) || e.ctrlKey || e.metaKey) return;
+    if (!/^[0-9]$/.test(e.key)) e.preventDefault();
+  });
+  input.addEventListener("paste", (e) => {
+    e.preventDefault();
+    const text = (e.clipboardData || window.clipboardData).getData("text").replace(/[^0-9]/g, "");
+    const start = input.selectionStart ?? input.value.length;
+    const end = input.selectionEnd ?? input.value.length;
+    input.value = input.value.slice(0, start) + text + input.value.slice(end);
+    const pos = start + text.length;
+    input.setSelectionRange(pos, pos);
+    input.dispatchEvent(new Event("input", { bubbles: true }));
+  });
+}
+
 export function downloadBlob(filename, blob) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");

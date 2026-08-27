@@ -15,7 +15,7 @@ export async function render(container) {
   const listaDefault = maxNumeric(await getVocabulario(), "lista");
 
   container.append(
-    el("h1", { class: "page-title" }, "Traducir"),
+    el("h1", { class: "page-title" }, "Traducir palabras"),
     el("p", { class: "page-subtitle" }, "Traduce y guardalo como palabra nueva.")
   );
 

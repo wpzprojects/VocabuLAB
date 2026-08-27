@@ -11,7 +11,7 @@ import { getVocabulario } from "../store.js";
 export async function render(container) {
   const rows = await getVocabulario();
 
-  const state = { lista: "", aprendida: "", aleatorio: false, swap: false, limite: 20 };
+  const state = { lista: "", aprendida: "", aleatorio: false, swap: false, limite: 5 };
   let aciertos = 0;
   let total = 0;
 
@@ -36,25 +36,23 @@ export async function render(container) {
   const resetBtn = el("button", { class: "btn" }, "Reset test");
 
   container.append(
-    el("div", { class: "flash-toolbar" }, [
+    el("div", { class: "flash-toolbar gap-sm" }, [
       el("div", { class: "field" }, [el("label", {}, "Lista"), listaSelect]),
-      el("div", { class: "field" }, [el("label", {}, "Aprendida"), aprendidaSelect]),
-      el("div", { class: "field" }, [el("label", {}, "# de palabras"), limiteInput]),
+      el("div", { class: "field" }, [el("label", {}, "Aprendidas"), aprendidaSelect]),
     ])
   );
   container.append(
     el("div", { class: "flash-toolbar" }, [
-      el("div", { class: "field field-auto" }, [
-        el("span", { class: "field-title" }, "Orden"),
-        el("label", { class: "checkbox-row" }, ["Aleatorio", aleatorioCheck]),
+      el("label", { class: "checkbox-row field-auto" }, ["Orden aleatorio", aleatorioCheck]),
+      el("label", { class: "toggle-row field-auto" }, [
+        el("span", {}, "Intercambiar idioma"),
+        el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
       ]),
-      el("div", { class: "field field-auto" }, [
-        el("span", { class: "field-title" }, "Idioma"),
-        el("label", { class: "toggle-row" }, [
-          el("span", {}, "Intercambiar"),
-          el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
-        ]),
-      ]),
+    ])
+  );
+  container.append(
+    el("div", { class: "flash-toolbar" }, [
+      el("div", { class: "field" }, [el("label", {}, "# de palabras"), limiteInput]),
       resultText,
       resetBtn,
     ])

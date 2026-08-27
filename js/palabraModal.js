@@ -2,7 +2,7 @@
 // Traducir al guardar un resultado, para que ambas vias puedan completar
 // Lista y Palabra en contexto antes de guardar).
 
-import { el } from "./util/format.js";
+import { el, bindIntegerInput, confirmAction } from "./util/format.js";
 import { addPalabra, updatePalabra, deletePalabra } from "./store.js";
 
 // backdrop: el ".modal-backdrop" (creado y anexado al container por quien
@@ -19,13 +19,13 @@ export function openPalabraModal(backdrop, { row = null, defaults = {}, onSaved,
   const ingInput = el("input", { type: "text", value: row?.palabra_ing ?? defaults.palabra_ing ?? "", required: true });
   const espInput = el("input", { type: "text", value: row?.palabra_esp ?? defaults.palabra_esp ?? "", required: true });
   const listaInput = el("input", {
-    type: "number",
-    min: "0",
-    step: "1",
+    type: "text",
     inputmode: "numeric",
+    pattern: "[0-9]*",
     value: row ? row.lista ?? "" : defaults.lista ?? "",
     placeholder: "1, 2, 3...",
   });
+  bindIntegerInput(listaInput);
   const contextoInput = el(
     "textarea",
     { rows: 3, placeholder: "Ej: I've never used a bow and arrow" },
@@ -50,7 +50,8 @@ export function openPalabraModal(backdrop, { row = null, defaults = {}, onSaved,
         {
           class: "btn btn-danger",
           onclick: async () => {
-            if (!confirm(`Eliminar "${row.palabra_ing}"?`)) return;
+            const ok = await confirmAction(`Eliminar "${row.palabra_ing}"? Esta accion no se puede deshacer.`, { danger: true, okLabel: "Eliminar" });
+            if (!ok) return;
             await deletePalabra(row.id);
             closeModal();
             await onDeleted?.();

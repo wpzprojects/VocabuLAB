@@ -1,7 +1,7 @@
 // Pantalla "Ver" (1. Pantalla_Ver): lista de vocabulario con selector de
 // Lista, buscador, orden A-Z y CRUD (Nuevo/Editar/Borrar).
 
-import { el, debounce, distinct, maxNumeric } from "../util/format.js";
+import { el, debounce, distinct, maxNumeric, confirmAction } from "../util/format.js";
 import { getVocabulario, exportVocabularioCsv } from "../store.js";
 import { openPalabraModal } from "../palabraModal.js";
 
@@ -14,11 +14,10 @@ export async function render(container) {
   let query = "";
 
   container.append(
-    el("h1", { class: "page-title" }, "Palabras"),
+    el("h1", { class: "page-title" }, "Gestion de palabras"),
     el("p", { class: "page-subtitle" }, "Busca, filtra y edita tu vocabulario.")
   );
 
-  const toolbar = el("div", { class: "toolbar" });
   const listaSelect = el("select", { id: "ver-lista" }, [
     el("option", { value: "" }, "Todas"),
     ...distinct(rows, "lista").map((v) => el("option", { value: v }, String(v))),
@@ -28,13 +27,13 @@ export async function render(container) {
   const exportBtn = el("button", { class: "btn" }, "Exportar CSV");
   const newBtn = el("button", { class: "btn btn-primary" }, "+ Nueva palabra");
 
-  toolbar.append(
-    el("div", { class: "field" }, [el("label", { for: "ver-lista" }, "Lista"), listaSelect]),
-    el("div", { class: "field search" }, [el("label", { for: "ver-buscar" }, "Buscar"), searchInput]),
-    sortBtn,
-    exportBtn,
-    newBtn
-  );
+  const toolbar = el("div", { class: "toolbar" }, [
+    el("div", { class: "toolbar-row" }, [
+      el("div", { class: "field" }, [el("label", { for: "ver-lista" }, "Lista"), listaSelect]),
+      el("div", { class: "field search" }, [el("label", { for: "ver-buscar" }, "Buscar palabra"), searchInput]),
+    ]),
+    el("div", { class: "toolbar-row" }, [sortBtn, exportBtn, newBtn]),
+  ]);
   container.append(toolbar);
 
   const resultsWrap = el("div", {});
@@ -56,7 +55,7 @@ export async function render(container) {
 
   function renderResults(filtered) {
     resultsWrap.innerHTML = "";
-    resultsWrap.append(el("p", { class: "row-count" }, `Filas: ${filtered.length}`));
+    resultsWrap.append(el("p", { class: "row-count" }, `Selecciona una fila para editar · Filas: ${filtered.length}`));
 
     if (filtered.length === 0) {
       resultsWrap.append(el("div", { class: "empty-state" }, el("p", {}, "No hay palabras con esos filtros.")));
@@ -67,7 +66,7 @@ export async function render(container) {
       el("tr", {}, [
         el("th", {}, "Ingles"),
         el("th", {}, "Espanol"),
-        el("th", {}, "Aprendida"),
+        el("th", { class: "col-center" }, "Aprendida"),
       ]),
     ]);
     const tbody = el("tbody", {});
@@ -89,13 +88,12 @@ export async function render(container) {
           [
             el("td", {}, row.palabra_ing),
             el("td", {}, row.palabra_esp),
-            el("td", {}, row.aprendida ? el("span", { class: "badge badge-success" }, "Si") : el("span", { class: "badge" }, "No")),
+            el("td", { class: "col-center" }, row.aprendida ? el("span", { class: "badge badge-success" }, "Si") : el("span", { class: "badge" }, "No")),
           ]
         )
       );
     });
     resultsWrap.append(el("div", { class: "table-wrap" }, el("table", {}, [thead, tbody])));
-    resultsWrap.append(el("p", { class: "text-sm text-muted" }, "Toca una fila para editarla o borrarla."));
   }
 
   async function render0() {
@@ -118,8 +116,8 @@ export async function render(container) {
     sortDesc = !sortDesc;
     applyFilters();
   });
-  exportBtn.addEventListener("click", () => {
-    if (confirm("Descargar vocabulario_*.csv con el estado actual?")) exportVocabularioCsv();
+  exportBtn.addEventListener("click", async () => {
+    if (await confirmAction("Descargar vocabulario_*.csv con el estado actual?")) exportVocabularioCsv();
   });
   newBtn.addEventListener("click", () => openModal(null));
 
