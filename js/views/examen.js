@@ -53,8 +53,7 @@ export async function render(container) {
   container.append(
     el("div", { class: "flash-toolbar gap-sm" }, [
       el("div", { class: "field field-compact" }, [el("label", {}, "# de palabras"), limiteInput]),
-      resultText,
-      resetBtn,
+      el("div", { class: "quiz-result-row" }, [resultText, resetBtn]),
     ])
   );
 

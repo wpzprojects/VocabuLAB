@@ -16,7 +16,7 @@ const paths = {
   trash: "M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13",
   plus: "M12 5v14M5 12h14",
   sort: "M7 4v16m0 0-3-3m3 3 3-3M17 20V4m0 0 3 3m-3-3-3 3",
-  shuffle: "m18 4 3 3-3 3M3 17h4l10-13h4M18 20l3-3-3-3M3 7h4l3 4m6 2 3 4h4",
+  shuffle: "M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5",
   save: "M5 4h11l4 4v12H5V4Zm3 0v5h8V4M8 14h8v6H8v-6Z",
   download: "M12 3v13m0 0-4-4m4 4 4-4M4 21h16",
   x: "m6 6 12 12M18 6 6 18",

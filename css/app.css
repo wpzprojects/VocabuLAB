@@ -299,7 +299,8 @@ tbody tr.clickable:active { background: var(--accent-soft); }
 .quiz-row.incorrect .quiz-correct { color: var(--danger); }
 .quiz-row .quiz-answer-row { display: flex; gap: var(--space-2); align-items: center; flex-wrap: wrap; }
 .quiz-row .quiz-answer-row input { flex: 1 1 200px; }
-.quiz-score { font-weight: 800; font-size: 1.1rem; align-self: center; margin-left: auto; white-space: nowrap; }
+.quiz-score { font-weight: 800; font-size: 1.1rem; white-space: nowrap; }
+.quiz-result-row { display: flex; align-items: center; gap: var(--space-3); flex: 0 0 auto; margin-left: auto; align-self: flex-end; }
 
 @media (max-width: 720px) {
   .content { padding: var(--space-4); }
