@@ -12,7 +12,7 @@ import {
   deleteFrasesByCategoria,
 } from "../store.js";
 
-const APP_VERSION = "1.0.3";
+const APP_VERSION = "1.0.4";
 
 const SECCIONES = [
   {
@@ -130,8 +130,7 @@ function buildBulkDeleteField(label, options, deleteFn, plural) {
 
   return el("div", { class: "field" }, [
     el("label", {}, label),
-    select,
-    el("div", { class: "btn-row", style: "margin-top:var(--space-2)" }, [deleteBtn]),
+    el("div", { class: "select-with-btn" }, [select, deleteBtn]),
     statusMsg,
   ]);
 }
