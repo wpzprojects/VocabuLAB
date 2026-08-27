@@ -12,7 +12,7 @@ import {
   deleteFrasesByCategoria,
 } from "../store.js";
 
-const APP_VERSION = "1.0.4";
+const APP_VERSION = "1.0.5";
 
 const SECCIONES = [
   {

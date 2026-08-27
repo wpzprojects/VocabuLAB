@@ -26,10 +26,10 @@ export async function render(container) {
     ...distinct(rows, "categoria").map((v) => el("option", { value: v }, String(v))),
   ]);
   const searchInput = el("input", { type: "search", placeholder: "Buscar frase..." });
-  const sortBtn = el("button", { class: "btn" }, "A-Z");
+  const sortBtn = el("button", { class: "btn btn-shuffle-match" }, "A-Z");
   const shuffleBtn = el(
     "button",
-    { class: "btn btn-icon-only", "aria-label": "Aleatorizar", title: "Aleatorizar" },
+    { class: "btn btn-shuffle-match", "aria-label": "Aleatorizar", title: "Aleatorizar" },
     el("span", { html: icon("shuffle") })
   );
   const exportBtn = el("button", { class: "btn" }, "Exportar CSV");
