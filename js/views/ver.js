@@ -30,7 +30,7 @@ export async function render(container) {
   const toolbar = el("div", { class: "toolbar" }, [
     el("div", { class: "toolbar-row" }, [
       el("div", { class: "field" }, [el("label", { for: "ver-lista" }, "Lista"), listaSelect]),
-      el("div", { class: "field search" }, [el("label", { for: "ver-buscar" }, "Buscar palabra"), searchInput]),
+      el("div", { class: "field search" }, [el("label", { for: "ver-buscar" }, "Buscar"), searchInput]),
     ]),
     el("div", { class: "toolbar-row" }, [sortBtn, exportBtn, newBtn]),
   ]);

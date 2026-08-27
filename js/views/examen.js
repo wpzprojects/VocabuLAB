@@ -51,8 +51,8 @@ export async function render(container) {
     ])
   );
   container.append(
-    el("div", { class: "flash-toolbar" }, [
-      el("div", { class: "field" }, [el("label", {}, "# de palabras"), limiteInput]),
+    el("div", { class: "flash-toolbar gap-sm" }, [
+      el("div", { class: "field field-compact" }, [el("label", {}, "# de palabras"), limiteInput]),
       resultText,
       resetBtn,
     ])

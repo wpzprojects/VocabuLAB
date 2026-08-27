@@ -2,6 +2,7 @@
 // aplicado a Frases_Comunes, con un toggle inline de "Aprendida" por fila.
 
 import { el, debounce, distinct, confirmAction } from "../util/format.js";
+import { icon } from "../icons.js";
 import { getFrases, addFrase, updateFrase, deleteFrase, setFraseAprendida, exportFrasesCsv } from "../store.js";
 
 export async function render(container) {
@@ -23,7 +24,11 @@ export async function render(container) {
   ]);
   const searchInput = el("input", { type: "search", placeholder: "Buscar frase..." });
   const sortBtn = el("button", { class: "btn" }, "A-Z");
-  const shuffleBtn = el("button", { class: "btn" }, "Aleatorizar");
+  const shuffleBtn = el(
+    "button",
+    { class: "btn btn-icon-only", "aria-label": "Aleatorizar", title: "Aleatorizar" },
+    el("span", { html: icon("shuffle") })
+  );
   const exportBtn = el("button", { class: "btn" }, "Exportar CSV");
   const newBtn = el("button", { class: "btn btn-primary" }, "+ Nueva frase");
 
