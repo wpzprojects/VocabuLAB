@@ -13,7 +13,7 @@ import {
 } from "../store.js";
 import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.3.1";
+const APP_VERSION = "1.3.2";
 
 const SECCIONES = [
   {
@@ -188,8 +188,7 @@ function buildCloudBackupCard() {
     el(
       "p",
       { class: "text-sm text-muted" },
-      'Guarda una copia de tu vocabulario y frases en una carpeta "VocabuLAB" de tu Google Drive (el JSON que usa Restaurar, ' +
-        "mas los mismos vocabulario.csv y frases.csv de Exportar CSV, por si los quieres abrir en Excel), o restaurala en otro " +
+      'Guarda una copia de tu vocabulario y frases en una carpeta "VocabuLAB" de tu Google Drive, o restaurala en otro ' +
         "dispositivo. Requiere conexion a internet e iniciar sesion con tu cuenta de Google."
     ),
     el("div", { class: "btn-row" }, [saveBtn, restoreBtn]),
