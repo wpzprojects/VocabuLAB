@@ -8,7 +8,7 @@
 //   3. exportCsv() permite sacar el estado actual a CSV para reincorporarlo
 //      a mano al Excel original si se quiere.
 
-import { uid, downloadCsv, parseCsv } from "./util/format.js";
+import { uid, downloadCsv, buildCsv, parseCsv } from "./util/format.js";
 
 const KEY_VOCAB = "vocabulab:v1:vocabulario";
 const KEY_FRASES = "vocabulab:v1:frases";
@@ -129,38 +129,44 @@ export async function deleteFrasesByCategoria(categoria) {
 
 // ---------------- Backup / exportacion ----------------
 
+const VOCAB_CSV_COLUMNS = [
+  { key: "lista", label: "Lista" },
+  { key: "palabra_ing", label: "Palabra_Ing" },
+  { key: "palabra_esp", label: "Palabra_Esp" },
+  { key: "aprendida_txt", label: "Aprendida" },
+  { key: "contexto", label: "Palabra_en_contexto" },
+];
+const FRASES_CSV_COLUMNS = [
+  { key: "categoria", label: "Categoria" },
+  { key: "frase_ing", label: "Frase_Ing" },
+  { key: "frase_esp", label: "Frase_Esp" },
+  { key: "notas_uso", label: "Notas_de_uso" },
+  { key: "aprendida_txt", label: "Aprendida" },
+];
+
 export async function exportVocabularioCsv() {
   const vocab = await getVocabulario();
   const stamp = new Date().toISOString().slice(0, 10);
-
-  downloadCsv(
-    `vocabulario_${stamp}.csv`,
-    [
-      { key: "lista", label: "Lista" },
-      { key: "palabra_ing", label: "Palabra_Ing" },
-      { key: "palabra_esp", label: "Palabra_Esp" },
-      { key: "aprendida_txt", label: "Aprendida" },
-      { key: "contexto", label: "Palabra_en_contexto" },
-    ],
-    vocab.map((r) => ({ ...r, aprendida_txt: r.aprendida ? "Si" : "No" }))
-  );
+  downloadCsv(`vocabulario_${stamp}.csv`, VOCAB_CSV_COLUMNS, vocab.map((r) => ({ ...r, aprendida_txt: r.aprendida ? "Si" : "No" })));
 }
 
 export async function exportFrasesCsv() {
   const frases = await getFrases();
   const stamp = new Date().toISOString().slice(0, 10);
+  downloadCsv(`frases_${stamp}.csv`, FRASES_CSV_COLUMNS, frases.map((r) => ({ ...r, aprendida_txt: r.aprendida ? "Si" : "No" })));
+}
 
-  downloadCsv(
-    `frases_${stamp}.csv`,
-    [
-      { key: "categoria", label: "Categoria" },
-      { key: "frase_ing", label: "Frase_Ing" },
-      { key: "frase_esp", label: "Frase_Esp" },
-      { key: "notas_uso", label: "Notas_de_uso" },
-      { key: "aprendida_txt", label: "Aprendida" },
-    ],
-    frases.map((r) => ({ ...r, aprendida_txt: r.aprendida ? "Si" : "No" }))
-  );
+// Igual que exportVocabularioCsv/exportFrasesCsv, pero devuelven el texto en
+// vez de disparar una descarga -- las usa js/drive.js para subir los CSV al
+// backup en Google Drive junto con el JSON.
+export async function buildVocabularioCsv() {
+  const vocab = await getVocabulario();
+  return buildCsv(VOCAB_CSV_COLUMNS, vocab.map((r) => ({ ...r, aprendida_txt: r.aprendida ? "Si" : "No" })));
+}
+
+export async function buildFrasesCsv() {
+  const frases = await getFrases();
+  return buildCsv(FRASES_CSV_COLUMNS, frases.map((r) => ({ ...r, aprendida_txt: r.aprendida ? "Si" : "No" })));
 }
 
 // ---------------- Restaurar desde CSV (reemplaza todo el dataset) ----------------
@@ -205,8 +211,19 @@ export async function importFrasesCsv(text) {
   return rows.length;
 }
 
-// Punto de extension para Fase 2 (backup a Google Drive vía Google Identity
-// Services + Drive API v3, requiere que el usuario cree un cliente OAuth).
-export async function backupToDrive() {
-  throw new Error("Backup a Google Drive aun no esta implementado.");
+// ---------------- Restaurar desde snapshot JSON (backup en la nube) ----------------
+// Mismo patron que importVocabularioCsv/importFrasesCsv (reemplaza todo el
+// dataset), pero a partir de un objeto ya parseado en vez de un CSV. Lo usa
+// js/drive.js al restaurar el backup de Google Drive.
+
+export async function replaceVocabulario(rows) {
+  vocabCache = rows;
+  persist(KEY_VOCAB, rows);
+  return rows.length;
+}
+
+export async function replaceFrases(rows) {
+  frasesCache = rows;
+  persist(KEY_FRASES, rows);
+  return rows.length;
 }

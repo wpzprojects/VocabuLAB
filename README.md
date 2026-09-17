@@ -12,6 +12,7 @@ La app de Power Apps escribía directo al Excel vía conectores (`Patch`/`Remove
 - Al abrir la app por primera vez en un navegador, el seed se copia a **localStorage**. Todo lo que agregues/edites/borres/marques como aprendida vive ahí — es privado de ese navegador/dispositivo.
 - En **Palabras** y **Frases**, cada pantalla tiene su propio botón **Exportar CSV** (con confirmación previa) que descarga `vocabulario_YYYY-MM-DD.csv` o `frases_YYYY-MM-DD.csv` respectivamente, con el estado actual (seed + tus cambios), por si quieres reincorporarlo a mano al Excel original o respaldarlo. La pantalla **Ayuda** tiene el flujo inverso, **Restaurar desde CSV**: sube uno de esos archivos para recuperar tus datos en otro navegador/dispositivo (reemplaza por completo el dataset correspondiente, no se combina).
 - La pantalla **Traducir** usa la API pública de [MyMemory](https://mymemory.translated.net/) en vez del conector Microsoft Translator del original (que requiere autenticación de Power Apps). No hay detección automática de idioma gratuita, así que eliges el sentido de la traducción (Inglés→Español / Español→Inglés).
+- **Ayuda** tiene ademas un respaldo manual a **Google Drive** (`js/drive.js`, botones "Guardar en Drive" / "Restaurar desde Drive"): crea/reutiliza una carpeta `VocabuLAB` visible en el Drive normal del usuario (scope `drive.file`, la app solo ve esa carpeta y sus archivos, no el resto del Drive) y ahi sube `VocabuLAB_backup.json` (fuente de verdad, usado por Restaurar) junto con `vocabulario.csv` y `frases.csv` (los mismos que generan los botones Exportar CSV, para abrir en Excel/Sheets sin pasar por la app). Usa Google Identity Services (OAuth por token, sin backend); requiere un Client ID de Google Cloud Console con el origen de la PWA autorizado (ver seccion "Configurar Google Drive" abajo).
 
 ## Ejecutar localmente
 
@@ -32,6 +33,7 @@ index.html, manifest.webmanifest, sw.js   # shell PWA
 css/                                       # tokens.css (paleta clara/oscura) + app.css (componentes)
 js/app.js, router.js, nav.js, icons.js     # bootstrap, router SPA por hash, navegacion, iconos SVG inline
 js/store.js                                # persistencia: seed JSON -> localStorage, CRUD, exportCsv()
+js/drive.js                                # backup/restauracion manual contra Google Drive (OAuth + Drive API v3)
 js/translate.js                            # wrapper de la API de traduccion (MyMemory)
 js/util/format.js                          # helpers de DOM/datos (el, uid, downloadCsv, etc.)
 js/views/*.js                              # 1 modulo por pantalla: export async function render(container, params)
@@ -49,9 +51,19 @@ APP_PowerApps/                             # app original de Power Apps + Excel 
 
 Ojo: esto **no** afecta lo que un usuario ya tenga guardado en su localStorage — el seed solo se usa la primera vez que la app abre en un navegador nuevo.
 
-## Pendiente / Fase 2
+## Configurar Google Drive (backup en la nube)
 
-- **Backup a Google Drive**: técnicamente viable desde el navegador (Google Identity Services + Drive API v3, sin backend), pero requiere que el dueño de la app cree un cliente OAuth en Google Cloud Console y autorice el origen donde se sirva la PWA. El hook `backupToDrive()` en `js/store.js` está listo para implementarse ahí.
+El `CLIENT_ID` en `js/drive.js` es publico (no es secreto, es normal que viva en el codigo del navegador), pero solo funciona si el origen desde el que sirves la PWA esta autorizado en ese cliente OAuth. Si necesitas crear uno nuevo (o agregar un origen, por ejemplo al mover la app a otro dominio):
+
+1. [console.cloud.google.com](https://console.cloud.google.com/) → crear proyecto → **APIs y servicios → Biblioteca** → habilitar "Google Drive API".
+2. **APIs y servicios → Pantalla de consentimiento de OAuth**: tipo Externo, agrega el scope `.../auth/drive.file`, y agrega tu propia cuenta de Gmail en "Usuarios de prueba". Deja la app en estado "Testing" (no hace falta publicarla/verificarla para uso personal).
+3. **APIs y servicios → Credenciales → Crear credenciales → ID de cliente de OAuth**, tipo "Aplicación web". En "Orígenes de JavaScript autorizados" agrega cada origen desde el que abras la app (sin ruta ni `/` final), por ejemplo `https://tu-usuario.github.io`, `http://127.0.0.1:5500`, `http://localhost:5500`.
+4. Copia el Client ID (`....apps.googleusercontent.com`) y pegalo en `CLIENT_ID` en `js/drive.js`.
+
+Nota: mientras el proyecto este en "Testing", la sesion de Google expira cada 7 dias — al usar "Guardar/Restaurar desde Drive" despues de ese tiempo simplemente vuelve a pedir iniciar sesion.
+
+## Pendiente / Fase 3
+
 - Si se prefiere un `.xlsx` real de 2 hojas en vez de 2 CSV al exportar, habría que vendorizar una librería como SheetJS.
 
 ## Iconos / logo

@@ -11,8 +11,9 @@ import {
   deletePalabrasByLista,
   deleteFrasesByCategoria,
 } from "../store.js";
+import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.2.4";
+const APP_VERSION = "1.3.1";
 
 const SECCIONES = [
   {
@@ -93,6 +94,7 @@ export async function render(container) {
   const [vocab, frases] = await Promise.all([getVocabulario(), getFrases()]);
   wrap.append(buildAdvancedCard(vocab, frases));
   wrap.append(buildRestoreCard());
+  wrap.append(buildCloudBackupCard());
   wrap.append(buildDeveloperCard());
 }
 
@@ -131,6 +133,66 @@ function buildBulkDeleteField(label, options, deleteFn, plural) {
   return el("div", { class: "field" }, [
     el("label", {}, label),
     el("div", { class: "select-with-btn" }, [select, deleteBtn]),
+    statusMsg,
+  ]);
+}
+
+function setStatus(statusMsg, text, color) {
+  statusMsg.style.color = color || "var(--text-muted)";
+  statusMsg.textContent = text;
+  statusMsg.hidden = false;
+}
+
+function buildCloudBackupCard() {
+  const statusMsg = el("p", { class: "text-sm", hidden: true }, "");
+  const saveBtn = el("button", { class: "btn btn-primary" }, "Guardar en Drive");
+  const restoreBtn = el("button", { class: "btn" }, "Restaurar desde Drive");
+
+  saveBtn.addEventListener("click", async () => {
+    saveBtn.disabled = true;
+    setStatus(statusMsg, "Guardando en Drive...", null);
+    try {
+      await saveBackupToDrive();
+      setStatus(statusMsg, 'Listo: respaldo guardado en tu Drive como "VocabuLAB_backup.json".', "var(--success)");
+    } catch (err) {
+      setStatus(statusMsg, `No se pudo guardar: ${err.message || err}`, "var(--danger)");
+    } finally {
+      saveBtn.disabled = false;
+    }
+  });
+
+  restoreBtn.addEventListener("click", async () => {
+    const ok = await confirmAction(
+      "Esto reemplaza TODAS tus palabras y frases actuales con el contenido del respaldo guardado en Drive. No se puede deshacer. Continuar?",
+      { danger: true, okLabel: "Continuar" }
+    );
+    if (!ok) return;
+    restoreBtn.disabled = true;
+    setStatus(statusMsg, "Restaurando desde Drive...", null);
+    try {
+      const info = await restoreBackupFromDrive();
+      setStatus(
+        statusMsg,
+        `Listo: se restauraron ${info.vocabularioCount} palabras y ${info.frasesCount} frases. Entra a Palabras/Frases para verlas.`,
+        "var(--success)"
+      );
+    } catch (err) {
+      setStatus(statusMsg, `No se pudo restaurar: ${err.message || err}`, "var(--danger)");
+    } finally {
+      restoreBtn.disabled = false;
+    }
+  });
+
+  return el("div", { class: "card" }, [
+    el("h2", { class: "section-title", style: "margin-top:0" }, "Respaldo en la nube (Google Drive)"),
+    el(
+      "p",
+      { class: "text-sm text-muted" },
+      'Guarda una copia de tu vocabulario y frases en una carpeta "VocabuLAB" de tu Google Drive (el JSON que usa Restaurar, ' +
+        "mas los mismos vocabulario.csv y frases.csv de Exportar CSV, por si los quieres abrir en Excel), o restaurala en otro " +
+        "dispositivo. Requiere conexion a internet e iniciar sesion con tu cuenta de Google."
+    ),
+    el("div", { class: "btn-row" }, [saveBtn, restoreBtn]),
     statusMsg,
   ]);
 }

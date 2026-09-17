@@ -141,9 +141,11 @@ export function uid() {
   return btoa(String.fromCharCode(...bytes)).replace(/[+/=]/g, (c) => ({ "+": "-", "/": "_", "=": "" }[c]));
 }
 
-// Genera un CSV (con BOM UTF-8 para que Excel detecte tildes/ñ correctamente)
-// a partir de columnas [{key, label}] y dispara la descarga en el navegador.
-export function downloadCsv(filename, columns, rows) {
+// Genera el texto de un CSV (con BOM UTF-8 para que Excel detecte tildes/ñ
+// correctamente) a partir de columnas [{key, label}]. Reutilizado tanto por
+// downloadCsv (descarga en el navegador) como por el backup a Google Drive
+// (js/drive.js), que sube este mismo texto sin pasar por un archivo local.
+export function buildCsv(columns, rows) {
   const escapeCell = (value) => {
     const s = value === null || value === undefined ? "" : String(value);
     return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
@@ -152,7 +154,11 @@ export function downloadCsv(filename, columns, rows) {
     columns.map((c) => escapeCell(c.label)).join(","),
     ...rows.map((row) => columns.map((c) => escapeCell(row[c.key])).join(",")),
   ];
-  const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+  return "﻿" + lines.join("\r\n");
+}
+
+export function downloadCsv(filename, columns, rows) {
+  const blob = new Blob([buildCsv(columns, rows)], { type: "text/csv;charset=utf-8" });
   downloadBlob(filename, blob);
 }
 
