@@ -103,6 +103,16 @@ button { font-family: inherit; }
 .app-body { flex: 1 1 auto; display: flex; min-height: 0; }
 .content { flex: 1 1 auto; min-width: 0; padding: var(--space-5); max-width: 1100px; margin: 0 auto; width: 100%; }
 
+/* ---------- transicion entre pantallas ---------- */
+@keyframes view-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.content.view-enter { animation: view-fade-in 180ms ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  .content.view-enter { animation: none; }
+}
+
 /* ---------- typography helpers ---------- */
 .page-title { font-size: 1.5rem; font-weight: 800; margin-bottom: var(--space-1); }
 .page-subtitle { color: var(--text-muted); margin: 0 0 var(--space-5); max-width: 65ch; }

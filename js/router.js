@@ -32,6 +32,12 @@ function currentPath() {
   return `/${segmentsOf(hash.slice(1)).join("/")}`;
 }
 
+function playEnterAnimation(mount) {
+  mount.classList.remove("view-enter");
+  void mount.offsetWidth; // fuerza reflow para poder reiniciar la animacion
+  mount.classList.add("view-enter");
+}
+
 function match(path) {
   for (const route of routeTable) {
     const m = path.match(route.regex);
@@ -60,6 +66,7 @@ export function initRouter({ mount, onNavigate }) {
           innerHTML: `<h2>Pantalla no encontrada</h2><p class="text-muted">La ruta <code>${path}</code> no existe.</p><p><a class="btn btn-primary" href="#/">Ir al inicio</a></p>`,
         })
       );
+      playEnterAnimation(mount);
       onNavigate?.(path, {});
       return;
     }
@@ -75,6 +82,7 @@ export function initRouter({ mount, onNavigate }) {
       console.error("Error cargando la vista:", err);
       mount.innerHTML = `<div class="empty-state"><h2>Ocurrio un error cargando esta pantalla</h2><p class="text-muted mono">${String(err.message || err)}</p></div>`;
     }
+    playEnterAnimation(mount);
     onNavigate?.(path, found.params);
   }
 
