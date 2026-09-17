@@ -3,7 +3,7 @@
 
 import { el, debounce, distinct, confirmAction } from "../util/format.js";
 import { icon } from "../icons.js";
-import { getFrases, addFrase, updateFrase, deleteFrase, setFraseAprendida, exportFrasesCsv } from "../store.js";
+import { getFrases, addFrase, updateFrase, deleteFrase, setFraseAprendida } from "../store.js";
 
 const SIN_CATEGORIA = "__sin_categoria__";
 
@@ -41,7 +41,6 @@ export async function render(container) {
     { class: "btn btn-shuffle-match", "aria-label": "Aleatorizar", title: "Aleatorizar" },
     el("span", { html: icon("shuffle") })
   );
-  const exportBtn = el("button", { class: "btn" }, "Exportar CSV");
   const newBtn = el("button", { class: "btn btn-primary" }, "+ Nueva frase");
 
   const toolbar = el("div", { class: "toolbar" }, [
@@ -49,7 +48,7 @@ export async function render(container) {
       el("div", { class: "field" }, [el("label", {}, "Categoria"), catSelect]),
       el("div", { class: "field search" }, [el("label", {}, "Buscar"), searchInput]),
     ]),
-    el("div", { class: "toolbar-row" }, [sortBtn, shuffleBtn, exportBtn, newBtn]),
+    el("div", { class: "toolbar-row" }, [sortBtn, shuffleBtn, newBtn]),
   ]);
   container.append(toolbar);
 
@@ -177,9 +176,6 @@ export async function render(container) {
     aleatorio = true;
     snapshotIds = null;
     applyFilters();
-  });
-  exportBtn.addEventListener("click", async () => {
-    if (await confirmAction("Descargar frases_*.csv con el estado actual?")) exportFrasesCsv();
   });
   newBtn.addEventListener("click", () => openModal(null));
 

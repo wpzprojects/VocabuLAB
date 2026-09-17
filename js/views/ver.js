@@ -1,8 +1,8 @@
 // Pantalla "Ver" (1. Pantalla_Ver): lista de vocabulario con selector de
 // Lista, buscador, orden A-Z y CRUD (Nuevo/Editar/Borrar).
 
-import { el, debounce, distinct, maxNumeric, confirmAction } from "../util/format.js";
-import { getVocabulario, exportVocabularioCsv } from "../store.js";
+import { el, debounce, distinct, maxNumeric } from "../util/format.js";
+import { getVocabulario } from "../store.js";
 import { openPalabraModal } from "../palabraModal.js";
 
 // Estado de filtro/orden a nivel de modulo: el navegador cachea el modulo
@@ -29,7 +29,6 @@ export async function render(container) {
   const searchInput = el("input", { type: "search", id: "ver-buscar", placeholder: "Buscar en ingles o espanol...", value: query });
   listaSelect.value = listaFiltro;
   const sortBtn = el("button", { class: "btn" }, "A-Z");
-  const exportBtn = el("button", { class: "btn" }, "Exportar CSV");
   const newBtn = el("button", { class: "btn btn-primary" }, "+ Nueva palabra");
 
   const toolbar = el("div", { class: "toolbar" }, [
@@ -37,7 +36,7 @@ export async function render(container) {
       el("div", { class: "field" }, [el("label", { for: "ver-lista" }, "Lista"), listaSelect]),
       el("div", { class: "field search" }, [el("label", { for: "ver-buscar" }, "Buscar"), searchInput]),
     ]),
-    el("div", { class: "toolbar-row" }, [sortBtn, exportBtn, newBtn]),
+    el("div", { class: "toolbar-row" }, [sortBtn, newBtn]),
   ]);
   container.append(toolbar);
 
@@ -125,9 +124,6 @@ export async function render(container) {
   sortBtn.addEventListener("click", () => {
     sortDesc = !sortDesc;
     applyFilters();
-  });
-  exportBtn.addEventListener("click", async () => {
-    if (await confirmAction("Descargar vocabulario_*.csv con el estado actual?")) exportVocabularioCsv();
   });
   newBtn.addEventListener("click", () => openModal(null));
 

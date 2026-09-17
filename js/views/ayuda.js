@@ -15,7 +15,7 @@ import {
 } from "../store.js";
 import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.4.5";
+const APP_VERSION = "1.5.0";
 
 const SECCIONES = [
   {
@@ -24,7 +24,7 @@ const SECCIONES = [
       "Busca por ingles/espanol o filtra por Lista con el selector de arriba.",
       "Toca cualquier fila de la tabla para abrir esa palabra: ahi puedes Guardar los cambios o Borrarla.",
       "El boton + Nueva palabra abre el mismo formulario en blanco para agregar una palabra.",
-      "Exportar CSV descarga una copia de respaldo del vocabulario (pide confirmacion antes de descargar).",
+      "Para exportar o restaurar un CSV de respaldo, entra a la tarjeta \"Exportar / Restaurar CSV\" mas abajo en esta misma pantalla de Ayuda.",
     ],
   },
   {
@@ -58,7 +58,6 @@ const SECCIONES = [
     items: [
       "Mismo patron que Palabras, pero para frases de uso frecuente organizadas por Categoria en vez de Lista.",
       "Toca una fila para editarla o borrarla; el casillero de Aprendida se marca directo desde la tabla.",
-      "Tiene su propio boton Exportar CSV, independiente del de Palabras.",
     ],
   },
 ];
@@ -258,7 +257,7 @@ function buildCsvField(label, exportFn, importFn) {
 
   return el("div", { class: "field" }, [
     el("label", { class: "field-title" }, label),
-    el("div", { class: "btn-row" }, [exportBtn, restoreBtn]),
+    el("div", { class: "btn-row btn-row-equal" }, [exportBtn, restoreBtn]),
     statusMsg,
   ]);
 }
