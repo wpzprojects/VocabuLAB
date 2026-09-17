@@ -18,7 +18,8 @@ function compile(pattern) {
 }
 
 const routeTable = [
-  ["/", () => import("./views/ver.js")],
+  ["/", () => import("./views/home.js")],
+  ["/palabras", () => import("./views/ver.js")],
   ["/traducir", () => import("./views/traducir.js")],
   ["/practicar", () => import("./views/practicar.js")],
   ["/frases", () => import("./views/frases.js")],
@@ -56,7 +57,7 @@ export function initRouter({ mount, onNavigate }) {
       mount.append(
         Object.assign(document.createElement("div"), {
           className: "empty-state",
-          innerHTML: `<h2>Pantalla no encontrada</h2><p class="text-muted">La ruta <code>${path}</code> no existe.</p><p><a class="btn btn-primary" href="#/">Ir a Palabras</a></p>`,
+          innerHTML: `<h2>Pantalla no encontrada</h2><p class="text-muted">La ruta <code>${path}</code> no existe.</p><p><a class="btn btn-primary" href="#/">Ir al inicio</a></p>`,
         })
       );
       onNavigate?.(path, {});

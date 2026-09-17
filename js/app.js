@@ -26,10 +26,11 @@ topbarActions.innerHTML = `
   </a>`;
 
 function setActiveLink(path) {
-  const section = path.split("/").filter(Boolean)[0] || "ver";
+  const section = path.split("/").filter(Boolean)[0] || "";
   document.querySelectorAll("[data-key]").forEach((a) => {
     a.classList.toggle("active", a.dataset.key === section);
   });
+  topnav.hidden = section === "";
 }
 
 initRouter({
