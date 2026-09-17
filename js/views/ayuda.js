@@ -15,7 +15,7 @@ import {
 } from "../store.js";
 import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.4.4";
+const APP_VERSION = "1.4.5";
 
 const SECCIONES = [
   {
@@ -193,7 +193,7 @@ function buildCloudBackupCard() {
       'Guarda una copia de tu vocabulario y frases en una carpeta "VocabuLAB" de tu Google Drive, o restaurala en otro ' +
         "dispositivo. Requiere conexion a internet e iniciar sesion con tu cuenta de Google."
     ),
-    el("div", { class: "btn-row" }, [saveBtn, restoreBtn]),
+    el("div", { class: "btn-row btn-row-equal" }, [saveBtn, restoreBtn]),
     statusMsg,
   ]);
 }
