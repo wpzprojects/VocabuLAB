@@ -16,6 +16,11 @@ import { openPalabraModal } from "../palabraModal.js";
 const state = { lista: "", aprendida: "", aleatorio: false, swap: false };
 let snapshotIds = null;
 
+// IDs de palabras con la traduccion revelada (boton "Ver"). Tambien a
+// nivel de modulo para que sobreviva a cambios de pestana y a guardar en
+// el modal, igual que el resto del estado de esta vista.
+const revealedIds = new Set();
+
 export async function render(container) {
   const rows = await getVocabulario();
   const byId = new Map(rows.map((r) => [r.id, r]));
@@ -100,20 +105,23 @@ export async function render(container) {
     const primary = state.swap ? row.palabra_esp : row.palabra_ing;
     const secondary = state.swap ? row.palabra_ing : row.palabra_esp;
 
+    const revealed = revealedIds.has(row.id);
     const card = el("div", { class: `flash-card${row.aprendida ? "" : " pending"}` });
-    const secondaryEl = el("div", { class: "flash-secondary", hidden: true }, secondary);
-    const contextEl = row.contexto ? el("div", { class: "flash-context", hidden: true }, row.contexto) : null;
+    const secondaryEl = el("div", { class: "flash-secondary", hidden: !revealed }, secondary);
+    const contextEl = row.contexto ? el("div", { class: "flash-context", hidden: !revealed }, row.contexto) : null;
     const main = el("div", { class: "flash-main" }, [
       el("div", { class: "flash-primary" }, primary),
       secondaryEl,
       ...(contextEl ? [contextEl] : []),
     ]);
 
-    const revealBtn = el("button", { class: "btn btn-sm btn-reveal" }, "Ver");
+    const revealBtn = el("button", { class: "btn btn-sm btn-reveal" }, revealed ? "Ocultar" : "Ver");
     revealBtn.addEventListener("click", () => {
       secondaryEl.hidden = !secondaryEl.hidden;
       if (contextEl) contextEl.hidden = secondaryEl.hidden;
       revealBtn.textContent = secondaryEl.hidden ? "Ver" : "Ocultar";
+      if (secondaryEl.hidden) revealedIds.delete(row.id);
+      else revealedIds.add(row.id);
     });
 
     const editBtn = el("button", { class: "btn btn-sm" }, "Editar");
@@ -137,16 +145,19 @@ export async function render(container) {
   listaSelect.addEventListener("change", () => {
     state.lista = listaSelect.value;
     snapshotIds = null;
+    revealedIds.clear();
     applyFilters();
   });
   aprendidaSelect.addEventListener("change", () => {
     state.aprendida = aprendidaSelect.value;
     snapshotIds = null;
+    revealedIds.clear();
     applyFilters();
   });
   aleatorioCheck.addEventListener("change", () => {
     state.aleatorio = aleatorioCheck.checked;
     snapshotIds = null;
+    revealedIds.clear();
     applyFilters();
   });
   swapToggle.addEventListener("change", () => {
