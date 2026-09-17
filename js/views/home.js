@@ -13,15 +13,17 @@ export async function render(container) {
   const grid = el(
     "div",
     { class: "home-grid" },
-    navLinks.map((link) =>
-      el("a", { class: "card home-card", href: link.hash }, [
-        el("span", { class: "home-card-icon", html: icon(link.icon) }),
-        el("span", { class: "home-card-body" }, [
-          el("span", { class: "home-card-title" }, link.title),
-          el("span", { class: "home-card-desc" }, link.desc || ""),
-        ]),
-      ])
-    )
+    navLinks
+      .filter((link) => link.key !== "ayuda")
+      .map((link) =>
+        el("a", { class: "card home-card", href: link.hash }, [
+          el("span", { class: "home-card-icon", html: icon(link.icon) }),
+          el("span", { class: "home-card-body" }, [
+            el("span", { class: "home-card-title" }, link.title),
+            el("span", { class: "home-card-desc" }, link.desc || ""),
+          ]),
+        ])
+      )
   );
 
   container.append(grid);
