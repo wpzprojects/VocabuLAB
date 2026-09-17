@@ -4,6 +4,8 @@
 
 import { el, distinct, confirmAction } from "../util/format.js";
 import {
+  exportVocabularioCsv,
+  exportFrasesCsv,
   importVocabularioCsv,
   importFrasesCsv,
   getVocabulario,
@@ -13,7 +15,7 @@ import {
 } from "../store.js";
 import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.3.2";
+const APP_VERSION = "1.4.3";
 
 const SECCIONES = [
   {
@@ -93,7 +95,7 @@ export async function render(container) {
 
   const [vocab, frases] = await Promise.all([getVocabulario(), getFrases()]);
   wrap.append(buildAdvancedCard(vocab, frases));
-  wrap.append(buildRestoreCard());
+  wrap.append(buildCsvCard());
   wrap.append(buildCloudBackupCard());
   wrap.append(buildDeveloperCard());
 }
@@ -213,45 +215,50 @@ function buildDeveloperCard() {
   ]);
 }
 
-function buildRestoreCard() {
+function buildCsvCard() {
   return el("div", { class: "card" }, [
-    el("h2", { class: "section-title", style: "margin-top:0" }, "Restaurar desde CSV"),
+    el("h2", { class: "section-title", style: "margin-top:0" }, "Exportar / Restaurar CSV"),
     el(
       "p",
       { class: "text-sm text-muted" },
-      "Para recuperar tus datos en un navegador o dispositivo nuevo a partir de un CSV exportado antes. " +
-        "Ojo: reemplaza POR COMPLETO el vocabulario o las frases actuales de este navegador con el contenido del archivo — no se combina con lo que ya tengas, y no se puede deshacer."
+      "Exporta un CSV de tu vocabulario o frases para respaldarlo, o restauralo en un navegador o dispositivo nuevo. " +
+        "Ojo: Restaurar reemplaza POR COMPLETO los datos actuales con el contenido del archivo — no se combina con lo que ya tengas, y no se puede deshacer."
     ),
-    buildImportField("Restaurar vocabulario desde CSV", importVocabularioCsv),
-    buildImportField("Restaurar frases desde CSV", importFrasesCsv),
+    buildCsvField("Vocabulario", exportVocabularioCsv, importVocabularioCsv),
+    buildCsvField("Frases", exportFrasesCsv, importFrasesCsv),
   ]);
 }
 
-function buildImportField(label, importFn) {
-  const fileInput = el("input", { type: "file", accept: ".csv,text/csv", hidden: true });
+function buildCsvField(label, exportFn, importFn) {
   const statusMsg = el("p", { class: "text-sm", hidden: true }, "");
-  const pickBtn = el("label", { class: "btn" }, [label, fileInput]);
+  const exportBtn = el("button", { class: "btn btn-primary" }, "Exportar CSV");
+  const fileInput = el("input", { type: "file", accept: ".csv,text/csv", hidden: true });
+  const restoreBtn = el("label", { class: "btn" }, ["Restaurar CSV", fileInput]);
+
+  exportBtn.addEventListener("click", async () => {
+    if (await confirmAction(`Descargar un CSV de ${label.toLowerCase()} con el estado actual?`)) await exportFn();
+  });
 
   fileInput.addEventListener("change", async () => {
     const file = fileInput.files[0];
     fileInput.value = "";
     if (!file) return;
     const ok = await confirmAction(
-      `Esto reemplaza TODOS los datos actuales con el contenido de "${file.name}". No se puede deshacer. Continuar?`,
+      `Esto reemplaza TODOS los datos actuales de ${label} con el contenido de "${file.name}". No se puede deshacer. Continuar?`,
       { danger: true, okLabel: "Continuar" }
     );
     if (!ok) return;
     try {
-      const text = await file.text();
-      const count = await importFn(text);
-      statusMsg.style.color = "var(--success)";
-      statusMsg.textContent = `Listo: se restauraron ${count} filas. Entra a la pantalla correspondiente para verlas.`;
+      const count = await importFn(await file.text());
+      setStatus(statusMsg, `Listo: se restauraron ${count} filas. Entra a la pantalla correspondiente para verlas.`, "var(--success)");
     } catch (err) {
-      statusMsg.style.color = "var(--danger)";
-      statusMsg.textContent = `No se pudo restaurar: ${err.message || err}`;
+      setStatus(statusMsg, `No se pudo restaurar: ${err.message || err}`, "var(--danger)");
     }
-    statusMsg.hidden = false;
   });
 
-  return el("div", { class: "field" }, [pickBtn, statusMsg]);
+  return el("div", { class: "field" }, [
+    el("label", { class: "field-title" }, label),
+    el("div", { class: "btn-row" }, [exportBtn, restoreBtn]),
+    statusMsg,
+  ]);
 }
