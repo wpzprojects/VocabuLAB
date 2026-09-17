@@ -267,7 +267,7 @@ thead th {
   color: var(--text-muted); font-weight: 700; font-size: 0.76rem; text-transform: uppercase; letter-spacing: .03em;
   white-space: nowrap;
 }
-tbody td { padding: var(--space-3); border-top: 1px solid var(--border); }
+tbody td { padding: var(--space-3); border-top: 1px solid var(--border); overflow-wrap: anywhere; }
 th.col-center, td.col-center { text-align: center; }
 tbody tr:hover { background: var(--bg-sunken); }
 tbody tr.clickable { cursor: pointer; }
