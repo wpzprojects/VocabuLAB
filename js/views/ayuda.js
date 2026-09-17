@@ -15,7 +15,7 @@ import {
 } from "../store.js";
 import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.5.9";
+const APP_VERSION = "1.6.0";
 
 const SECCIONES = [
   {

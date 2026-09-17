@@ -2,6 +2,7 @@
 // Lista, buscador, orden A-Z y CRUD (Nuevo/Editar/Borrar).
 
 import { el, debounce, distinct, maxNumeric } from "../util/format.js";
+import { icon } from "../icons.js";
 import { getVocabulario } from "../store.js";
 import { openPalabraModal } from "../palabraModal.js";
 
@@ -9,12 +10,17 @@ import { openPalabraModal } from "../palabraModal.js";
 // dinamico por URL, asi que estas variables sobreviven entre llamadas a
 // render() (cambiar de pestana y volver, o recargar tras guardar/borrar en
 // el modal). Solo se pierden al recargar la app por completo.
+// snapshotIds "congela" el orden ya resuelto (ver comentario igual en
+// frases.js) para que el aleatorio no se vuelva a barajar en cada remount.
 let sortDesc = false;
 let listaFiltro = "";
 let query = "";
+let aleatorio = false;
+let snapshotIds = null;
 
 export async function render(container) {
   const rows = await getVocabulario();
+  const byId = new Map(rows.map((r) => [r.id, r]));
   const listaDefault = maxNumeric(rows, "lista");
 
   container.append(
@@ -28,7 +34,12 @@ export async function render(container) {
   ]);
   const searchInput = el("input", { type: "search", id: "ver-buscar", placeholder: "Buscar en ingles o espanol...", value: query });
   listaSelect.value = listaFiltro;
-  const sortBtn = el("button", { class: "btn" }, sortDesc ? "A-Z" : "Z-A");
+  const sortBtn = el("button", { class: "btn btn-shuffle-match" }, sortDesc ? "A-Z" : "Z-A");
+  const shuffleBtn = el(
+    "button",
+    { class: "btn btn-shuffle-match", "aria-label": "Aleatorizar", title: "Aleatorizar" },
+    el("span", { html: icon("shuffle") })
+  );
   const newBtn = el("button", { class: "btn btn-primary" }, "+ Nueva palabra");
 
   const toolbar = el("div", { class: "toolbar" }, [
@@ -37,7 +48,7 @@ export async function render(container) {
       el("div", { class: "field search" }, [el("label", { for: "ver-buscar" }, "Buscar"), searchInput]),
     ]),
     el("div", { class: "toolbar-row" }, [
-      el("div", { class: "btn-slot" }, sortBtn),
+      el("div", { class: "btn-slot" }, [sortBtn, shuffleBtn]),
       el("div", { class: "btn-slot search" }, newBtn),
     ]),
   ]);
@@ -46,7 +57,16 @@ export async function render(container) {
   const resultsWrap = el("div", {});
   container.append(resultsWrap);
 
-  function applyFilters() {
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function computeSnapshot() {
     let filtered = rows.filter((r) => !listaFiltro || String(r.lista) === listaFiltro);
     if (query) {
       const q = query.toLowerCase();
@@ -54,9 +74,17 @@ export async function render(container) {
         (r) => r.palabra_ing.toLowerCase().includes(q) || r.palabra_esp.toLowerCase().includes(q)
       );
     }
-    filtered = [...filtered].sort((a, b) =>
-      sortDesc ? b.palabra_ing.localeCompare(a.palabra_ing, "es") : a.palabra_ing.localeCompare(b.palabra_ing, "es")
-    );
+    filtered = aleatorio
+      ? shuffle(filtered)
+      : [...filtered].sort((a, b) =>
+          sortDesc ? b.palabra_ing.localeCompare(a.palabra_ing, "es") : a.palabra_ing.localeCompare(b.palabra_ing, "es")
+        );
+    snapshotIds = filtered.map((r) => r.id);
+  }
+
+  function applyFilters() {
+    if (snapshotIds === null) computeSnapshot();
+    const filtered = snapshotIds.map((id) => byId.get(id)).filter(Boolean);
     renderResults(filtered);
   }
 
@@ -115,18 +143,27 @@ export async function render(container) {
 
   listaSelect.addEventListener("change", () => {
     listaFiltro = listaSelect.value;
+    snapshotIds = null;
     applyFilters();
   });
   searchInput.addEventListener(
     "input",
     debounce(() => {
       query = searchInput.value.trim();
+      snapshotIds = null;
       applyFilters();
     }, 200)
   );
   sortBtn.addEventListener("click", () => {
+    aleatorio = false;
     sortDesc = !sortDesc;
     sortBtn.textContent = sortDesc ? "A-Z" : "Z-A";
+    snapshotIds = null;
+    applyFilters();
+  });
+  shuffleBtn.addEventListener("click", () => {
+    aleatorio = true;
+    snapshotIds = null;
     applyFilters();
   });
   newBtn.addEventListener("click", () => openModal(null));
