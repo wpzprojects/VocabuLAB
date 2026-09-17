@@ -35,7 +35,7 @@ export async function render(container) {
   ]);
   const searchInput = el("input", { type: "search", placeholder: "Buscar frase...", value: query });
   catSelect.value = categoriaFiltro;
-  const sortBtn = el("button", { class: "btn btn-shuffle-match" }, "A-Z");
+  const sortBtn = el("button", { class: "btn btn-shuffle-match" }, sortDesc ? "A-Z" : "Z-A");
   const shuffleBtn = el(
     "button",
     { class: "btn btn-shuffle-match", "aria-label": "Aleatorizar", title: "Aleatorizar" },
@@ -169,6 +169,7 @@ export async function render(container) {
   sortBtn.addEventListener("click", () => {
     aleatorio = false;
     sortDesc = !sortDesc;
+    sortBtn.textContent = sortDesc ? "A-Z" : "Z-A";
     snapshotIds = null;
     applyFilters();
   });

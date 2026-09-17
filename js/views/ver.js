@@ -28,7 +28,7 @@ export async function render(container) {
   ]);
   const searchInput = el("input", { type: "search", id: "ver-buscar", placeholder: "Buscar en ingles o espanol...", value: query });
   listaSelect.value = listaFiltro;
-  const sortBtn = el("button", { class: "btn" }, "A-Z");
+  const sortBtn = el("button", { class: "btn" }, sortDesc ? "A-Z" : "Z-A");
   const newBtn = el("button", { class: "btn btn-primary" }, "+ Nueva palabra");
 
   const toolbar = el("div", { class: "toolbar" }, [
@@ -123,6 +123,7 @@ export async function render(container) {
   );
   sortBtn.addEventListener("click", () => {
     sortDesc = !sortDesc;
+    sortBtn.textContent = sortDesc ? "A-Z" : "Z-A";
     applyFilters();
   });
   newBtn.addEventListener("click", () => openModal(null));
