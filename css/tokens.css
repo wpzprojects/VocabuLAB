@@ -22,7 +22,7 @@
   --topnav-h: 48px;
 
   /* --- tema oscuro estilo Claude (unico tema de la app) --- */
-  --bg: #262624;
+  --bg: #1d1d1b; /* prueba: 25% mas oscuro que el original #262624, para dar mas contraste a las tarjetas (--bg-elevated) */
   --bg-elevated: #30302e;
   --bg-sunken: #1f1e1d;
   --bg-input: #1f1e1d;
