@@ -15,7 +15,7 @@ import {
 } from "../store.js";
 import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.5.7";
+const APP_VERSION = "1.5.8";
 
 const SECCIONES = [
   {
@@ -220,8 +220,8 @@ function buildCsvCard() {
     el(
       "p",
       { class: "text-sm text-muted" },
-      "Exporta un CSV de tu vocabulario o frases para respaldarlo, o restauralo en un navegador o dispositivo nuevo. " +
-        "Ojo: Restaurar reemplaza POR COMPLETO los datos actuales con el contenido del archivo — no se combina con lo que ya tengas, y no se puede deshacer."
+      "Exporta un CSV de tu vocabulario o frases como respaldo, o restauralo en un dispositivo nuevo. " +
+        "Ojo: Restaurar reemplaza TODO el contenido actual — no se combina, y no se puede deshacer."
     ),
     buildCsvField("Vocabulario", exportVocabularioCsv, importVocabularioCsv),
     buildCsvField("Frases", exportFrasesCsv, importFrasesCsv),
