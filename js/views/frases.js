@@ -7,13 +7,21 @@ import { getFrases, addFrase, updateFrase, deleteFrase, setFraseAprendida, expor
 
 const SIN_CATEGORIA = "__sin_categoria__";
 
+// Ver comentario equivalente en ver.js: estado a nivel de modulo para que
+// el filtro sobreviva a cambios de pestana y a guardar/borrar en el modal.
+// snapshotIds "congela" el resultado ya resuelto (que frases, en que
+// orden) para que volver de otra pestana o guardar en el modal no vuelva
+// a barajar: solo se recalcula cuando el usuario toca un control de
+// filtro/orden explicitamente.
+let categoriaFiltro = "";
+let query = "";
+let sortDesc = false;
+let aleatorio = false;
+let snapshotIds = null;
+
 export async function render(container) {
   const rows = await getFrases();
-
-  let categoriaFiltro = "";
-  let query = "";
-  let sortDesc = false;
-  let aleatorio = false;
+  const byId = new Map(rows.map((r) => [r.id, r]));
 
   container.append(
     el("h1", { class: "page-title" }, "Frases comunes"),
@@ -25,7 +33,8 @@ export async function render(container) {
     el("option", { value: SIN_CATEGORIA }, "Sin categoria"),
     ...distinct(rows, "categoria").map((v) => el("option", { value: v }, String(v))),
   ]);
-  const searchInput = el("input", { type: "search", placeholder: "Buscar frase..." });
+  const searchInput = el("input", { type: "search", placeholder: "Buscar frase...", value: query });
+  catSelect.value = categoriaFiltro;
   const sortBtn = el("button", { class: "btn btn-shuffle-match" }, "A-Z");
   const shuffleBtn = el(
     "button",
@@ -56,7 +65,7 @@ export async function render(container) {
     return a;
   }
 
-  function applyFilters() {
+  function computeSnapshot() {
     let filtered = rows.filter((r) => {
       if (!categoriaFiltro) return true;
       if (categoriaFiltro === SIN_CATEGORIA) return !r.categoria;
@@ -76,6 +85,12 @@ export async function render(container) {
       : [...filtered].sort((a, b) =>
           sortDesc ? b.frase_ing.localeCompare(a.frase_ing, "es") : a.frase_ing.localeCompare(b.frase_ing, "es")
         );
+    snapshotIds = filtered.map((r) => r.id);
+  }
+
+  function applyFilters() {
+    if (snapshotIds === null) computeSnapshot();
+    const filtered = snapshotIds.map((id) => byId.get(id)).filter(Boolean);
     renderResults(filtered);
   }
 
@@ -141,22 +156,26 @@ export async function render(container) {
 
   catSelect.addEventListener("change", () => {
     categoriaFiltro = catSelect.value;
+    snapshotIds = null;
     applyFilters();
   });
   searchInput.addEventListener(
     "input",
     debounce(() => {
       query = searchInput.value.trim();
+      snapshotIds = null;
       applyFilters();
     }, 200)
   );
   sortBtn.addEventListener("click", () => {
     aleatorio = false;
     sortDesc = !sortDesc;
+    snapshotIds = null;
     applyFilters();
   });
   shuffleBtn.addEventListener("click", () => {
     aleatorio = true;
+    snapshotIds = null;
     applyFilters();
   });
   exportBtn.addEventListener("click", async () => {

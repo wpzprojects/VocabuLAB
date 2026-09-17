@@ -5,13 +5,17 @@ import { el, debounce, distinct, maxNumeric, confirmAction } from "../util/forma
 import { getVocabulario, exportVocabularioCsv } from "../store.js";
 import { openPalabraModal } from "../palabraModal.js";
 
+// Estado de filtro/orden a nivel de modulo: el navegador cachea el modulo
+// dinamico por URL, asi que estas variables sobreviven entre llamadas a
+// render() (cambiar de pestana y volver, o recargar tras guardar/borrar en
+// el modal). Solo se pierden al recargar la app por completo.
+let sortDesc = false;
+let listaFiltro = "";
+let query = "";
+
 export async function render(container) {
   const rows = await getVocabulario();
   const listaDefault = maxNumeric(rows, "lista");
-
-  let sortDesc = false;
-  let listaFiltro = "";
-  let query = "";
 
   container.append(
     el("h1", { class: "page-title" }, "Gestion de palabras"),
@@ -22,7 +26,8 @@ export async function render(container) {
     el("option", { value: "" }, "Todas"),
     ...distinct(rows, "lista").map((v) => el("option", { value: v }, String(v))),
   ]);
-  const searchInput = el("input", { type: "search", id: "ver-buscar", placeholder: "Buscar en ingles o espanol..." });
+  const searchInput = el("input", { type: "search", id: "ver-buscar", placeholder: "Buscar en ingles o espanol...", value: query });
+  listaSelect.value = listaFiltro;
   const sortBtn = el("button", { class: "btn" }, "A-Z");
   const exportBtn = el("button", { class: "btn" }, "Exportar CSV");
   const newBtn = el("button", { class: "btn btn-primary" }, "+ Nueva palabra");

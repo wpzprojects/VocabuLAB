@@ -8,10 +8,21 @@
 import { el, distinct, isCorrectAnswer } from "../util/format.js";
 import { getVocabulario } from "../store.js";
 
+// Ver comentario equivalente en ver.js: estado a nivel de modulo para que
+// el filtro sobreviva a cambios de pestana. snapshotIds "congela" el
+// cuestionario ya resuelto (que palabras, en que orden) para que volver de
+// otra pestana no vuelva a barajar ni cambie el set de palabras a mitad de
+// un examen; solo se recalcula al cambiar un filtro/orden o al presionar
+// "Reset test". El progreso (aciertos/total) se queda local a render() a
+// proposito: hoy ya se reinicia cada vez que cambia un filtro, asi que no
+// tiene sentido persistirlo entre visitas.
+const state = { lista: "", aprendida: "", aleatorio: false, swap: false, limite: 5 };
+let snapshotIds = null;
+
 export async function render(container) {
   const rows = await getVocabulario();
+  const byId = new Map(rows.map((r) => [r.id, r]));
 
-  const state = { lista: "", aprendida: "", aleatorio: false, swap: false, limite: 5 };
   let aciertos = 0;
   let total = 0;
 
@@ -30,8 +41,10 @@ export async function render(container) {
     el("option", { value: "no" }, "No"),
   ]);
   const limiteInput = el("input", { type: "number", min: 0, max: 100, step: 5, value: String(state.limite) });
-  const aleatorioCheck = el("input", { type: "checkbox" });
-  const swapToggle = el("input", { type: "checkbox" });
+  const aleatorioCheck = el("input", { type: "checkbox", checked: state.aleatorio || null });
+  const swapToggle = el("input", { type: "checkbox", checked: state.swap || null });
+  listaSelect.value = state.lista;
+  aprendidaSelect.value = state.aprendida;
   const resultText = el("span", { class: "quiz-score" }, "Resultado: 0/0");
   const resetBtn = el("button", { class: "btn" }, "Reset test");
 
@@ -69,7 +82,7 @@ export async function render(container) {
     return a;
   }
 
-  function buildQuestions() {
+  function computeSnapshot() {
     let filtered = rows.filter(
       (r) =>
         (!state.lista || String(r.lista) === state.lista) &&
@@ -79,7 +92,12 @@ export async function render(container) {
       ? shuffle(filtered)
       : [...filtered].sort((a, b) => a.palabra_ing.localeCompare(b.palabra_ing, "es"));
     if (state.limite > 0) filtered = filtered.slice(0, state.limite);
-    return filtered;
+    snapshotIds = filtered.map((r) => r.id);
+  }
+
+  function buildQuestions() {
+    if (snapshotIds === null) computeSnapshot();
+    return snapshotIds.map((id) => byId.get(id)).filter(Boolean);
   }
 
   function updateScore() {
@@ -131,25 +149,32 @@ export async function render(container) {
 
   listaSelect.addEventListener("change", () => {
     state.lista = listaSelect.value;
+    snapshotIds = null;
     renderQuestions();
   });
   aprendidaSelect.addEventListener("change", () => {
     state.aprendida = aprendidaSelect.value;
+    snapshotIds = null;
     renderQuestions();
   });
   limiteInput.addEventListener("change", () => {
     state.limite = Number(limiteInput.value) || 0;
+    snapshotIds = null;
     renderQuestions();
   });
   aleatorioCheck.addEventListener("change", () => {
     state.aleatorio = aleatorioCheck.checked;
+    snapshotIds = null;
     renderQuestions();
   });
   swapToggle.addEventListener("change", () => {
     state.swap = swapToggle.checked;
     renderQuestions();
   });
-  resetBtn.addEventListener("click", renderQuestions);
+  resetBtn.addEventListener("click", () => {
+    snapshotIds = null;
+    renderQuestions();
+  });
 
   renderQuestions();
 }

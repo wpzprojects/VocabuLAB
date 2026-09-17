@@ -6,10 +6,19 @@ import { el, distinct } from "../util/format.js";
 import { getVocabulario, setAprendida } from "../store.js";
 import { openPalabraModal } from "../palabraModal.js";
 
+// Ver comentario equivalente en ver.js: estado a nivel de modulo para que
+// el filtro sobreviva a cambios de pestana y a guardar/borrar en el modal.
+// snapshotIds ademas "congela" el resultado ya resuelto (que palabras, en
+// que orden) para que volver de otra pestana o guardar en el modal no
+// vuelva a barajar ni haga desaparecer una palabra que acabas de marcar
+// como aprendida en plena sesion de practica: solo se recalcula cuando el
+// usuario toca un control de filtro/orden explicitamente.
+const state = { lista: "", aprendida: "", aleatorio: false, swap: false };
+let snapshotIds = null;
+
 export async function render(container) {
   const rows = await getVocabulario();
-
-  const state = { lista: "", aprendida: "", aleatorio: false, swap: false };
+  const byId = new Map(rows.map((r) => [r.id, r]));
 
   container.append(
     el("h1", { class: "page-title" }, "Practicar vocabulario"),
@@ -25,8 +34,10 @@ export async function render(container) {
     el("option", { value: "si" }, "Si"),
     el("option", { value: "no" }, "No"),
   ]);
-  const aleatorioCheck = el("input", { type: "checkbox" });
-  const swapToggle = el("input", { type: "checkbox" });
+  const aleatorioCheck = el("input", { type: "checkbox", checked: state.aleatorio || null });
+  const swapToggle = el("input", { type: "checkbox", checked: state.swap || null });
+  listaSelect.value = state.lista;
+  aprendidaSelect.value = state.aprendida;
 
   container.append(
     el("div", { class: "flash-toolbar gap-sm" }, [
@@ -57,7 +68,7 @@ export async function render(container) {
     return a;
   }
 
-  function applyFilters() {
+  function computeSnapshot() {
     let filtered = rows.filter(
       (r) =>
         (!state.lista || String(r.lista) === state.lista) &&
@@ -66,6 +77,12 @@ export async function render(container) {
     filtered = state.aleatorio
       ? shuffle(filtered)
       : [...filtered].sort((a, b) => a.palabra_ing.localeCompare(b.palabra_ing, "es"));
+    snapshotIds = filtered.map((r) => r.id);
+  }
+
+  function applyFilters() {
+    if (snapshotIds === null) computeSnapshot();
+    const filtered = snapshotIds.map((id) => byId.get(id)).filter(Boolean);
     renderList(filtered);
   }
 
@@ -119,14 +136,17 @@ export async function render(container) {
 
   listaSelect.addEventListener("change", () => {
     state.lista = listaSelect.value;
+    snapshotIds = null;
     applyFilters();
   });
   aprendidaSelect.addEventListener("change", () => {
     state.aprendida = aprendidaSelect.value;
+    snapshotIds = null;
     applyFilters();
   });
   aleatorioCheck.addEventListener("change", () => {
     state.aleatorio = aleatorioCheck.checked;
+    snapshotIds = null;
     applyFilters();
   });
   swapToggle.addEventListener("change", () => {
