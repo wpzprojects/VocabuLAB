@@ -148,11 +148,13 @@ button { font-family: inherit; }
 }
 
 /* ---------- home (pantalla de inicio) ---------- */
+.home-subtitle { margin-bottom: var(--space-4); }
 .home-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
+.home-card + .home-card { margin-top: 0; }
 .home-card {
   display: flex;
   align-items: center;

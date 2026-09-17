@@ -8,10 +8,7 @@ import { icon } from "../icons.js";
 import { navLinks } from "../nav.js";
 
 export async function render(container) {
-  container.append(
-    el("h1", { class: "page-title" }, "VocabuLAB"),
-    el("p", { class: "page-subtitle" }, "Elige una seccion para continuar.")
-  );
+  container.append(el("p", { class: "page-subtitle home-subtitle" }, "Elige una seccion para continuar."));
 
   const grid = el(
     "div",
