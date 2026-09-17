@@ -36,7 +36,10 @@ export async function render(container) {
       el("div", { class: "field" }, [el("label", { for: "ver-lista" }, "Lista"), listaSelect]),
       el("div", { class: "field search" }, [el("label", { for: "ver-buscar" }, "Buscar"), searchInput]),
     ]),
-    el("div", { class: "toolbar-row" }, [sortBtn, newBtn]),
+    el("div", { class: "toolbar-row" }, [
+      el("div", { class: "btn-slot" }, sortBtn),
+      el("div", { class: "btn-slot search" }, newBtn),
+    ]),
   ]);
   container.append(toolbar);
 

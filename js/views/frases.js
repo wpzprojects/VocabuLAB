@@ -48,7 +48,10 @@ export async function render(container) {
       el("div", { class: "field" }, [el("label", {}, "Categoria"), catSelect]),
       el("div", { class: "field search" }, [el("label", {}, "Buscar"), searchInput]),
     ]),
-    el("div", { class: "toolbar-row" }, [sortBtn, shuffleBtn, newBtn]),
+    el("div", { class: "toolbar-row" }, [
+      el("div", { class: "btn-slot" }, [sortBtn, shuffleBtn]),
+      el("div", { class: "btn-slot search" }, newBtn),
+    ]),
   ]);
   container.append(toolbar);
 
