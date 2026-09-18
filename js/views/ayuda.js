@@ -15,49 +15,44 @@ import {
 } from "../store.js";
 import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.6.5";
+const APP_VERSION = "1.6.6";
 
 const SECCIONES = [
   {
     titulo: "Palabras",
     items: [
-      "Busca por ingles/espanol o filtra por Lista con el selector de arriba.",
-      "Toca cualquier fila de la tabla para abrir esa palabra: ahi puedes Guardar los cambios o Borrarla.",
-      "El boton + Nueva palabra abre el mismo formulario en blanco para agregar una palabra.",
-      "Para exportar o restaurar un CSV de respaldo, entra a la tarjeta \"Exportar / Restaurar CSV\" mas abajo en esta misma pantalla de Ayuda.",
+      "Busca en ingles o espanol, filtra por Lista, u ordena con Z-A y el boton de aleatorio.",
+      "Toca una fila para editarla o borrarla; + Nueva palabra abre el mismo formulario en blanco.",
+      "La columna Aprendida es solo informativa: se marca en Practicar.",
     ],
   },
   {
     titulo: "Traducir",
     items: [
-      "Elige el sentido (Ingles → Espanol o Espanol → Ingles) y escribe el texto a traducir.",
-      "Requiere conexion a internet: usa el servicio publico MyMemory, no funciona sin conexion.",
-      "Con el resultado en pantalla puedes indicar una Lista y guardarlo directo como palabra nueva en tu vocabulario.",
+      "Toca el boton de sentido para alternar Ingles → Espanol / Espanol → Ingles, escribe el texto y presiona Traducir. Requiere internet (servicio MyMemory).",
+      "Con el resultado puedes guardarlo como palabra nueva, eligiendo su Lista.",
     ],
   },
   {
     titulo: "Practicar",
     items: [
-      "Muestra tu vocabulario en tarjetas; filtra por Lista, por Aprendida, o actívalas en orden Aleatorio.",
-      "El interruptor de Idioma cambia cual de los dos idiomas se muestra primero en la tarjeta.",
-      "El boton Ver revela la traduccion (y el contexto, si la palabra tiene uno); Editar abre el formulario de esa palabra.",
-      "El interruptor Aprendida de cada tarjeta marca esa palabra como aprendida al instante.",
+      "Tarjetas con tu vocabulario: filtra por Lista y Aprendidas, y activa Orden aleatorio si quieres.",
+      "Intercambiar idioma cambia cual idioma se muestra primero. Ver revela la traduccion (y el contexto, si lo hay); Editar abre la palabra.",
+      "El interruptor Aprendida de cada tarjeta marca la palabra al instante.",
     ],
   },
   {
     titulo: "Examen",
     items: [
-      "Genera un cuestionario con tu vocabulario: filtra por Lista, Aprendida, o limita el numero de palabras.",
-      "Orden aleatoriza las preguntas; Idioma cambia si te pregunta la palabra en ingles o en espanol.",
-      "Escribe tu respuesta y presiona Evaluar (o Enter) para revisar; el resultado se acumula arriba.",
-      "Reset test vuelve a generar el cuestionario desde cero con los filtros actuales.",
+      "Cuestionario con tu vocabulario: filtra por Lista y Aprendidas, y define cuantas preguntas con # de palabras (0 = todas). Orden aleatorio e Intercambiar idioma funcionan como en Practicar.",
+      "Escribe tu respuesta y presiona Evaluar (o Enter); el resultado se acumula arriba. Reset test genera el cuestionario de nuevo.",
     ],
   },
   {
     titulo: "Frases",
     items: [
-      "Mismo patron que Palabras, pero para frases de uso frecuente organizadas por Categoria en vez de Lista.",
-      "Toca una fila para editarla o borrarla; el casillero de Aprendida se marca directo desde la tabla.",
+      "Igual que Palabras, pero organizadas por Categoria; la busqueda tambien revisa las notas de uso.",
+      "Toca una fila para editarla o borrarla; Aprendida se marca directo en la tabla.",
     ],
   },
 ];
