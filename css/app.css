@@ -304,7 +304,7 @@ tbody tr.clickable:active { background: var(--accent-soft); }
 
 /* ---------- flashcards (Practicar) ---------- */
 .flash-toolbar { display: flex; gap: var(--space-6); flex-wrap: wrap; align-items: flex-end; margin-bottom: var(--space-4); }
-.flash-toolbar.gap-sm { gap: var(--space-4); }
+.flash-toolbar.gap-sm { gap: var(--space-3); }
 .flash-toolbar .field { margin-bottom: 0; min-width: 150px; flex: 1 1 150px; }
 .flash-toolbar .field-auto { min-width: 0; flex: 0 0 auto; margin-bottom: 0; }
 .flash-toolbar .field.field-compact { margin-bottom: 0; min-width: 64px; flex: 0 1 90px; }
@@ -363,11 +363,12 @@ tbody tr.clickable:active { background: var(--accent-soft); }
 @media (max-width: 480px) {
   .toolbar-row .field { min-width: 0; flex: 1 1 0; }
   .toolbar-row .field.search { flex: 1.3 1 0; }
-  .toolbar-row .btn-slot { min-width: 0; flex: 1 1 0; }
+  .toolbar-row .btn-slot { min-width: 0; flex: 1 1 0; gap: var(--space-2); }
   .toolbar-row .btn-slot.search { flex: 1.3 1 0; }
   .toolbar-row { gap: var(--space-2); }
   .toolbar-row .btn { padding-left: 10px; padding-right: 10px; }
   .flash-toolbar { gap: 40px; }
+  .flash-toolbar.gap-sm { gap: var(--space-2); }
   .flash-toolbar .field { min-width: 0; flex: 1 1 0; }
   .quiz-score { font-size: 0.95rem; }
 }
