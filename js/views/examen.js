@@ -55,12 +55,9 @@ export async function render(container) {
     ])
   );
   container.append(
-    el("div", { class: "flash-toolbar" }, [
-      el("label", { class: "checkbox-row field-auto" }, [aleatorioCheck, "Orden aleatorio"]),
-      el("label", { class: "toggle-row toggle-plain field-auto" }, [
-        el("span", { class: "toggle-switch" }, [swapToggle, el("span", { class: "track" }), el("span", { class: "thumb" })]),
-        el("span", {}, "Intercambiar idioma"),
-      ]),
+    el("div", { class: "flash-toolbar gap-sm" }, [
+      el("div", { class: "field" }, [el("label", { class: "checkbox-row" }, [aleatorioCheck, "Orden aleatorio"])]),
+      el("div", { class: "field" }, [el("label", { class: "checkbox-row" }, [swapToggle, "Intercambiar idioma"])]),
     ])
   );
   container.append(
