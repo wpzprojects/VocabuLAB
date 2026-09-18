@@ -15,7 +15,7 @@ import {
 } from "../store.js";
 import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.6.6";
+const APP_VERSION = "1.6.7";
 
 const SECCIONES = [
   {
@@ -81,7 +81,7 @@ export async function render(container) {
 
   wrap.append(
     el("p", { class: "text-sm text-muted" }, [
-      "Todo lo que agregues, edites, borres o marques como aprendida se guarda solo en este navegador/dispositivo (localStorage) — usa ",
+      'Todo lo que agregues, edites, borres o marques como palabra o frase "aprendida" se guarda solo en este navegador/dispositivo (localStorage); usa ',
       el("strong", {}, "Exportar CSV"),
       " o ",
       el("strong", {}, "Guardar en Drive"),
