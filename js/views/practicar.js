@@ -5,6 +5,7 @@
 import { el, distinct } from "../util/format.js";
 import { getVocabulario, setAprendida } from "../store.js";
 import { openPalabraModal } from "../palabraModal.js";
+import { speakButton, detenerPronunciacion } from "../speech.js";
 
 // Ver comentario equivalente en ver.js: estado a nivel de modulo para que
 // el filtro sobreviva a cambios de pestana y a guardar/borrar en el modal.
@@ -89,6 +90,7 @@ export async function render(container) {
   }
 
   function renderList(filtered) {
+    detenerPronunciacion();
     countEl.textContent = `Filas: ${filtered.length}`;
     list.innerHTML = "";
     if (filtered.length === 0) {
@@ -102,12 +104,20 @@ export async function render(container) {
     const primary = state.swap ? row.palabra_esp : row.palabra_ing;
     const secondary = state.swap ? row.palabra_ing : row.palabra_esp;
 
+    // La bocina va junto a la palabra en ingles, este donde este: con el
+    // idioma intercambiado queda en la respuesta oculta y solo aparece al
+    // tocar "Ver", para que el audio no delate la respuesta.
+    const speak = speakButton(row.palabra_ing);
+
     const revealed = revealedIds.has(row.id);
     const card = el("div", { class: `flash-card${row.aprendida ? "" : " pending"}` });
-    const secondaryEl = el("div", { class: "flash-secondary", hidden: !revealed }, secondary);
+    const secondaryEl = el("div", { class: "flash-secondary", hidden: !revealed }, [
+      el("span", {}, secondary),
+      state.swap ? speak : null,
+    ]);
     const contextEl = row.contexto ? el("div", { class: "flash-context", hidden: !revealed }, row.contexto) : null;
     const main = el("div", { class: "flash-main" }, [
-      el("div", { class: "flash-primary" }, primary),
+      el("div", { class: "flash-primary" }, [el("span", {}, primary), state.swap ? null : speak]),
       secondaryEl,
       ...(contextEl ? [contextEl] : []),
     ]);

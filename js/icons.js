@@ -21,6 +21,7 @@ const paths = {
   save: "M5 4h11l4 4v12H5V4Zm3 0v5h8V4M8 14h8v6H8v-6Z",
   download: "M12 3v13m0 0-4-4m4 4 4-4M4 21h16",
   x: "m6 6 12 12M18 6 6 18",
+  speaker: "M11 5 6 9H2v6h4l5 4V5Zm4.5 3.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14",
 };
 
 export function icon(name, cls = "") {

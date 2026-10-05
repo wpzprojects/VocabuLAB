@@ -320,6 +320,22 @@ tbody tr.clickable:active { background: var(--accent-soft); }
 .flash-card .flash-context { color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 4px; }
 .flash-card .flash-actions { display: flex; align-items: center; gap: var(--space-3); flex: 0 0 auto; }
 .flash-card.pending { border-color: var(--warning); }
+.flash-card .flash-primary, .flash-card .flash-secondary { display: flex; align-items: center; gap: var(--space-1); }
+.flash-card .flash-secondary[hidden] { display: none; }
+/* Bocina de pronunciacion: discreta, pero con area tactil de 44x44 px; el
+   margen negativo evita que agrande la altura de la linea. */
+.speak-btn {
+  flex: 0 0 auto;
+  width: 44px; height: 44px;
+  margin: -10px 0;
+  border: none; border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.speak-btn:hover { background: var(--bg-sunken); color: var(--accent-strong); }
+.speak-btn:active { color: var(--accent-strong); }
 .btn-reveal { min-width: 84px; }
 
 .toggle-row { display: flex; align-items: center; gap: var(--space-2); font-size: 0.85rem; font-weight: 600; }
