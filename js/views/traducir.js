@@ -148,7 +148,7 @@ export async function render(container) {
   }
 
   // Con una sola opcion se muestra como texto; con varias (Gemini) se
-  // eligen tocandolas y la seleccionada es la que se guarda.
+  // eligen tocandolas y las seleccionadas son las que se guardan.
   function showResult(original, opciones, fuente, from) {
     resultWrap.innerHTML = "";
     resultWrap.hidden = false;
@@ -165,6 +165,8 @@ export async function render(container) {
         opciones[0].nota ? el("p", { class: "text-sm text-muted", style: "margin-top:var(--space-1)" }, opciones[0].nota) : null,
       ]);
     } else {
+      // Seleccion multiple: las opciones marcadas se guardan unidas por
+      // comas, en el orden en que las propone Gemini.
       const botones = opciones.map((o, i) => {
         const b = el(
           "button",
@@ -172,15 +174,19 @@ export async function render(container) {
           [el("strong", {}, o.texto), o.nota ? el("span", { class: "text-sm text-muted" }, o.nota) : null]
         );
         b.addEventListener("click", () => {
-          botones.forEach((x) => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
-          elegida = o.texto;
+          b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true");
+          elegida = opciones
+            .filter((_, j) => botones[j].getAttribute("aria-pressed") === "true")
+            .map((x) => x.texto)
+            .join(", ");
+          saveBtn.disabled = !elegida;
           savedMsg.hidden = true;
           saveBtn.textContent = "Guardar como palabra nueva";
         });
         return b;
       });
       cuerpo = el("div", {}, [
-        el("p", { class: "text-sm text-muted", style: "margin-top:0" }, "Toca la opcion que quieres guardar:"),
+        el("p", { class: "text-sm text-muted", style: "margin-top:0" }, "Toca una o varias opciones para guardar:"),
         el("div", { class: "translation-options" }, botones),
       ]);
     }
@@ -198,6 +204,8 @@ export async function render(container) {
     );
 
     saveBtn.addEventListener("click", () => {
+      // La traduccion guardada siempre arranca en mayuscula.
+      elegida = elegida.charAt(0).toUpperCase() + elegida.slice(1);
       const palabraIng = from === "en" ? original : elegida;
       const palabraEsp = from === "en" ? elegida : original;
       openPalabraModal(backdrop, {

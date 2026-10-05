@@ -265,7 +265,9 @@ input[type="checkbox"] { accent-color: var(--accent); }
 .btn-ghost:hover { background: var(--bg-sunken); }
 .btn-sm { padding: 6px 10px; font-size: 0.78rem; min-height: 32px; }
 .btn-row { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-4); }
-.btn-row-equal .btn { flex: 1 1 0; }
+/* Botones lado a lado: sin salto de linea y con poco relleno lateral para
+   que el texto quepa en una sola linea en el celular. */
+.btn-row-equal .btn { flex: 1 1 0; white-space: nowrap; padding-left: 8px; padding-right: 8px; }
 .btn[disabled] { opacity: 0.5; cursor: not-allowed; }
 
 /* ---------- toolbar / tables ---------- */
