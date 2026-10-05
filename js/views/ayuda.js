@@ -4,7 +4,7 @@
 
 import { el } from "../util/format.js";
 
-const APP_VERSION = "1.12.1";
+const APP_VERSION = "1.13.0";
 
 const SECCIONES = [
   {
@@ -85,6 +85,7 @@ export function render(container) {
 }
 
 function buildDeveloperCard() {
+  const statusMsg = el("p", { class: "text-sm dev-update-status", hidden: true }, "");
   return el("div", { class: "card dev-card" }, [
     el("div", { class: "dev-header" }, [
       el("span", { class: "dev-avatar" }, "WP"),
@@ -97,7 +98,46 @@ function buildDeveloperCard() {
       el("a", { href: "mailto:wperez.net@hotmail.com" }, "wperez.net@hotmail.com"),
       el("a", { href: "tel:+573104762477" }, "+57 310 476 2477"),
     ]),
-    el("p", { class: "dev-footer" }, `Colombia · 2026 · v${APP_VERSION}`),
+    el("div", { class: "dev-footer" }, [
+      el("span", {}, `Colombia · 2026 · v${APP_VERSION}`),
+      buildUpdateButton(statusMsg),
+    ]),
+    statusMsg,
   ]);
+}
+
+// Busca un sw.js nuevo en el servidor. Si lo hay, se instala solo
+// (skipWaiting + clients.claim) y app.js recarga la pagina al cambiar el
+// controlador, asi que aqui solo se informa el resultado.
+function buildUpdateButton(statusMsg) {
+  const btn = el("button", { class: "btn btn-sm" }, "Buscar actualizacion");
+  const setStatus = (text, color) => {
+    statusMsg.style.color = color || "var(--text-muted)";
+    statusMsg.textContent = text;
+    statusMsg.hidden = false;
+  };
+
+  btn.addEventListener("click", async () => {
+    const reg = "serviceWorker" in navigator ? await navigator.serviceWorker.getRegistration() : null;
+    if (!reg) {
+      setStatus("Este navegador no permite buscar actualizaciones; recarga la pagina.", "var(--danger)");
+      return;
+    }
+    btn.disabled = true;
+    setStatus("Buscando actualizacion...");
+    try {
+      await reg.update();
+      if (reg.installing || reg.waiting) {
+        setStatus("Hay una version nueva: se esta descargando y la app se recargara sola.", "var(--success)");
+      } else {
+        setStatus("Ya tienes la ultima version.", "var(--success)");
+        btn.disabled = false;
+      }
+    } catch (err) {
+      setStatus("No se pudo buscar la actualizacion. Revisa tu conexion a internet.", "var(--danger)");
+      btn.disabled = false;
+    }
+  });
+  return btn;
 }
 
