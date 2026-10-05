@@ -6,7 +6,7 @@
 // Sube este numero en cada deploy que toque algun archivo cacheado (css/js/
 // icons/data) - si sw.js no cambia de bytes, el navegador nunca detecta que
 // hay una version nueva que instalar y la app queda sirviendo la cache vieja.
-const CACHE_VERSION = "v92";
+const CACHE_VERSION = "v93";
 const CACHE_NAME = `vocabulab-${CACHE_VERSION}`;
 
 const SCOPE = self.registration.scope;
@@ -49,7 +49,10 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches
       .open(CACHE_NAME)
-      .then((cache) => cache.addAll(APP_SHELL))
+      // cache: "reload" salta la cache HTTP del navegador: GitHub Pages
+      // manda max-age=600, y sin esto la version nueva podia precachear los
+      // archivos viejos.
+      .then((cache) => cache.addAll(APP_SHELL.map((url) => new Request(url, { cache: "reload" }))))
       .then(() => self.skipWaiting())
       .catch((err) => console.warn("[sw] fallo precacheando el shell completo:", err))
   );
