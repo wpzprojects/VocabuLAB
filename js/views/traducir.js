@@ -166,7 +166,9 @@ export async function render(container) {
       ]);
     } else {
       // Seleccion multiple: las opciones marcadas se guardan unidas por
-      // comas, en el orden en que las propone Gemini.
+      // comas, en el orden en que el usuario las fue marcando. La primera
+      // viene marcada de entrada.
+      const seleccion = [0];
       const botones = opciones.map((o, i) => {
         const b = el(
           "button",
@@ -174,11 +176,11 @@ export async function render(container) {
           [el("strong", {}, o.texto), o.nota ? el("span", { class: "text-sm text-muted" }, o.nota) : null]
         );
         b.addEventListener("click", () => {
-          b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true");
-          elegida = opciones
-            .filter((_, j) => botones[j].getAttribute("aria-pressed") === "true")
-            .map((x) => x.texto)
-            .join(", ");
+          const pos = seleccion.indexOf(i);
+          if (pos === -1) seleccion.push(i);
+          else seleccion.splice(pos, 1);
+          b.setAttribute("aria-pressed", pos === -1 ? "true" : "false");
+          elegida = seleccion.map((j) => opciones[j].texto).join(", ");
           saveBtn.disabled = !elegida;
           savedMsg.hidden = true;
           saveBtn.textContent = "Guardar como palabra nueva";
