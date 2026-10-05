@@ -12,10 +12,13 @@ import {
   getFrases,
   deletePalabrasByLista,
   deleteFrasesByCategoria,
+  getGeminiKey,
+  setGeminiKey,
+  setGeminiKeyOmitida,
 } from "../store.js";
 import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.8.1";
+const APP_VERSION = "1.9.0";
 
 const SECCIONES = [
   {
@@ -23,6 +26,7 @@ const SECCIONES = [
     items: [
       "Busca en ingles o espanol, filtra por Lista, u ordena con Z-A y el boton de aleatorio.",
       "Toca una fila para editarla o borrarla; + Nueva palabra abre el mismo formulario en blanco.",
+      "En el formulario, Sugerir ejemplo llena Palabra en contexto con una frase de uso que puedes editar antes de guardar. Requiere internet; con tu clave de Gemini (ver abajo) los ejemplos respetan el significado en espanol.",
       "La columna Aprendida es solo informativa: se marca en Practicar.",
     ],
   },
@@ -91,6 +95,7 @@ export async function render(container) {
 
   const [vocab, frases] = await Promise.all([getVocabulario(), getFrases()]);
   wrap.append(buildAdvancedCard(vocab, frases));
+  wrap.append(buildGeminiCard());
   wrap.append(buildCsvCard());
   wrap.append(buildCloudBackupCard());
   wrap.append(buildDeveloperCard());
@@ -139,6 +144,52 @@ function setStatus(statusMsg, text, color) {
   statusMsg.style.color = color || "var(--text-muted)";
   statusMsg.textContent = text;
   statusMsg.hidden = false;
+}
+
+function buildGeminiCard() {
+  const statusMsg = el("p", { class: "text-sm" }, "");
+  const keyInput = el("input", { type: "password", placeholder: "Pega tu clave de Gemini", autocomplete: "off" });
+  const saveBtn = el("button", { class: "btn btn-primary" }, "Guardar");
+  const deleteBtn = el("button", { class: "btn btn-danger" }, "Borrar clave");
+
+  function refresh() {
+    const clave = getGeminiKey();
+    statusMsg.style.color = "var(--text-muted)";
+    statusMsg.textContent = clave ? `Clave configurada (termina en ...${clave.slice(-4)}).` : "Sin clave: Sugerir ejemplo usa solo el diccionario gratuito.";
+    // .btn fuerza display, asi que el atributo hidden no bastaria.
+    deleteBtn.style.display = clave ? "" : "none";
+  }
+
+  saveBtn.addEventListener("click", () => {
+    if (!keyInput.value.trim()) return;
+    setGeminiKey(keyInput.value);
+    setGeminiKeyOmitida(false);
+    keyInput.value = "";
+    refresh();
+  });
+  deleteBtn.addEventListener("click", async () => {
+    const ok = await confirmAction("Borrar la clave de Gemini de este dispositivo?", { danger: true, okLabel: "Borrar" });
+    if (!ok) return;
+    setGeminiKey("");
+    // Ya decidio no usarla: no volver a pedirla en el formulario.
+    setGeminiKeyOmitida(true);
+    refresh();
+  });
+  refresh();
+
+  return el("div", { class: "card" }, [
+    el("h2", { class: "section-title", style: "margin-top:0" }, "Ejemplos con IA (Gemini)"),
+    el("p", { class: "text-sm text-muted" }, [
+      "Opcional. Con tu clave gratuita de Gemini (",
+      el("a", { href: "https://aistudio.google.com/apikey", target: "_blank", rel: "noopener" }, "obtener clave"),
+      "), Sugerir ejemplo genera frases acordes al significado en espanol. La clave se guarda solo en este dispositivo " +
+        "(no va en el respaldo de Drive ni en los CSV). En la capa gratuita Google puede usar lo enviado (la palabra y su " +
+        "significado) para mejorar sus productos.",
+    ]),
+    el("div", { class: "field" }, [el("div", { class: "select-with-btn" }, [keyInput, saveBtn])]),
+    statusMsg,
+    deleteBtn,
+  ]);
 }
 
 function buildCloudBackupCard() {

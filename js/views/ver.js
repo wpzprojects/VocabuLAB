@@ -108,7 +108,7 @@ export async function render(container) {
       el("tr", {}, [
         el("th", { class: "col-speak", "aria-label": "Pronunciación" }),
         el("th", { class: "col-after-speak" }, "Ingles"),
-        el("th", {}, "Espanol"),
+        el("th", { class: "col-before-shrink" }, "Espanol"),
         el("th", { class: "col-center col-shrink" }, "Aprendida"),
       ]),
     ]);
@@ -133,7 +133,7 @@ export async function render(container) {
             // speakButton ya frena el click para no abrir el modal.
             el("td", { class: "col-speak" }, speakButton(row.palabra_ing)),
             el("td", { class: "col-after-speak" }, row.palabra_ing),
-            el("td", {}, row.palabra_esp),
+            el("td", { class: "col-before-shrink" }, row.palabra_esp),
             el("td", { class: "col-center col-shrink" }, row.aprendida ? el("span", { class: "badge badge-success" }, "Si") : el("span", { class: "badge" }, "No")),
           ]
         )

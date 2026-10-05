@@ -41,6 +41,34 @@ async function ensure(cacheRef, key, seedName) {
 const vocabRef = { get value() { return vocabCache; }, set value(v) { vocabCache = v; } };
 const frasesRef = { get value() { return frasesCache; }, set value(v) { frasesCache = v; } };
 
+// ---------------- Ajustes: clave de Gemini ----------------
+// Clave personal del usuario para sugerir ejemplos (js/ejemplos.js). Vive
+// solo en este dispositivo: el respaldo de Drive y los CSV solo incluyen
+// vocabulario y frases, asi que nunca sale de aqui. "Ahora no" se recuerda
+// para no volver a pedirla en cada sugerencia.
+
+const KEY_GEMINI = "vocabulab:v1:gemini-key";
+const KEY_GEMINI_OMITIDA = "vocabulab:v1:gemini-key-omitida";
+
+export function getGeminiKey() {
+  return localStorage.getItem(KEY_GEMINI) || "";
+}
+
+export function setGeminiKey(clave) {
+  const valor = String(clave || "").trim();
+  if (valor) localStorage.setItem(KEY_GEMINI, valor);
+  else localStorage.removeItem(KEY_GEMINI);
+}
+
+export function isGeminiKeyOmitida() {
+  return localStorage.getItem(KEY_GEMINI_OMITIDA) === "1";
+}
+
+export function setGeminiKeyOmitida(omitida) {
+  if (omitida) localStorage.setItem(KEY_GEMINI_OMITIDA, "1");
+  else localStorage.removeItem(KEY_GEMINI_OMITIDA);
+}
+
 // ---------------- Vocabulario ----------------
 
 export async function getVocabulario() {

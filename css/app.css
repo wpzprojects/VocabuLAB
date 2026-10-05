@@ -201,6 +201,15 @@ button { font-family: inherit; }
 .field label.btn { font-size: 0.86rem; font-weight: 700; color: var(--text); }
 .field label.checkbox-row { font-size: 0.88rem; font-weight: 400; }
 .field .hint { font-size: 0.78rem; color: var(--text-faint); }
+/* "Sugerir ejemplo" en el formulario de palabra */
+.field .suggest-status { margin: var(--space-2) 0 0; color: var(--text-muted); }
+.key-panel {
+  margin-top: var(--space-3); padding: var(--space-3);
+  border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-sunken);
+  display: flex; flex-direction: column; gap: var(--space-2); align-items: flex-start;
+}
+.key-panel p { margin: 0; }
+.key-panel .select-with-btn { width: 100%; }
 .field-title { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); }
 .select-with-btn { display: flex; gap: var(--space-2); align-items: center; }
 .select-with-btn select { flex: 1 1 auto; min-width: 0; }
@@ -306,9 +315,9 @@ tbody tr.clickable:active { background: var(--accent-soft); }
   width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; padding: var(--space-5);
 }
 .modal h2 { font-size: 1.1rem; }
-.modal-actions { display: flex; justify-content: flex-end; gap: var(--space-3); margin-top: var(--space-5); }
+.modal-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); }
 .modal-actions--split { justify-content: space-between; flex-wrap: wrap; }
-.modal-actions-group { display: flex; gap: var(--space-3); }
+.modal-actions-group { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-3); }
 
 /* ---------- flashcards (Practicar) ---------- */
 .flash-toolbar { display: flex; gap: var(--space-6); flex-wrap: wrap; align-items: flex-end; margin-bottom: var(--space-4); }
@@ -354,6 +363,11 @@ th.col-after-speak, td.col-after-speak { padding-left: var(--space-1); }
 /* Columna que se ajusta a su contenido (el titulo) en vez de recibir parte
    del ancho sobrante: ese ancho pasa a Ingles y Espanol. */
 th.col-shrink, td.col-shrink { width: 1%; }
+/* Entre Espanol y Aprendida no hace falta margen: Aprendida solo muestra
+   Si/No centrado bajo un titulo mucho mas ancho, asi que el texto en
+   espanol puede llegar hasta el borde sin chocar con nada. */
+th.col-before-shrink, td.col-before-shrink { padding-right: 0; }
+th.col-shrink, td.col-shrink { padding-left: 0; }
 .btn-reveal { min-width: 84px; }
 
 .toggle-row { display: flex; align-items: center; gap: var(--space-2); font-size: 0.85rem; font-weight: 600; }
