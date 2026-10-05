@@ -106,9 +106,10 @@ export async function render(container) {
 
     const thead = el("thead", {}, [
       el("tr", {}, [
-        el("th", {}, "Ingles"),
+        el("th", { class: "col-speak", "aria-label": "Pronunciación" }),
+        el("th", { class: "col-after-speak" }, "Ingles"),
         el("th", {}, "Espanol"),
-        el("th", { class: "col-center" }, "Aprendida"),
+        el("th", { class: "col-center col-shrink" }, "Aprendida"),
       ]),
     ]);
     const tbody = el("tbody", {});
@@ -128,11 +129,12 @@ export async function render(container) {
             },
           },
           [
-            // La bocina va antes de la palabra para que quede alineada en
-            // columna; speakButton ya frena el click para no abrir el modal.
-            el("td", {}, el("span", { class: "speak-cell" }, [speakButton(row.palabra_ing), el("span", {}, row.palabra_ing)])),
+            // Bocina en su propia columna (sin titulo), antes de "Ingles";
+            // speakButton ya frena el click para no abrir el modal.
+            el("td", { class: "col-speak" }, speakButton(row.palabra_ing)),
+            el("td", { class: "col-after-speak" }, row.palabra_ing),
             el("td", {}, row.palabra_esp),
-            el("td", { class: "col-center" }, row.aprendida ? el("span", { class: "badge badge-success" }, "Si") : el("span", { class: "badge" }, "No")),
+            el("td", { class: "col-center col-shrink" }, row.aprendida ? el("span", { class: "badge badge-success" }, "Si") : el("span", { class: "badge" }, "No")),
           ]
         )
       );

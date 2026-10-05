@@ -77,8 +77,9 @@ button { font-family: inherit; }
 .topnav {
   flex: 0 0 auto;
   display: flex;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
   background: var(--bg-elevated);
   border-bottom: 1px solid var(--border);
   overflow-x: auto;
@@ -86,17 +87,23 @@ button { font-family: inherit; }
   top: var(--topbar-h);
   z-index: 39;
 }
+/* Icono arriba y nombre debajo; los botones se reparten el ancho de la
+   barra para que quepan todos en un celular sin desplazar la barra. El
+   max-width evita botones enormes en pantallas anchas. */
 .topnav-link {
-  display: flex; align-items: center; gap: var(--space-2);
-  padding: var(--space-2) var(--space-3);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  padding: var(--space-1) 2px;
   border-radius: var(--radius-sm);
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.86rem;
+  font-size: 0.7rem;
   font-weight: 700;
   white-space: nowrap;
-  flex: 0 0 auto;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 140px;
 }
+.topnav-link span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
 .topnav-link:hover { background: var(--bg-sunken); color: var(--text); }
 .topnav-link.active { background: var(--accent); color: var(--accent-contrast); }
 .topnav[hidden] { display: none; }
@@ -336,12 +343,17 @@ tbody tr.clickable:active { background: var(--accent-soft); }
 }
 .speak-btn:hover { background: var(--bg-sunken); color: var(--accent-strong); }
 .speak-btn:active { color: var(--accent-strong); }
-/* Celda "Ingles" de Palabras: bocina antes de la palabra. Los margenes
-   negativos conservan el area tactil de 44x44 px sin agrandar la fila, y
-   dejan el icono (18 px) centrado entre el borde de la celda y el texto:
-   10 px a cada lado, con el texto empezando a 38 px del borde. */
-.speak-cell { display: flex; align-items: center; }
-.speak-cell .speak-btn { margin: -14px -3px -14px -15px; }
+/* Columna de la bocina en Palabras (sin titulo). Boton de 30 px de ancho
+   (no 44) para no comerle espacio a las palabras; conserva 44 px de alto
+   con margen negativo para no agrandar la fila. Con el relleno reducido de
+   la columna siguiente, el icono (18 px) queda centrado: 10 px al borde de
+   la tabla y 10 px a la palabra. */
+th.col-speak, td.col-speak { width: 1%; padding: 0 0 0 var(--space-1); }
+td.col-speak .speak-btn { width: 30px; margin: -14px 0; vertical-align: middle; }
+th.col-after-speak, td.col-after-speak { padding-left: var(--space-1); }
+/* Columna que se ajusta a su contenido (el titulo) en vez de recibir parte
+   del ancho sobrante: ese ancho pasa a Ingles y Espanol. */
+th.col-shrink, td.col-shrink { width: 1%; }
 .btn-reveal { min-width: 84px; }
 
 .toggle-row { display: flex; align-items: center; gap: var(--space-2); font-size: 0.85rem; font-weight: 600; }
