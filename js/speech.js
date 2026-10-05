@@ -28,7 +28,7 @@ export function pronunciar(texto) {
   speechSynthesis.cancel(); // evita que se encolen pronunciaciones
   const u = new SpeechSynthesisUtterance(texto);
   u.lang = "en-US";
-  u.rate = 0.9; // ligeramente mas lento, util para aprender
+  u.rate = 1; // velocidad normal: a 0.9 algunas voces sonaban distorsionadas
   if (vozIngles) u.voice = vozIngles;
   speechSynthesis.speak(u);
 }
