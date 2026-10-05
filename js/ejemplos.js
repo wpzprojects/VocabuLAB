@@ -20,6 +20,13 @@ export function limpiarPalabra(texto) {
     .trim();
 }
 
+// Separa las acepciones guardadas con comas ("Correr, funcionar") para
+// pedir el ejemplo con una sola a la vez.
+function acepciones(texto) {
+  const partes = limpiarPalabra(texto).split(",").map((p) => p.trim()).filter(Boolean);
+  return partes.length ? partes : [""];
+}
+
 async function desdeGemini(palabra, significado, anterior, clave) {
   const partes = [
     `Write one short, natural English example sentence (intermediate level, at most 15 words) using "${palabra}"`,
@@ -57,14 +64,20 @@ async function desdeDiccionario(palabra, anterior) {
 
 // Devuelve { texto, fuente } o { texto: null }, y en `avisos` los motivos
 // por los que alguna fuente fallo (para mostrarlos discretamente).
-export async function sugerirEjemplo({ palabraIng, palabraEsp, anterior = "" }) {
-  const palabra = limpiarPalabra(palabraIng);
+// turno: numero de sugerencias ya pedidas; si la palabra tiene varias
+// acepciones separadas por comas, cada sugerencia usa la siguiente en el
+// orden guardado (la primera, luego la segunda... y vuelve a empezar).
+export async function sugerirEjemplo({ palabraIng, palabraEsp, anterior = "", turno = 0 }) {
+  const ings = acepciones(palabraIng);
+  const esps = acepciones(palabraEsp);
+  const palabra = ings[turno % ings.length];
+  const significado = esps[turno % esps.length];
   const avisos = [];
   const clave = getGeminiKey();
 
   if (clave) {
     try {
-      const texto = await desdeGemini(palabra, limpiarPalabra(palabraEsp), anterior, clave);
+      const texto = await desdeGemini(palabra, significado, anterior, clave);
       if (texto) return { texto, fuente: "Gemini", avisos };
     } catch (err) {
       avisos.push(err.message || String(err));
@@ -83,7 +96,7 @@ export async function sugerirEjemplo({ palabraIng, palabraEsp, anterior = "" }) 
 
 // Ultimo recurso: buscar a mano un ejemplo y copiarlo.
 export function enlacesBusqueda(palabraIng) {
-  const palabra = limpiarPalabra(palabraIng);
+  const palabra = acepciones(palabraIng)[0];
   return [
     { nombre: "YouGlish", url: `https://youglish.com/pronounce/${encodeURIComponent(palabra)}/english/us` },
     {

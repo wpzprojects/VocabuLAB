@@ -48,6 +48,8 @@ export function openPalabraModal(backdrop, { row = null, defaults = {}, onSaved,
   // Ultimo texto sugerido: si el campo todavia lo tiene, pedir otro no
   // necesita confirmacion (no se pierde nada escrito por el usuario).
   let ultimaSugerencia = "";
+  // Sugerencias ya mostradas: con varias acepciones, cada una usa la siguiente.
+  let turnoSugerencia = 0;
   let keyPanel = null;
 
   function setSuggestStatus(children) {
@@ -117,9 +119,10 @@ export function openPalabraModal(backdrop, { row = null, defaults = {}, onSaved,
     suggestBtn.disabled = true;
     setSuggestStatus("Buscando ejemplo...");
     try {
-      const r = await sugerirEjemplo({ palabraIng: ingInput.value, palabraEsp: espInput.value, anterior: actual });
+      const r = await sugerirEjemplo({ palabraIng: ingInput.value, palabraEsp: espInput.value, anterior: actual, turno: turnoSugerencia });
       const avisos = r.avisos.length ? ` (${r.avisos.join("; ")})` : "";
       if (r.texto) {
+        turnoSugerencia++;
         contextoInput.value = r.texto;
         ultimaSugerencia = r.texto;
         suggestBtn.querySelector("span").textContent = "Otra sugerencia";
