@@ -7,6 +7,7 @@
 
 import { el, distinct, isCorrectAnswer } from "../util/format.js";
 import { getVocabulario } from "../store.js";
+import { speakButton, detenerPronunciacion } from "../speech.js";
 
 // Ver comentario equivalente en ver.js: estado a nivel de modulo para que
 // el filtro sobreviva a cambios de pestana. snapshotIds "congela" el
@@ -105,6 +106,7 @@ export async function render(container) {
     aciertos = 0;
     total = 0;
     updateScore();
+    detenerPronunciacion();
     list.innerHTML = "";
 
     const questions = buildQuestions();
@@ -118,7 +120,13 @@ export async function render(container) {
       const expected = state.swap ? row.palabra_ing : row.palabra_esp;
 
       const rowEl = el("div", { class: "quiz-row" });
-      const promptEl = el("div", { class: "quiz-prompt" }, prompt);
+      // Igual que en Practicar: la bocina va junto a la palabra en ingles.
+      // Con el idioma intercambiado el ingles es la respuesta, asi que la
+      // bocina solo aparece al evaluar, junto a la respuesta correcta.
+      const promptEl = el("div", { class: "quiz-prompt" }, [
+        el("span", {}, prompt),
+        state.swap ? null : speakButton(row.palabra_ing),
+      ]);
       const input = el("input", { type: "text", placeholder: "Tu respuesta..." });
       const checkBtn = el("button", { class: "btn btn-sm" }, "Evaluar");
 
@@ -129,6 +137,10 @@ export async function render(container) {
         input.disabled = true;
         checkBtn.disabled = true;
         promptEl.append(el("span", { class: "quiz-correct" }, `→ ${expected}`));
+        if (state.swap) {
+          const speak = speakButton(row.palabra_ing);
+          if (speak) promptEl.append(speak);
+        }
         aciertos += ok ? 1 : 0;
         total += 1;
         updateScore();

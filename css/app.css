@@ -336,6 +336,12 @@ tbody tr.clickable:active { background: var(--accent-soft); }
 }
 .speak-btn:hover { background: var(--bg-sunken); color: var(--accent-strong); }
 .speak-btn:active { color: var(--accent-strong); }
+/* Celda "Ingles" de Palabras: bocina antes de la palabra. Los margenes
+   negativos conservan el area tactil de 44x44 px sin agrandar la fila, y
+   dejan el icono (18 px) centrado entre el borde de la celda y el texto:
+   10 px a cada lado, con el texto empezando a 38 px del borde. */
+.speak-cell { display: flex; align-items: center; }
+.speak-cell .speak-btn { margin: -14px -3px -14px -15px; }
 .btn-reveal { min-width: 84px; }
 
 .toggle-row { display: flex; align-items: center; gap: var(--space-2); font-size: 0.85rem; font-weight: 600; }
@@ -359,7 +365,7 @@ tbody tr.clickable:active { background: var(--accent-soft); }
 .quiz-row.correct { border-color: var(--success); background: var(--success-soft); }
 .quiz-row.incorrect { border-color: var(--danger); background: var(--danger-soft); }
 .quiz-row .quiz-prompt {
-  font-weight: 700; display: flex; align-items: baseline; gap: var(--space-2); flex-wrap: wrap;
+  font-weight: 700; display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap;
 }
 .quiz-row .quiz-correct { font-weight: 600; font-size: 0.88rem; color: var(--text-muted); }
 .quiz-row.correct .quiz-correct { color: var(--success); }

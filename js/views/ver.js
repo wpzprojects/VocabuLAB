@@ -5,6 +5,7 @@ import { el, debounce, distinct, maxNumeric } from "../util/format.js";
 import { icon } from "../icons.js";
 import { getVocabulario } from "../store.js";
 import { openPalabraModal } from "../palabraModal.js";
+import { speakButton, detenerPronunciacion } from "../speech.js";
 
 // Estado de filtro/orden a nivel de modulo: el navegador cachea el modulo
 // dinamico por URL, asi que estas variables sobreviven entre llamadas a
@@ -89,6 +90,7 @@ export async function render(container) {
   }
 
   function renderResults(filtered) {
+    detenerPronunciacion();
     resultsWrap.innerHTML = "";
     resultsWrap.append(
       el("div", { class: "row-count row-count-split" }, [
@@ -126,7 +128,9 @@ export async function render(container) {
             },
           },
           [
-            el("td", {}, row.palabra_ing),
+            // La bocina va antes de la palabra para que quede alineada en
+            // columna; speakButton ya frena el click para no abrir el modal.
+            el("td", {}, el("span", { class: "speak-cell" }, [speakButton(row.palabra_ing), el("span", {}, row.palabra_ing)])),
             el("td", {}, row.palabra_esp),
             el("td", { class: "col-center" }, row.aprendida ? el("span", { class: "badge badge-success" }, "Si") : el("span", { class: "badge" }, "No")),
           ]

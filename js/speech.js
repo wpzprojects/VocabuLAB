@@ -52,5 +52,10 @@ export function speakButton(texto) {
       e.stopPropagation();
       pronunciar(texto);
     },
+    // Enter/Espacio sobre la bocina no deben llegar a un contenedor que
+    // tambien reaccione al teclado (p. ej. las filas de Palabras).
+    onkeydown: (e) => {
+      if (e.key === "Enter" || e.key === " ") e.stopPropagation();
+    },
   });
 }
