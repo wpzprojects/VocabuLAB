@@ -37,11 +37,12 @@ export function openPalabraModal(backdrop, { row = null, defaults = {}, onSaved,
 
   // "Sugerir ejemplo": llena el campo de contexto (siempre editable; solo
   // se guarda al presionar Guardar). Ver js/ejemplos.js para las fuentes.
-  const suggestBtn = el("button", { type: "button", class: "btn", html: `${icon("sparkle")}<span>Sugerir ejemplo</span>` });
+  const suggestBtn = el("button", { type: "button", class: "btn btn-sm", html: `${icon("sparkle")}<span>Sugerir ejemplo</span>` });
   const suggestStatus = el("p", { class: "hint suggest-status", hidden: true });
   const contextoField = el("div", { class: "field" }, [
     el("label", {}, "Palabra en contexto (opcional)"),
     contextoInput,
+    el("div", { class: "suggest-row" }, [suggestBtn]),
     suggestStatus,
   ]);
   // Ultimo texto sugerido: si el campo todavia lo tiene, pedir otro no
@@ -161,13 +162,12 @@ export function openPalabraModal(backdrop, { row = null, defaults = {}, onSaved,
         "Borrar"
       )
     : null;
-  // "Sugerir ejemplo" va a la izquierda de Cancelar/Guardar.
   const actions = row
     ? el("div", { class: "modal-actions modal-actions--split" }, [
         deleteBtn,
-        el("div", { class: "modal-actions-group" }, [suggestBtn, cancelBtn, saveBtn]),
+        el("div", { class: "modal-actions-group" }, [cancelBtn, saveBtn]),
       ])
-    : el("div", { class: "modal-actions" }, [suggestBtn, cancelBtn, saveBtn]);
+    : el("div", { class: "modal-actions" }, [cancelBtn, saveBtn]);
   const modal = el("div", { class: "modal" }, [form, actions]);
 
   backdrop.append(modal);
