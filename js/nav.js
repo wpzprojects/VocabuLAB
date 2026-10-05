@@ -8,5 +8,7 @@ export const navLinks = [
   { key: "practicar", title: "Practicar", icon: "clock", hash: "#/practicar", desc: "Repasa con tarjetas" },
   { key: "examen", title: "Examen", icon: "check", hash: "#/examen", desc: "Evalua lo que sabes" },
   { key: "frases", title: "Frases", icon: "chat", hash: "#/frases", desc: "Practica frases completas" },
-  { key: "ayuda", title: "Ayuda", icon: "help", hash: "#/ayuda", desc: "Guia de uso y contacto" },
+  // utility: van como iconos en la barra superior, no en el menu ni en el inicio.
+  { key: "config", title: "Configuracion", icon: "gear", hash: "#/config", desc: "Respaldos, IA y opciones", utility: true },
+  { key: "ayuda", title: "Ayuda", icon: "help", hash: "#/ayuda", desc: "Guia de uso y contacto", utility: true },
 ];

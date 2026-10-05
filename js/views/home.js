@@ -14,7 +14,7 @@ export async function render(container) {
     "div",
     { class: "home-grid" },
     navLinks
-      .filter((link) => link.key !== "ayuda")
+      .filter((link) => !link.utility)
       .map((link) =>
         el("a", { class: "card home-card", href: link.hash }, [
           el("span", { class: "home-card-icon", html: icon(link.icon) }),

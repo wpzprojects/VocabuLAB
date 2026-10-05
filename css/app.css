@@ -141,7 +141,7 @@ button { font-family: inherit; }
 
 .help-list { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: var(--space-2); }
 .help-list li { line-height: 1.5; }
-.view-ayuda p, .view-ayuda li { text-align: justify; }
+.view-ayuda p, .view-ayuda li, .view-config p { text-align: justify; }
 
 /* ---------- tarjeta de desarrollador (Ayuda) ---------- */
 .dev-card { display: flex; flex-direction: column; gap: var(--space-4); }

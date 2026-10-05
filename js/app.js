@@ -9,7 +9,7 @@ const mount = document.getElementById("app");
 document.getElementById("brand-mark").innerHTML = '<img src="icons/icon.svg" alt="" width="28" height="28">';
 
 topnav.innerHTML = navLinks
-  .filter((link) => link.key !== "ayuda")
+  .filter((link) => !link.utility)
   .map(
     (link) => `
     <a class="topnav-link" data-key="${link.key}" href="${link.hash}">
@@ -19,11 +19,15 @@ topnav.innerHTML = navLinks
   )
   .join("");
 
-const ayudaLink = navLinks.find((link) => link.key === "ayuda");
-topbarActions.innerHTML = `
-  <a class="icon-btn" data-key="${ayudaLink.key}" href="${ayudaLink.hash}" aria-label="${ayudaLink.title}" title="${ayudaLink.title}">
-    ${icon(ayudaLink.icon)}
-  </a>`;
+topbarActions.innerHTML = navLinks
+  .filter((link) => link.utility)
+  .map(
+    (link) => `
+  <a class="icon-btn" data-key="${link.key}" href="${link.hash}" aria-label="${link.title}" title="${link.title}">
+    ${icon(link.icon)}
+  </a>`
+  )
+  .join("");
 
 function setActiveLink(path) {
   const section = path.split("/").filter(Boolean)[0] || "";
