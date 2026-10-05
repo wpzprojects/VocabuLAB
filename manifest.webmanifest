@@ -2,6 +2,7 @@
   "name": "VocabuLAB",
   "short_name": "VocabuLAB",
   "description": "Practica vocabulario y frases en ingles: ver, traducir, practicar y examinarte.",
+  "id": "./vocabulab-app",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
