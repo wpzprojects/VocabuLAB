@@ -18,7 +18,7 @@ import {
 } from "../store.js";
 import { saveBackupToDrive, restoreBackupFromDrive } from "../drive.js";
 
-const APP_VERSION = "1.9.2";
+const APP_VERSION = "1.10.0";
 
 const SECCIONES = [
   {
@@ -33,7 +33,7 @@ const SECCIONES = [
   {
     titulo: "Traducir",
     items: [
-      "Toca el boton de sentido para alternar Ingles → Espanol / Espanol → Ingles, escribe el texto y presiona Traducir. Requiere internet (servicio MyMemory).",
+      "Toca el boton de sentido para alternar Ingles → Espanol / Espanol → Ingles, escribe el texto y presiona Traducir (servicio MyMemory) o Traducir con IA (Gemini, con tu clave): la IA da varias acepciones y tocas la que quieres guardar. Requiere internet.",
       "Con el resultado puedes guardarlo como palabra nueva, eligiendo su Lista.",
     ],
   },
@@ -178,13 +178,13 @@ function buildGeminiCard() {
   refresh();
 
   return el("div", { class: "card" }, [
-    el("h2", { class: "section-title", style: "margin-top:0" }, "Ejemplos con IA (Gemini)"),
+    el("h2", { class: "section-title", style: "margin-top:0" }, "IA (Gemini)"),
     el("p", { class: "text-sm text-muted" }, [
       "Opcional. Con tu clave gratuita de Gemini (",
       el("a", { href: "https://aistudio.google.com/apikey", target: "_blank", rel: "noopener" }, "obtener clave"),
-      "), Sugerir ejemplo genera frases acordes al significado en espanol. La clave se guarda solo en este dispositivo " +
-        "(no va en el respaldo de Drive ni en los CSV). En la capa gratuita Google puede usar lo enviado (la palabra y su " +
-        "significado) para mejorar sus productos.",
+      "), Sugerir ejemplo genera frases acordes al significado en espanol y Traducir con IA ofrece varias acepciones. La clave se guarda solo en este dispositivo " +
+        "(no va en el respaldo de Drive ni en los CSV). En la capa gratuita Google puede usar lo enviado (palabras y textos " +
+        "a traducir) para mejorar sus productos.",
     ]),
     el("div", { class: "field" }, [el("div", { class: "select-with-btn" }, [keyInput, saveBtn])]),
     statusMsg,

@@ -9,11 +9,7 @@
 // Las APIs se llaman directo desde el navegador (ambas permiten CORS).
 
 import { getGeminiKey } from "./store.js";
-
-// Modelo ligero con capa gratuita. Si Google lo retira, basta cambiarlo
-// aqui (ver https://ai.google.dev/gemini-api/docs/models).
-const GEMINI_MODEL = "gemini-3.5-flash-lite";
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
+import { generarConGemini } from "./gemini.js";
 
 // Quita notas entre parentesis que el usuario agrega a la palabra, p. ej.
 // "Abroad (L1 ok)" -> "Abroad".
@@ -31,24 +27,8 @@ async function desdeGemini(palabra, significado, anterior, clave) {
     anterior ? ` It must be different from: "${anterior}".` : "",
     " Reply with only the sentence: no quotes, no translation, no explanation.",
   ];
-  const res = await fetch(GEMINI_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "x-goog-api-key": clave },
-    body: JSON.stringify({
-      contents: [{ role: "user", parts: [{ text: partes.join("") }] }],
-      generationConfig: { temperature: 1, maxOutputTokens: 256 },
-    }),
-  });
-  if (!res.ok) {
-    if (res.status === 400 || res.status === 401 || res.status === 403) throw new Error("la clave de Gemini no es valida");
-    if (res.status === 429) throw new Error("se alcanzo el limite de uso de Gemini");
-    throw new Error(`Gemini respondio con error ${res.status}`);
-  }
-  const data = await res.json();
-  const texto = (data?.candidates?.[0]?.content?.parts || [])
-    .map((p) => p.text || "")
-    .join("")
-    .trim()
+  const respuesta = await generarConGemini(partes.join(""), clave);
+  const texto = respuesta
     .split("\n")[0]
     .replace(/^["'“”]+|["'“”]+$/g, "")
     .trim();
