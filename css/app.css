@@ -282,7 +282,11 @@ input[type="checkbox"] { accent-color: var(--accent); }
 .row-count { color: var(--text-faint); font-size: 0.8rem; margin-bottom: var(--space-2); }
 .row-count-split { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-2); }
 
-.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-elevated); }
+/* overflow-y: hidden porque con overflow-x: auto el eje vertical pasa a
+   "auto": la bocina de la ultima fila (44 px de alto con margen negativo)
+   sobresale un par de pixeles y el contenedor se volvia desplazable en
+   vertical, robandose el primer gesto de scroll de la pagina. */
+.table-wrap { overflow-x: auto; overflow-y: hidden; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-elevated); }
 table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
 thead th {
   text-align: left; padding: var(--space-3); background: var(--bg-sunken);
