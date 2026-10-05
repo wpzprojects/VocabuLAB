@@ -4,7 +4,7 @@
 
 import { el } from "../util/format.js";
 
-const APP_VERSION = "1.12.0";
+const APP_VERSION = "1.12.1";
 
 const SECCIONES = [
   {
